@@ -39,14 +39,14 @@
                                                 <div class="input_gp">
                                                     <div class="rdo_item">
                                                         <input id="have_spouse" name="spouse" type="radio"
-                                                            @click="spouse = true" />
+                                                            @click="spouse = true; relative === 'no_relative' && (heirs_count = 1)" />
                                                         <label for="have_spouse">あり</label>
                                                     </div>
                                                 </div>
                                                 <div class="input_gp">
                                                     <div class="rdo_item">
                                                         <input id="not_have_spouse" name="spouse" type="radio"
-                                                            @click="spouse = false" />
+                                                            @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0)" />
                                                         <label for="not_have_spouse">なし</label>
                                                     </div>
                                                 </div>
@@ -101,14 +101,15 @@
                                             <div class="input_gp_row">
                                                 <div class="input_gp">
                                                     <div class="rdo_item">
-                                                        <input id="parents" name="relative" type="radio" />
+                                                        <input id="parents" name="relative" type="radio"
+                                                            @click="relative = 'parents'" />
                                                         <label for="parents">父母</label>
                                                     </div>
                                                 </div>
                                                 <div class="input_gp">
                                                     <div class="rdo_item">
                                                         <input id="no_relative" name="relative" type="radio"
-                                                            @click="relative='no_relative'" />
+                                                            @click="relative='no_relative'; !spouse && (heirs_count = 0) " />
                                                         <label for="no_relative">いない</label>
                                                     </div>
                                                 </div>
@@ -122,7 +123,7 @@
                                             <div class="input_gp_row">
                                                 <div class="input_gp">
                                                     <select name="legal_heirs" id="heirs"
-                                                        :disabled="relative === 'no_relative'">
+                                                        :disabled="relative === 'no_relative'" x-model="heirs_count">
                                                         <option :disabled="spouse"
                                                             selected="!spouse && relative === 'no_relative'" value>
                                                         </option>
@@ -149,7 +150,7 @@
                         </fieldset>
 
                         <div class="submit_btn">
-                            <input type="submit" value="計算する" />
+                            <input type="button" value="計算する" />
                         </div>
                     </form>
                 </div>
