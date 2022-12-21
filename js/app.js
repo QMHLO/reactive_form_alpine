@@ -70,6 +70,12 @@ function app() {
       this.debts.digit = 0;
     },
   }));
+  Alpine.data("step2", () => ({
+    spouse: false, // boolean
+    relative: "", // ["child", "siblings", "parents", "no_relative"]
+    inherit_rate: 0,
+    heirs_count: null,
+  }));
   Alpine.data("step3", () => ({
     lands: {
       digit: "",

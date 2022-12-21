@@ -150,7 +150,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset x-data="step2">
                 <div class="form_wrapper">
                   <h4 class="form_ttl">
                     <div class="date_block">
@@ -163,30 +163,30 @@
                   </h4>
                   <div class="input_block">
                     <div class="input_row style3">
-                      <div class="txt"><label for="">非上場株式の数</label></div>
+                      <div class="txt"><label>配偶者</label></div>
                       <div class="input_right_row">
                         <div class="input_gp_row">
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input type="radio" />
-                              <label for="">社</label>
+                              <input id="have_spouse" name="spouse" type="radio" @click="spouse = true; relative === 'no_relative' && (heirs_count = 1)" />
+                              <label for="have_spouse">あり</label>
                             </div>
                           </div>
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input type="radio" />
-                              <label for="">あり</label>
+                              <input id="not_have_spouse" name="spouse" type="radio" @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0)" />
+                              <label for="not_have_spouse">なし</label>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="input_row style3">
-                      <div class="txt"><label for="">法定相続人の人数</label><img src="./q.png" class="q_img" alt="" /></div>
+                      <div class="txt"><label for="inherit_rate">配偶者の遺産取得割合</label><img src="./q.png" class="q_img" alt="" /></div>
                       <div class="input_right_row">
                         <div class="input_gp_row">
                           <div class="input_gp">
-                            <select name="legal_heirs" id="heirs">
+                            <select name="inherit_rate" id="inherit_rate" :disabled="!spouse" x-model="inherit_rate">
                               <option value="0">0</option>
                               <option value="10">10</option>
                               <option value="20">20</option>
@@ -205,45 +205,46 @@
                       </div>
                     </div>
                     <div class="input_row style3">
-                      <div class="txt"><label for="">非上場株式の数</label><img src="./q.png" class="q_img" alt="" /></div>
+                      <div class="txt"><label for="">配偶者以外の法定相続人の続柄</label><img src="./q.png" class="q_img" alt="" /></div>
                       <div class="input_right_row rdo">
                         <div class="input_gp_row">
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input type="radio" />
-                              <label for="">子</label>
+                              <input id="child" name="relative" type="radio" @click="relative = 'child'" />
+                              <label for="child">子</label>
                             </div>
                           </div>
                           <div class="input_gp">
                             <div class="rdo_item max">
-                              <input type="radio" />
-                              <label for="">兄弟姉妹</label>
+                              <input id="siblings" name="relative" type="radio" @click="relative = 'siblings'" />
+                              <label for="siblings">兄弟姉妹</label>
                             </div>
                           </div>
                         </div>
                         <div class="input_gp_row">
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input type="radio" />
-                              <label for="">父母</label>
+                              <input id="parents" name="relative" type="radio" @click="relative = 'parents'" />
+                              <label for="parents">父母</label>
                             </div>
                           </div>
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input type="radio" />
-                              <label for="">なし</label>
+                              <input id="no_relative" name="relative" type="radio" @click="relative='no_relative'; !spouse && (heirs_count = 0) " />
+                              <label for="no_relative">いない</label>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="input_row style3">
-                      <div class="txt"><label for="">法定相続人の人数</label><img src="./q.png" class="q_img" alt="" /></div>
+                      <div class="txt"><label for="">法定相続人の人数（配偶者含む）</label><img src="./q.png" class="q_img" alt="" /></div>
                       <div class="input_right_row">
                         <div class="input_gp_row">
                           <div class="input_gp">
-                            <select name="legal_heirs" id="heirs">
-                              <option value="1">1</option>
+                            <select name="legal_heirs" id="heirs" :disabled="relative === 'no_relative'" x-model="heirs_count">
+                              <option :disabled="spouse" selected="!spouse && relative === 'no_relative'" value></option>
+                              <option :selected="spouse && relative === 'no_relative'" value="1" x-show="!spouse && relative !== 'no_relative'">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
                               <option value="4">4</option>
@@ -308,7 +309,7 @@
                 </div>
               </fieldset>
               <div class="submit_btn">
-                <input type="submit" value="計算する" id="show_result" />
+                <input type="button" value="計算する" id="show_result" />
               </div>
             </form>
           </div>
