@@ -262,7 +262,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset>
+              <fieldset x-data="step3">
                 <div class="form_wrapper">
                   <h4 class="form_ttl">
                     <div class="date_block">
@@ -279,13 +279,13 @@
                       <div class="input_right_row">
                         <div class="input_gp_row">
                           <div class="input_gp">
-                            <input type="number" />
+                            <input @keydown.enter.prevent @change="lands.handleChange" x-model="lands.digit" type="number" min="0" />
                             <label for="">ヶ所</label>
                           </div>
                         </div>
                         <div class="btn_gp">
-                          <div class="minus radius"></div>
-                          <div class="plus radius"></div>
+                          <div class="minus radius" @click="lands.decrease"></div>
+                          <div class="plus radius" @click="lands.increase"></div>
                         </div>
                       </div>
                     </div>
@@ -294,13 +294,13 @@
                       <div class="input_right_row">
                         <div class="input_gp_row">
                           <div class="input_gp">
-                            <input type="number" />
+                            <input @keydown.enter.prevent @change="unlistedshares.handleChange" x-model="unlistedshares.digit" type="number" min="0" />
                             <label for="">社</label>
                           </div>
                         </div>
                         <div class="btn_gp">
-                          <div class="minus radius"></div>
-                          <div class="plus radius"></div>
+                          <div class="minus radius" @click="unlistedshares.decrease"></div>
+                          <div class="plus radius" @click="unlistedshares.increase"></div>
                         </div>
                       </div>
                     </div>
@@ -308,7 +308,7 @@
                 </div>
               </fieldset>
               <div class="submit_btn">
-                <input type="submit" value="計算する" />
+                <input type="submit" value="計算する" id="show_result" />
               </div>
             </form>
           </div>

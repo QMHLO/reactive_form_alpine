@@ -12,7 +12,6 @@ function app() {
 
       increase() {
         this.savings.digit = Number(this.savings.digit) + 1;
-        console.log(this);
       },
     },
     realEstate: {
@@ -71,4 +70,34 @@ function app() {
       this.debts.digit = 0;
     },
   }));
+  Alpine.data("step3", () => ({
+    lands: {
+      digit: "",
+
+      decrease() {
+        this.lands.digit > 0 ? (this.lands.digit = Number(this.lands.digit) - 1) : undefined;
+      },
+
+      increase() {
+        this.lands.digit = Number(this.lands.digit) + 1;
+      },
+    },
+    unlistedshares: {
+      digit: "",
+
+      decrease() {
+        this.unlistedshares.digit > 0 ? (this.unlistedshares.digit = Number(this.unlistedshares.digit) - 1) : undefined;
+      },
+
+      increase() {
+        this.unlistedshares.digit = Number(this.unlistedshares.digit) + 1;
+      },
+    },
+  }));
 }
+
+const showResult = document.getElementById("show_result");
+const answerBlock = document.querySelector(".answer_block");
+showResult.addEventListener("click", () => {
+  answerBlock.style.display = "block";
+});
