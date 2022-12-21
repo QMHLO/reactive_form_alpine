@@ -27,3 +27,33 @@
 ```
 - Z = X + Y
 ```
+
+# Possible New Calculation X Form Formula
+
+## isan_sogaku = total inheritance
+
+- total inheritance = G \* 10000;
+
+---
+
+## sozokunin = heir
+
+---
+
+## haigusya = spouse
+
+---
+
+## zokugara = relationship
+
+---
+
+## haiwari = daily rate
+
+---
+
+## zei_taisho = taxable
+
+- taxable = ( total inheritance ) - (30000000 + 6000000 \* heir)
+
+---
