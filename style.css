@@ -429,6 +429,7 @@ html {
   height: 20px;
 }
 .calculate_inner_block .answer_block {
+  display: none;
   padding: 40px 30px;
   background: #faf7f7;
 }
