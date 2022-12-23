@@ -1,60 +1,77 @@
 document.addEventListener("alpine:init", app);
 
+const inc = (num, base) => Math.floor(num / base) + 1;
+const dec = (num, base) => Math.ceil(num / base) - 1;
+const normalize = (operation) => (base) => (num) => operation(num, base) * base;
+
+const inc_100 = normalize(inc)(100);
+const dec_100 = normalize(dec)(100);
+
 function app() {
   Alpine.data("step1", () => ({
     savings: {
       digit: "",
 
       decrease() {
-        this.savings.digit > 0 ? (this.savings.digit = Number(this.savings.digit) - 1) : undefined;
+        const current = Number(this.savings.digit);
+        this.savings.digit > 0 ? (this.savings.digit = dec_100(current)) : undefined;
       },
 
       increase() {
-        this.savings.digit = Number(this.savings.digit) + 1;
+        const current = Number(this.savings.digit);
+        this.savings.digit = inc_100(current);
       },
     },
     realEstate: {
       digit: "",
 
       decrease() {
-        this.realEstate.digit > 0 ? (this.realEstate.digit = Number(this.realEstate.digit) - 1) : undefined;
+        const current = Number(this.realEstate.digit);
+        this.realEstate.digit > 0 ? (this.realEstate.digit = dec_100(current)) : undefined;
       },
 
       increase() {
-        this.realEstate.digit = Number(this.realEstate.digit) + 1;
+        const current = Number(this.realEstate.digit);
+        this.realEstate.digit = inc_100(current);
       },
     },
     securities: {
       digit: "",
 
       decrease() {
-        this.securities.digit > 0 ? (this.securities.digit = Number(this.securities.digit) - 1) : undefined;
+        const current = Number(this.securities.digit);
+        this.securities.digit > 0 ? (this.securities.digit = dec_100(current)) : undefined;
       },
 
       increase() {
-        this.securities.digit = Number(this.securities.digit) + 1;
+        const current = Number(this.securities.digit);
+        this.securities.digit = inc_100(current);
       },
     },
     others: {
       digit: "",
 
       decrease() {
-        this.others.digit > 0 ? (this.others.digit = Number(this.others.digit) - 1) : undefined;
+        const current = Number(this.others.digit);
+        this.others.digit > 0 ? (this.others.digit = dec_100(current)) : undefined;
       },
 
       increase() {
-        this.others.digit = Number(this.others.digit) + 1;
+        const current = Number(this.others.digit);
+        this.others.digit = inc_100(current);
       },
     },
     debts: {
       digit: "",
 
       decrease() {
-        this.debts.digit > 0 ? (this.debts.digit = Number(this.debts.digit) - 1) : undefined;
+        const current = Number(this.debts.digit);
+        this.debts.digit > 0 ? (this.debts.digit = dec_100(current)) : undefined;
       },
 
       increase() {
-        this.debts.digit = Number(this.debts.digit) + 1;
+        const current = Number(this.debts.digit);
+        this.debts.digit = inc_100(current);
       },
     },
     total() {
