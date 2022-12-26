@@ -350,45 +350,49 @@ function zeikin(toribun) {
 //Check Heritage Value
 let heritage_interval;
 let heritage;
+const Yresult = document.getElementById("yresult");
 
 function modifyHeritage() {
   if (heritage_interval <= 0) {
     heritage = 0;
     console.log(heritage);
-  } else if (heritage_interval > 0 && heritage_interval <= 4999) {
+  } else if (heritage_interval <= 4999) {
     heritage = 25;
     console.log(heritage);
   } else if (heritage_interval <= 5999) {
-    heritage = 30;
+    heritage = 35;
     console.log(heritage);
   } else if (heritage_interval <= 6999) {
-    heritage = 30;
+    heritage = 40;
     console.log(heritage);
   } else if (heritage_interval <= 7999) {
-    heritage = 30;
+    heritage = 45;
     console.log(heritage);
   } else if (heritage_interval <= 9999) {
-    heritage = 30;
+    heritage = 50;
     console.log(heritage);
   } else if (heritage_interval <= 14999) {
-    heritage = 30;
+    heritage = 65;
   } else if (heritage_interval <= 19999) {
-    heritage = 30;
+    heritage = 80;
     console.log(heritage);
   } else if (heritage_interval <= 24999) {
     console.log(heritage);
-    heritage = 30;
+    heritage = 100;
   } else if (heritage_interval <= 29999) {
-    heritage = 30;
+    heritage = 120;
     console.log(heritage);
   } else if (heritage_interval <= 39999) {
-    heritage = 30;
+    heritage = 150;
     console.log(heritage);
   } else if (heritage_interval <= 49999) {
-    heritage = 30;
+    heritage = 180;
     console.log(heritage);
   } else {
     heritage = undefined;
+    if (heritage === undefined) {
+      Yresult.innerHTML = "別途お見積り";
+    }
     console.log(heritage);
   }
 }
@@ -396,3 +400,21 @@ function modifyHeritage() {
 function land_factor(x) {
   return x > 0 ? 5 * (x - 1) + 4 : 0;
 }
+let heirs;
+function changeHeirs() {
+  if (sozokunin === 1) {
+    heirs = 0;
+  } else if (sozokunin === 2) {
+    heirs = 0.1;
+  } else if (sozokunin === 3) {
+    heirs = 0.2;
+  } else {
+    heirs = 0.3;
+  }
+}
+
+document.getElementById("show_result").addEventListener("click", function () {
+  const y = heritage + heirs + lands_value + stock_value;
+  console.log(heritage, heirs, lands_value, stock_value);
+  document.getElementById("yresult").innerText = y;
+});

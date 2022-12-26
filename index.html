@@ -263,7 +263,7 @@
                       <div class="input_gp_row">
                         <div class="input_gp">
                           <select name="legal_heirs" id="heirs" :disabled="relative === 'no_relative'"
-                            x-model="heirs_count" @change="sozokunin = Number(heirs_count)">
+                            x-model="heirs_count" @change="sozokunin = Number(heirs_count); changeHeirs();">
                             <option :disabled="spouse" selected="!spouse && relative === 'no_relative'" value></option>
                             <option :selected="spouse && relative === 'no_relative'" value="1"
                               x-show="!spouse && relative !== 'no_relative'">1</option>
@@ -354,7 +354,7 @@
                 <span>申告報酬<span class="required">※</span></span>
               </div>
               <div class="result_txt_box">
-                <span>〇〇〇〇万円</span>
+                <span id="yresult">〇〇〇〇万円</span>
               </div>
             </div>
             <div class="result_row">
