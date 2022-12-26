@@ -356,36 +356,36 @@ function modifyHeritage() {
   if (heritage_interval <= 0) {
     heritage = 0;
     console.log(heritage);
-  } else if (heritage_interval <= 4999) {
+  } else if (heritage_interval <= 5000) {
     heritage = 25;
     console.log(heritage);
-  } else if (heritage_interval <= 5999) {
+  } else if (heritage_interval <= 6000) {
     heritage = 35;
     console.log(heritage);
-  } else if (heritage_interval <= 6999) {
+  } else if (heritage_interval <= 7000) {
     heritage = 40;
     console.log(heritage);
-  } else if (heritage_interval <= 7999) {
+  } else if (heritage_interval <= 8000) {
     heritage = 45;
     console.log(heritage);
-  } else if (heritage_interval <= 9999) {
+  } else if (heritage_interval <= 10000) {
     heritage = 50;
     console.log(heritage);
-  } else if (heritage_interval <= 14999) {
+  } else if (heritage_interval <= 15000) {
     heritage = 65;
-  } else if (heritage_interval <= 19999) {
+  } else if (heritage_interval <= 20000) {
     heritage = 80;
     console.log(heritage);
-  } else if (heritage_interval <= 24999) {
+  } else if (heritage_interval <= 25000) {
     console.log(heritage);
     heritage = 100;
-  } else if (heritage_interval <= 29999) {
+  } else if (heritage_interval <= 30000) {
     heritage = 120;
     console.log(heritage);
-  } else if (heritage_interval <= 39999) {
+  } else if (heritage_interval <= 40000) {
     heritage = 150;
     console.log(heritage);
-  } else if (heritage_interval <= 49999) {
+  } else if (heritage_interval <= 50000) {
     heritage = 180;
     console.log(heritage);
   } else {
@@ -414,7 +414,26 @@ function changeHeirs() {
 }
 
 document.getElementById("show_result").addEventListener("click", function () {
-  const y = heritage + heirs + lands_value + stock_value;
-  console.log(heritage, heirs, lands_value, stock_value);
-  document.getElementById("yresult").innerText = y;
+  document.getElementById("yresult").innerText = y_result_text();
+  handle_z_result();
 });
+
+function y_result_text() {
+  console.log(heritage, heirs, lands_value, stock_value);
+
+  if (heritage === undefined) {
+    return "別途お見積り";
+  } else if (lands_value === undefined && stock_value === undefined) {
+    return "STEP3を入力したら概算を計算できます";
+  } else {
+    const y = heritage + heirs + lands_value + stock_value;
+    return y.toLocaleString();
+  }
+}
+
+function handle_z_result() {
+  if (lands_value === undefined && stock_value === undefined) {
+    document.getElementById("zresult1").remove();
+    document.getElementById("zresult").innerText = "STEP3を入力したら概算を計算できます";
+  }
+}
