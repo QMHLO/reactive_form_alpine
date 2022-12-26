@@ -432,7 +432,10 @@ function y_result_text() {
 }
 
 function handle_z_result() {
-  if (lands_value === undefined && stock_value === undefined) {
+  if (heritage === undefined) {
+    document.getElementById("zresult1").remove();
+    document.getElementById("zresult").innerText = "別途お見積り";
+  } else if (lands_value === undefined && stock_value === undefined) {
     document.getElementById("zresult1").remove();
     document.getElementById("zresult").innerText = "STEP3を入力したら概算を計算できます";
   }
