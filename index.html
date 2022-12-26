@@ -332,12 +332,137 @@
                   <span>〇〇〇〇万円</span>
                 </div>
               </div>
+<<<<<<< HEAD
               <div class="result_row">
                 <div class="result_label">
                   <span>申告報酬<span class="required">※</span></span>
                 </div>
                 <div class="result_txt_box">
                   <span>〇〇〇〇万円</span>
+=======
+            </fieldset>
+            <fieldset x-data="step2">
+              <div class="form_wrapper">
+                <h4 class="form_ttl" @click="console.log(heirs_count)">
+                  <div class="date_block">
+                    <div class="date_box">
+                      <span class="month">STEP</span>
+                      <span class="day">2</span>
+                    </div>
+                  </div>
+                  土地・株式について<br class="sp-on" />入力してください
+                </h4>
+                <div class="input_block">
+                  <div class="input_row style3">
+                    <div class="txt"><label>配偶者</label></div>
+                    <div class="input_right_row">
+                      <div class="input_gp_row">
+                        <div class="input_gp">
+                          <div class="rdo_item">
+                            <input id="have_spouse" name="spouse" type="radio"
+                              @click="spouse = true; relative === 'no_relative' && (heirs_count = 1); haigusya = 2" />
+                            <label for="have_spouse">あり</label>
+                          </div>
+                        </div>
+                        <div class="input_gp">
+                          <div class="rdo_item">
+                            <input id="not_have_spouse" name="spouse" type="radio"
+                              @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0); haigusya = 1" />
+                            <label for="not_have_spouse">なし</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input_row style3">
+                    <div class="txt"><label for="inherit_rate">配偶者の遺産取得割合</label><img src="./q.png" class="q_img"
+                        alt="" /></div>
+                    <div class="input_right_row">
+                      <div class="input_gp_row">
+                        <div class="input_gp">
+                          <select name="inherit_rate" id="inherit_rate" :disabled="!spouse" x-model="inherit_rate"
+                            @change="haiwari = Number(inherit_rate)">
+                            <option value="0">0</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                            <option value="60">60</option>
+                            <option value="70">70</option>
+                            <option value="80">80</option>
+                            <option value="90">90</option>
+                            <option value="100">100</option>
+                          </select>
+                          <label for="">%</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input_row style3">
+                    <div class="txt"><label for="">配偶者以外の法定相続人の続柄</label><img src="./q.png" class="q_img" alt="" />
+                    </div>
+                    <div class="input_right_row rdo">
+                      <div class="input_gp_row">
+                        <div class="input_gp">
+                          <div class="rdo_item">
+                            <input id="child" name="relative" type="radio" @click="relative = 'child'; zokugara = 1;" />
+                            <label for="child">子</label>
+                          </div>
+                        </div>
+                        <div class="input_gp">
+                          <div class="rdo_item max">
+                            <input id="siblings" name="relative" type="radio"
+                              @click="relative = 'siblings'; zokugara = 3;" />
+                            <label for="siblings">兄弟姉妹</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input_gp_row">
+                        <div class="input_gp">
+                          <div class="rdo_item">
+                            <input id="parents" name="relative" type="radio"
+                              @click="relative = 'parents'; zokugara = 2;" />
+                            <label for="parents">父母</label>
+                          </div>
+                        </div>
+                        <div class="input_gp">
+                          <div class="rdo_item">
+                            <input id="no_relative" name="relative" type="radio"
+                              @click="relative='no_relative'; !spouse && (heirs_count = 0); zokugara = 0; " />
+                            <label for="no_relative">いない</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input_row style3">
+                    <div class="txt"><label for="">法定相続人の人数（配偶者含む）</label><img src="./q.png" class="q_img" alt="" />
+                    </div>
+                    <div class="input_right_row">
+                      <div class="input_gp_row">
+                        <div class="input_gp">
+                          <select name="legal_heirs" id="heirs" :disabled="relative === 'no_relative'"
+                            x-model="heirs_count" @change="sozokunin = Number(heirs_count)">
+                            <option :disabled="spouse" selected="!spouse && relative === 'no_relative'" value></option>
+                            <option :selected="spouse && relative === 'no_relative'" value="1"
+                              x-show="!spouse && relative !== 'no_relative'">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                          </select>
+                          <label for="">人</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+>>>>>>> 881d8fba760bea22bb5aa3c84c127bfb846dff3c
                 </div>
               </div>
               <div class="result_row">
