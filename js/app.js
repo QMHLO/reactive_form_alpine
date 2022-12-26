@@ -1,8 +1,8 @@
 document.addEventListener("alpine:init", app);
 
-const inc = (num, base) => Math.floor(num / base) + 1;
-const dec = (num, base) => Math.ceil(num / base) - 1;
-const normalize = (operation) => (base) => (num) => operation(num, base) * base;
+const inc = (num, base) => (Math.floor(num / base) + 1) * base;
+const dec = (num, base) => (Math.ceil(num / base) - 1) * base;
+const normalize = (operation) => (base) => (num) => operation(num, base);
 
 const inc_100 = normalize(inc)(100);
 const dec_100 = normalize(dec)(100);
@@ -77,6 +77,7 @@ function app() {
     total() {
       const total =
         Number(this.savings.digit) + Number(this.realEstate.digit) + Number(this.securities.digit) + Number(this.others.digit) - Number(this.debts.digit);
+      isan_sogaku = total;
       return total;
     },
     reset() {
