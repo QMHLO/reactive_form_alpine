@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Document</title>
   </head>
+
   <body>
     <div class="section_inner">
       <div class="calculate_inner_block">
@@ -47,7 +50,9 @@
                     遺産の額を入力してください
                   </h4>
                   <div class="assets_block">
-                    <div class="left"><p>資産</p></div>
+                    <div class="left">
+                      <p>資産</p>
+                    </div>
                     <div class="right">
                       <div class="input_row">
                         <div class="txt"><label for="">現金・預貯金</label></div>
@@ -117,7 +122,9 @@
                     </div>
                   </div>
                   <div class="assets_block debt_block">
-                    <div class="left"><p>資産</p></div>
+                    <div class="left">
+                      <p>資産</p>
+                    </div>
                     <div class="right">
                       <div class="input_row">
                         <div class="txt"><label for="">債務・葬式費用</label></div>
@@ -143,7 +150,7 @@
                     <div class="txt"><label class="lb_md" for="">合計（自動計算）</label></div>
                     <div class="input_gp_row">
                       <div class="input_gp w160">
-                        <input type="number" x-model="total" @click="reset" radonly />
+                        <input type="number" x-model="total" @click="reset" readonly name="isan_sogaku" />
                         <label for="">万円</label>
                       </div>
                     </div>
@@ -152,7 +159,7 @@
               </fieldset>
               <fieldset x-data="step2">
                 <div class="form_wrapper">
-                  <h4 class="form_ttl">
+                  <h4 class="form_ttl" @click="console.log(heirs_count)">
                     <div class="date_block">
                       <div class="date_box">
                         <span class="month">STEP</span>
@@ -168,13 +175,13 @@
                         <div class="input_gp_row">
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input id="have_spouse" name="spouse" type="radio" @click="spouse = true; relative === 'no_relative' && (heirs_count = 1)" />
+                              <input id="have_spouse" name="spouse" type="radio" @click="spouse = true; relative === 'no_relative' && (heirs_count = 1); haigusya = 2" />
                               <label for="have_spouse">あり</label>
                             </div>
                           </div>
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input id="not_have_spouse" name="spouse" type="radio" @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0)" />
+                              <input id="not_have_spouse" name="spouse" type="radio" @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0); haigusya = 1" />
                               <label for="not_have_spouse">なし</label>
                             </div>
                           </div>
@@ -210,13 +217,13 @@
                         <div class="input_gp_row">
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input id="child" name="relative" type="radio" @click="relative = 'child'" />
+                              <input id="child" name="relative" type="radio" @click="relative = 'child'; zokugara = 1;" />
                               <label for="child">子</label>
                             </div>
                           </div>
                           <div class="input_gp">
                             <div class="rdo_item max">
-                              <input id="siblings" name="relative" type="radio" @click="relative = 'siblings'" />
+                              <input id="siblings" name="relative" type="radio" @click="relative = 'siblings'; zokugara = 3;" />
                               <label for="siblings">兄弟姉妹</label>
                             </div>
                           </div>
@@ -224,13 +231,13 @@
                         <div class="input_gp_row">
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input id="parents" name="relative" type="radio" @click="relative = 'parents'" />
+                              <input id="parents" name="relative" type="radio" @click="relative = 'parents'; zokugara = 2;" />
                               <label for="parents">父母</label>
                             </div>
                           </div>
                           <div class="input_gp">
                             <div class="rdo_item">
-                              <input id="no_relative" name="relative" type="radio" @click="relative='no_relative'; !spouse && (heirs_count = 0) " />
+                              <input id="no_relative" name="relative" type="radio" @click="relative='no_relative'; !spouse && (heirs_count = 0); zokugara = 0; " />
                               <label for="no_relative">いない</label>
                             </div>
                           </div>
@@ -242,7 +249,7 @@
                       <div class="input_right_row">
                         <div class="input_gp_row">
                           <div class="input_gp">
-                            <select name="legal_heirs" id="heirs" :disabled="relative === 'no_relative'" x-model="heirs_count">
+                            <select name="legal_heirs" id="heirs" :disabled="relative === 'no_relative'" x-model="heirs_count" @change="sozokunin = Number(heirs_count)">
                               <option :disabled="spouse" selected="!spouse && relative === 'no_relative'" value></option>
                               <option :selected="spouse && relative === 'no_relative'" value="1" x-show="!spouse && relative !== 'no_relative'">1</option>
                               <option value="2">2</option>
@@ -947,7 +954,7 @@
         </div>
       </div>
     </div>
-    <!-- <script src="./js/common.js"></script> -->
     <script src="./js/app.js"></script>
+    <script src="./js/calculation-form.js"></script>
   </body>
 </html>
