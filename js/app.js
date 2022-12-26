@@ -101,22 +101,30 @@ function app() {
       digit: "",
 
       decrease() {
-        this.lands.digit > 0 ? (this.lands.digit = Number(this.lands.digit) - 1) : undefined;
+        if (this.lands.digit > 0) {
+          this.lands.digit = Number(this.lands.digit) - 1;
+          lands_value = land_factor(Number(this.lands.digit));
+        }
       },
 
       increase() {
         this.lands.digit = Number(this.lands.digit) + 1;
+        lands_value = land_factor(Number(this.lands.digit));
       },
     },
     unlistedshares: {
       digit: "",
 
       decrease() {
-        this.unlistedshares.digit > 0 ? (this.unlistedshares.digit = Number(this.unlistedshares.digit) - 1) : undefined;
+        if (this.unlistedshares.digit > 0) {
+          this.unlistedshares.digit = Number(this.unlistedshares.digit) - 1;
+          stock_value = Number(this.unlistedshares.digit) * 15;
+        }
       },
 
       increase() {
         this.unlistedshares.digit = Number(this.unlistedshares.digit) + 1;
+        stock_value = Number(this.unlistedshares.digit) * 15;
       },
     },
   }));
