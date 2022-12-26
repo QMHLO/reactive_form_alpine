@@ -38,6 +38,8 @@
 
 ## sozokunin = heir
 
+- number maybe( 1-10 or 2-10 )
+
 ---
 
 ## haigusya = spouse

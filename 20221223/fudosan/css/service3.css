@@ -1,0 +1,2089 @@
+.common-reset-css {
+  /*
+  html5doctor.com Reset Stylesheet
+  v1.6.1
+  Last Updated: 2010-09-17
+  Author: Richard Clark - http://richclarkdesign.com
+  Twitter: @rich_clark
+  */
+  /* change colours to suit your needs */
+  /* change colours to suit your needs */
+  /* change border colour to suit your needs */
+  /* ===============================
+  Add css
+  =============================== */
+}
+.common-reset-css html,
+.common-reset-css body,
+.common-reset-css div,
+.common-reset-css span,
+.common-reset-css object,
+.common-reset-css iframe,
+.common-reset-css h1,
+.common-reset-css h2,
+.common-reset-css h3,
+.common-reset-css h4,
+.common-reset-css h5,
+.common-reset-css h6,
+.common-reset-css p,
+.common-reset-css blockquote,
+.common-reset-css pre,
+.common-reset-css abbr,
+.common-reset-css address,
+.common-reset-css cite,
+.common-reset-css code,
+.common-reset-css del,
+.common-reset-css dfn,
+.common-reset-css em,
+.common-reset-css img,
+.common-reset-css ins,
+.common-reset-css kbd,
+.common-reset-css q,
+.common-reset-css samp,
+.common-reset-css small,
+.common-reset-css strong,
+.common-reset-css sub,
+.common-reset-css sup,
+.common-reset-css var,
+.common-reset-css b,
+.common-reset-css i,
+.common-reset-css dl,
+.common-reset-css dt,
+.common-reset-css dd,
+.common-reset-css ol,
+.common-reset-css ul,
+.common-reset-css li,
+.common-reset-css fieldset,
+.common-reset-css form,
+.common-reset-css label,
+.common-reset-css legend,
+.common-reset-css table,
+.common-reset-css caption,
+.common-reset-css tbody,
+.common-reset-css tfoot,
+.common-reset-css thead,
+.common-reset-css tr,
+.common-reset-css th,
+.common-reset-css td,
+.common-reset-css article,
+.common-reset-css aside,
+.common-reset-css canvas,
+.common-reset-css details,
+.common-reset-css figcaption,
+.common-reset-css figure,
+.common-reset-css footer,
+.common-reset-css header,
+.common-reset-css hgroup,
+.common-reset-css menu,
+.common-reset-css nav,
+.common-reset-css section,
+.common-reset-css summary,
+.common-reset-css time,
+.common-reset-css mark,
+.common-reset-css audio,
+.common-reset-css video {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+.common-reset-css article,
+.common-reset-css aside,
+.common-reset-css details,
+.common-reset-css figcaption,
+.common-reset-css figure,
+.common-reset-css footer,
+.common-reset-css header,
+.common-reset-css hgroup,
+.common-reset-css menu,
+.common-reset-css nav,
+.common-reset-css section {
+  display: block;
+}
+.common-reset-css nav ul {
+  list-style: none;
+}
+.common-reset-css blockquote,
+.common-reset-css q {
+  quotes: none;
+}
+.common-reset-css blockquote:before,
+.common-reset-css blockquote:after,
+.common-reset-css q:before,
+.common-reset-css q:after {
+  content: "";
+  content: none;
+}
+.common-reset-css a {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+.common-reset-css ins {
+  text-decoration: none;
+  color: #000;
+  background-color: #ff9;
+}
+.common-reset-css mark {
+  font-style: italic;
+  font-weight: bold;
+  color: #000;
+  background-color: #ff9;
+}
+.common-reset-css del {
+  text-decoration: line-through;
+}
+.common-reset-css abbr[title],
+.common-reset-css dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+.common-reset-css table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.common-reset-css hr {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+.common-reset-css input,
+.common-reset-css select {
+  vertical-align: middle;
+}
+.common-reset-css a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+.common-reset-css a:link {
+  text-decoration: none;
+}
+.common-reset-css a:visited {
+  text-decoration: none;
+}
+.common-reset-css a:hover {
+  transition: all 0.2s ease;
+  text-decoration: none;
+  /* opacity: .90; */
+}
+.common-reset-css a:active {
+  text-decoration: none;
+}
+.common-reset-css a:hover img {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+}
+.common-reset-css *,
+.common-reset-css *:before,
+.common-reset-css *:after {
+  box-sizing: border-box;
+}
+.common-reset-css .clear {
+  clear: both !important;
+}
+.common-reset-css .cFix {
+  zoom: 1;
+}
+.common-reset-css .cFix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  line-height: 0;
+  content: ".";
+}
+.common-reset-css ul {
+  list-style: none;
+}
+.common-reset-css img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+/* ------------------ */
+
+#fudosan-consulting {
+  font-family: "Noto Sans JP", sans-serif;
+  /* For 16-20-28 */
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+  color: #333;
+}
+
+#fudosan-consulting .container {
+  width: 980px;
+  margin: 0 auto;
+}
+#fudosan-consulting .sub-container {
+  width: 920px;
+  margin: 0 auto;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+}
+#fudosan-consulting .pc {
+  display: block;
+}
+#fudosan-consulting .sp {
+  display: none;
+}
+@media screen and (max-width: 640px) {
+  #fudosan-consulting {
+    font-size: 14px;
+    letter-spacing: 0.28px;
+  }
+  #fudosan-consulting .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  #fudosan-consulting .sub-container {
+    width: 100%;
+    padding: 0;
+  }
+  #fudosan-consulting .pc {
+    display: none;
+  }
+  #fudosan-consulting .sp {
+    display: block;
+  }
+  #fudosan-consulting #fudosan-main {
+    padding-bottom: 60px;
+  }
+}
+#fudosan-consulting .f-noto-jp {
+  font-family: "Noto Sans JP", sans-serif;
+}
+#fudosan-consulting .fw-bold {
+  font-weight: 700;
+}
+#fudosan-consulting .fw-normal {
+  font-weight: 400;
+}
+#fudosan-consulting .fw-medium {
+  font-weight: 500;
+}
+#fudosan-consulting .fw-thin {
+  font-weight: 300;
+}
+#fudosan-consulting .fc-white {
+  color: #fff;
+}
+#fudosan-consulting .fc-black {
+  color: #000;
+}
+#fudosan-consulting .fc-main {
+  color: #333;
+}
+#fudosan-consulting .txt-center {
+  text-align: center;
+}
+#fudosan-consulting .txt-left {
+  text-align: left;
+}
+#fudosan-consulting .txt-right {
+  text-align: right;
+}
+#fudosan-consulting .txt-small {
+  font-size: 14px;
+  letter-spacing: 0.28px;
+}
+#fudosan-consulting .txt-regular {
+  font-size: 16px;
+}
+#fudosan-consulting .txt-medium {
+  font-size: 18px;
+  letter-spacing: 0.36px;
+}
+#fudosan-consulting .red-txt-22 {
+  font-size: 22px;
+  color: #c10000;
+  letter-spacing: 0.44px;
+}
+@media screen and (max-width: 640px) {
+  #fudosan-consulting .txt-small {
+    font-size: 11px;
+  }
+  #fudosan-consulting .red-txt-22 {
+    font-size: 20px;
+    letter-spacing: 0.32px;
+    line-height: 1.2;
+  }
+}
+#fudosan-consulting .h2-ttl {
+  display: flex;
+  justify-content: center;
+}
+#fudosan-consulting h2 {
+  font-size: 22px;
+  color: #000;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  line-height: 1.55;
+  letter-spacing: 0.4px;
+  text-align: center;
+  position: relative;
+  margin: 0;
+}
+#fudosan-consulting h2::before,
+#fudosan-consulting h2::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 70%;
+  background-color: #000;
+  bottom: 7px;
+}
+#fudosan-consulting .no-span h2::before,
+#fudosan-consulting .no-span h2::after {
+  height: 75%;
+  bottom: 4px;
+}
+#fudosan-consulting h2::before {
+  left: -20px;
+  transform: rotate(150deg);
+}
+#fudosan-consulting h2::after {
+  right: -18px;
+  transform: rotate(30deg);
+}
+#fudosan-consulting h2 span {
+  color: #c10000;
+  font-size: 30px;
+}
+#fudosan-consulting h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.75;
+  position: relative;
+  padding-left: 17px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#fudosan-consulting h3::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  content: "";
+  vertical-align: middle;
+  background: #c10000;
+}
+@media screen and (max-width: 640px) {
+  #fudosan-consulting h3 {
+    padding-left: 17px;
+    font-size: 20px;
+  }
+}
+#fudosan-consulting .thinking-block {
+  margin-top: 28px;
+}
+#fudosan-consulting .thinking-block ul {
+  display: flex;
+  margin: 0 -30px 0 -10px;
+}
+#fudosan-consulting .thinking-block li {
+  width: 33.33%;
+  padding: 0 30px;
+  position: relative;
+}
+#fudosan-consulting .thinking-block li::before {
+  position: absolute;
+  content: "";
+  bottom: -12px;
+  left: 10px;
+}
+#fudosan-consulting .thinking-block li:first-child::before {
+  width: 68px;
+  height: 118px;
+  background: url(../img/fudosan_consulting/fudosan_consulting_img_001.png)
+    no-repeat center;
+  background-size: contain;
+}
+#fudosan-consulting .thinking-block li:nth-child(2)::before {
+  width: 79px;
+  height: 130px;
+  background: url(../img/fudosan_consulting/fudosan_consulting_img_002.png)
+    no-repeat center;
+  background-size: contain;
+}
+#fudosan-consulting .thinking-block li:nth-child(3)::before {
+  width: 87px;
+  height: 130px;
+  background: url(../img/fudosan_consulting/fudosan_consulting_img_003.png)
+    no-repeat center;
+  background-size: contain;
+}
+#fudosan-consulting .thinking-block li p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  border-radius: 10px;
+  padding: 20px 20px 20px 70px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 25px 5px rgba(6, 0, 1, 0.15);
+  -webkit-box-shadow: 0px 0px 25px 5px rgba(6, 0, 1, 0.15);
+  -moz-box-shadow: 0px 0px 25px 5px rgba(6, 0, 1, 0.15);
+}
+#fudosan-consulting .red-ttl-block {
+  border: 30px solid #f7f5f2;
+  width: 100%;
+  margin-top: 52px;
+  position: relative;
+}
+#fudosan-consulting .red-ttl-block::before,
+#fudosan-consulting .red-ttl-block::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-52%);
+}
+#fudosan-consulting .red-ttl-block::before {
+  width: 127px;
+  height: 109px;
+  left: -10px;
+  background: url(../img/fudosan_consulting/fudosan_consulting_img_004.png)
+    no-repeat center;
+  background-size: contain;
+}
+#fudosan-consulting .red-ttl-block::after {
+  width: 120px;
+  height: 73px;
+  right: -10px;
+  background: url(../img/fudosan_consulting/fudosan_consulting_img_005.png)
+    no-repeat center;
+  background-size: contain;
+}
+#fudosan-consulting .red-ttl-block .fudosan-inner {
+  padding: 22px 5px 30px 5px;
+}
+#fudosan-consulting .red-ttl-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+}
+#fudosan-consulting .red-ttl-block .red-ttl-txt {
+  font-size: 50px;
+  color: #c10000;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.28;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#fudosan-consulting .red-ttl-block .red-ttl-txt span {
+  background: linear-gradient(
+    0deg,
+    rgba(242, 221, 221, 0) 0%,
+    rgb(242, 221, 221) 0%,
+    rgb(242, 221, 221) 28%,
+    rgba(242, 221, 221, 0) 28%
+  );
+}
+#fudosan-consulting .compare-block {
+  padding: 40px 0 25px 0;
+}
+#fudosan-consulting .compare-block .compare-txt p {
+  margin-bottom: 25px;
+}
+#fudosan-consulting .compare-wrapper {
+  padding: 0 90px;
+  display: flex;
+  margin-bottom: 35px;
+  margin-top: 25px;
+}
+#fudosan-consulting .compare-box01 {
+  width: 200px;
+  background-color: #f7f5f2;
+  padding: 20px 20px 29px 20px;
+}
+#fudosan-consulting .compare-box02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 380px;
+  padding: 0 20px 24px 20px;
+}
+#fudosan-consulting .compare-box03 {
+  width: 160px;
+  padding: 110px 0 44px 0;
+  background-color: #f7f5f2;
+}
+#fudosan-consulting .compare-box01 .bg-w-txt {
+  font-size: 20px;
+  padding: 16px 22px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+#fudosan-consulting .compare-block .plain-txt {
+  font-size: 22px;
+  letter-spacing: 0.44px;
+}
+#fudosan-consulting .compare-box01 .building-box {
+  width: 130px;
+  margin: 0 auto;
+}
+#fudosan-consulting .compare-box01 .img-txt-flex {
+  display: flex;
+  align-items: center;
+  padding: 10px 8px 0 14px;
+  justify-content: space-between;
+}
+#fudosan-consulting .compare-box01 .human-box {
+  width: 51px;
+}
+#fudosan-consulting .compare-box02 .arrow-txt {
+  position: relative;
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 0 30px 0 62px;
+  margin-bottom: 3px;
+}
+#fudosan-consulting .compare-box02 .arrow-txt span {
+  position: absolute;
+  top: 0;
+  left: 40px;
+}
+#fudosan-consulting .compare-box02 .arrow-box {
+  width: 100%;
+  margin-bottom: 40px;
+}
+#fudosan-consulting .compare-box03 .building-box {
+  width: 80px;
+  margin: 0 auto 35px auto;
+}
+#fudosan-consulting .contact-block {
+  width: 100%;
+  min-width: 980px;
+  background-color: #faf7f7;
+  padding: 55px 0 65px 0;
+}
+#fudosan-consulting .contact-block.contact-block02 {
+  padding: 40px 0;
+  margin: 60px 0;
+}
+#fudosan-consulting .contact-block .red-txt-big {
+  font-size: 24px;
+  color: #c10000;
+  line-height: 1.4;
+  letter-spacing: 0.48px;
+}
+#fudosan-consulting .contact-block .red-txt-sm,
+#fudosan-consulting .consulting_tab .red-txt-sm {
+  font-size: 22px;
+  color: #c10000;
+  line-height: 1.4;
+}
+#fudosan-consulting .consulting_tab .red-txt-sm {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+#fudosan-consulting .contact-block .tele-contact-box {
+  width: 740px;
+  padding: 20px 0;
+  margin: 35px auto 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+#fudosan-consulting .contact-block.contact-block02 .tele-contact-box {
+  margin-top: 0;
+}
+#fudosan-consulting .contact-block .tele-contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3px;
+}
+#fudosan-consulting .contact-block .tele-txt-number {
+  font-size: 40px;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+  display: inline-block;
+}
+#fudosan-consulting .contact-block .tele-contact-box span {
+  display: inline-block;
+  width: 55px;
+  height: 32px;
+  box-sizing: border-box;
+  margin-right: 40px;
+}
+#fudosan-consulting .tele-contact-box .txt-small {
+  color: #333;
+}
+#fudosan-consulting .contact-block .mail-box {
+  display: flex;
+  justify-content: center;
+}
+#fudosan-consulting .contact-block .mail-box a {
+  width: 520px;
+  background-color: #f2d100;
+  border-radius: 10px;
+  padding: 16px 50px 16px 85px;
+  position: relative;
+  box-shadow: 0px 5px 0px 0px rgb(235, 232, 227);
+  -webkit-box-shadow: 0px 5px 0px 0px rgb(235, 232, 227);
+  -moz-box-shadow: 0px 5px 0px 0px rgb(235, 232, 227);
+}
+#fudosan-consulting .contact-block .mail-box a::before,
+#fudosan-consulting .contact-block .mail-box a::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+}
+#fudosan-consulting .contact-block .mail-box a::before {
+  width: 39px;
+  height: 31px;
+  left: 30px;
+  background: url(../img/fudosan_consulting/fudosan_consulting_img_012.png)
+    no-repeat center;
+  background-size: contain;
+}
+#fudosan-consulting .contact-block .mail-box a::after {
+  width: 13px;
+  height: 20px;
+  right: 30px;
+  background: url(../img/fudosan_consulting/fudosan_consulting_img_013.png)
+    no-repeat center;
+  background-size: contain;
+}
+#fudosan-consulting .section_inner .fudosan-main {
+  max-width: 920px;
+  margin: 0 auto;
+}
+#fudosan-consulting .link_block {
+  padding: 40px 30px 15px 30px;
+  background: #faf7f7;
+  margin-top: 60px;
+}
+#fudosan-consulting .link_list_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+#fudosan-consulting .link_item_box {
+  width: 33.33%;
+  list-style: none;
+  padding: 0 10px 25px 10px;
+}
+#fudosan-consulting .link_item {
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 0px 2px 5px 1px rgba(181, 181, 181, 0.78);
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(181, 181, 181, 0.78);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(181, 181, 181, 0.78);
+}
+#fudosan-consulting .link_item span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  position: relative;
+  display: block;
+  padding: 30px 20px;
+}
+#fudosan-consulting .link_item span:after {
+  position: absolute;
+  content: url(../img/fudosan_consulting/down_arr.png);
+  width: 12px;
+  height: 8px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 640px) {
+  #fudosan-consulting .link_block {
+    padding: 30px 20px 10px 20px;
+    margin: 30px 0 0 0;
+  }
+  #fudosan-consulting .link_item_box {
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+  #fudosan-consulting .link_item {
+    width: 100%;
+    box-shadow: 0px 2px 5px 1px rgba(181, 181, 181, 0.2);
+    -webkit-box-shadow: 0px 2px 5px 1px rgba(181, 181, 181, 0.2);
+    -moz-box-shadow: 0px 2px 5px 1px rgba(181, 181, 181, 0.2);
+  }
+  #fudosan-consulting .link_item span {
+    padding: 20px 20px 20px 9px;
+  }
+  #fudosan-consulting .link_item span:after {
+    top: 50%;
+    width: 10px;
+    height: 7px;
+  }
+  #fudosan-consulting .compare-block .compare-txt p {
+    margin-bottom: 15px;
+  }
+}
+#fudosan-consulting .property-block {
+  padding: 40px 0 5px 0;
+}
+#fudosan-consulting .premium-btn-box .premium-btn {
+  width: 100%;
+}
+#fudosan-consulting .property-block .gray-bg {
+  background-color: #faf7f7;
+  padding: 40px 30px;
+  margin-bottom: 60px;
+}
+#fudosan-consulting .property-block .point-box {
+  background-color: #fff;
+  padding: 15px 0;
+  position: relative;
+  margin-bottom: 20px;
+}
+#fudosan-consulting .property-block .point-box.point-box02 {
+  padding: 24px 0 28px 0;
+}
+#fudosan-consulting .property-block .point-box .point-txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #c19302;
+  display: inline-block;
+  padding: 7px 29px 13px 19px;
+  line-height: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 93% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 93% 50%, 100% 100%, 0 100%);
+  margin-bottom: 20px;
+}
+#fudosan-consulting .property-block .point-box .point-txt span {
+  font-size: 20px;
+  margin-left: 6px;
+  line-height: 1;
+}
+#fudosan-consulting .property-block .graph-block {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#fudosan-consulting .property-block .graph-arrow {
+  width: 105px;
+  padding-right: 5px;
+}
+#fudosan-consulting .property-block .graph-arrow01 {
+  background-color: #543f22;
+  height: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#fudosan-consulting .property-block .graph-arrow02 {
+  background-color: #8d6939;
+  height: 110px;
+  padding-bottom: 33px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#fudosan-consulting .property-block .graph-arrow03 {
+  background-color: #b6894a;
+  height: 110px;
+  padding-bottom: 22px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#fudosan-consulting .property-block .graph-arrow02::before,
+#fudosan-consulting .property-block .graph-arrow03::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30px;
+  top: -0.5px;
+  left: 0;
+  background-color: #543f22;
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+#fudosan-consulting .property-block .graph-arrow03::before {
+  background-color: #8d6939;
+}
+#fudosan-consulting .property-block .graph-contents {
+  width: 756px;
+}
+#fudosan-consulting .property-block .graph-contents-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+#fudosan-consulting .graph-contents ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-gap: 6px;
+  gap: 6px;
+}
+#fudosan-consulting .graph-contents ul li {
+  min-height: 80px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#fudosan-consulting .graph-contents .ul-01 li {
+  background-color: #e9e4e1;
+}
+#fudosan-consulting .graph-contents .ul-02 li {
+  background-color: #efe9e4;
+}
+#fudosan-consulting .graph-contents .ul-03 li {
+  background-color: #f3ece5;
+}
+@media screen and (max-width: 640px) {
+  #fudosan-consulting h2 {
+    line-height: 1.3;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+  }
+  #fudosan-consulting h2 span {
+    font-size: 25px;
+  }
+  #fudosan-consulting h2::before,
+  #fudosan-consulting h2::after {
+    height: 90%;
+    bottom: 4px;
+  }
+  #fudosan-consulting h2::before {
+    transform: rotate(-25deg);
+    left: -15px;
+  }
+  #fudosan-consulting h2::after {
+    transform: rotate(25deg);
+    right: -10px;
+  }
+  #fudosan-consulting .thinking-block {
+    margin-top: 15px;
+  }
+  #fudosan-consulting .thinking-block ul {
+    margin: 0;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  #fudosan-consulting .thinking-block li {
+    width: 77%;
+    padding: 0 10px;
+  }
+  #fudosan-consulting .thinking-block li.thinking-li02 {
+    align-self: flex-end;
+  }
+  #fudosan-consulting .thinking-block li::before {
+    bottom: -7px;
+    left: 0px;
+  }
+  #fudosan-consulting .thinking-block li:first-child::before {
+    width: 34px;
+    height: 60px;
+  }
+  #fudosan-consulting .thinking-block li:nth-child(2)::before {
+    width: 40px;
+    height: 65px;
+    background: url(../img/fudosan_consulting/fudosan_consulting_img_002_sp.png)
+      no-repeat center;
+    background-size: contain;
+    left: auto;
+    right: 0;
+  }
+  #fudosan-consulting .thinking-block li:nth-child(3)::before {
+    width: 43px;
+    height: 65px;
+  }
+  #fudosan-consulting .thinking-block li p {
+    min-height: 87px;
+    line-height: 1.4;
+    padding: 10px 10px 10px 35px;
+    box-shadow: 0px 0px 8px 3px rgba(6, 0, 1, 0.15);
+    -webkit-box-shadow: 0px 0px 8px 3px rgba(6, 0, 1, 0.15);
+    -moz-box-shadow: 0px 0px 8px 3px rgba(6, 0, 1, 0.15);
+  }
+  #fudosan-consulting .thinking-block li p.sp-img-r {
+    padding: 10px 35px 10px 10px;
+  }
+  #fudosan-consulting .red-ttl-block {
+    border-width: 20px;
+    margin-top: 35px;
+  }
+  #fudosan-consulting .red-ttl-block .red-ttl-txt {
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+  #fudosan-consulting .red-ttl-txt::after {
+    height: 10px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #fudosan-consulting .red-ttl-block .fudosan-inner {
+    padding: 10px 35px 15px 35px;
+  }
+  #fudosan-consulting .red-ttl-block::before,
+  #fudosan-consulting .red-ttl-block::after {
+    top: 54%;
+  }
+  #fudosan-consulting .red-ttl-block::before {
+    width: 67px;
+    height: 54px;
+    left: -19px;
+  }
+  #fudosan-consulting .red-ttl-block::after {
+    width: 60px;
+    height: 48px;
+    right: -14px;
+    background-position: bottom;
+  }
+  #fudosan-consulting .compare-block {
+    padding: 10px 0;
+  }
+  #fudosan-consulting .compare-wrapper {
+    padding: 0;
+    justify-content: center;
+    margin: 0 0 20px 0;
+  }
+  #fudosan-consulting .compare-box01 {
+    width: 102px;
+    padding: 12px 4px 12px 4px;
+    letter-spacing: 0.32px;
+  }
+  #fudosan-consulting .compare-box01 .bg-w-txt {
+    padding: 3px 3px;
+    font-size: 14px;
+    border-radius: 5px;
+    line-height: 1.2;
+  }
+  #fudosan-consulting .compare-box01 .human-box {
+    width: 25px;
+  }
+  #fudosan-consulting .compare-box01 .building-box {
+    width: 65px;
+  }
+  #fudosan-consulting .compare-block .plain-txt {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  #fudosan-consulting .compare-box01 .img-txt-flex {
+    padding-left: 10px;
+  }
+  #fudosan-consulting .compare-box02 {
+    width: 165px;
+    padding: 0 10px 10px 9px;
+  }
+  #fudosan-consulting .compare-box02 .arrow-txt {
+    padding: 0 5px 0 15px;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  #fudosan-consulting .compare-box02 .arrow-txt span {
+    left: 0;
+  }
+  #fudosan-consulting .compare-box03 {
+    width: 78px;
+    padding: 0 0 17px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  #fudosan-consulting .compare-box03 .building-box {
+    width: 40px;
+    margin-bottom: 17px;
+  }
+  #fudosan-consulting .compare-box02 .arrow-box {
+    margin-bottom: 20px;
+  }
+  #fudosan-consulting .compare-box02 .arrow-box:last-child {
+    margin-bottom: 0;
+  }
+  #fudosan-consulting .contact-block {
+    padding: 30px 0;
+    margin: 30px 0;
+    min-width: auto;
+  }
+  #fudosan-consulting .contact-block.contact-block.contact-block01 {
+    margin-top: 0;
+  }
+  #fudosan-consulting .contact-block.contact-block02 {
+    margin: 30px 0;
+    padding: 30px 0;
+  }
+  #fudosan-consulting .contact-block .red-txt-sm {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  #fudosan-consulting .contact-block .red-txt-big {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    padding: 0 28px;
+  }
+  #fudosan-consulting .contact-block .tele-contact-box {
+    width: 100%;
+    margin: 20px auto;
+    padding: 17px 0;
+    border-radius: 5px;
+  }
+  #fudosan-consulting .contact-block .tele-txt-number {
+    font-size: 25px;
+    letter-spacing: 0.38px;
+  }
+  #fudosan-consulting .contact-block .tele-contact-box span {
+    width: 31px;
+    height: 18px;
+    margin-right: 18px;
+  }
+  #fudosan-consulting .contact-block .mail-box {
+    padding: 0 20px;
+  }
+  #fudosan-consulting .contact-block .mail-box a {
+    width: 100%;
+  }
+  #fudosan-consulting .contact-block .mail-box a::before {
+    width: 20px;
+    height: 15px;
+    left: 20px;
+  }
+  #fudosan-consulting .contact-block .mail-box a::after {
+    width: 7px;
+    height: 10px;
+    right: 10px;
+  }
+  #fudosan-consulting .contact-block .mail-box a {
+    border-radius: 5px;
+    font-size: 11px;
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0px 3px 0px 0px rgb(235, 232, 227);
+    -webkit-box-shadow: 0px 3px 0px 0px rgb(235, 232, 227);
+    -moz-box-shadow: 0px 3px 0px 0px rgb(235, 232, 227);
+  }
+  #fudosan-consulting .property-block {
+    padding: 10px 0 0 0;
+  }
+  #fudosan-consulting .property-block .gray-bg-wrapper {
+    background-color: #faf7f7;
+  }
+  #fudosan-consulting .property-block .gray-bg {
+    padding: 30px 0;
+    margin-bottom: 30px;
+  }
+  #fudosan-consulting .property-block .point-box {
+    padding: 35px 20px 20px 20px;
+    margin-bottom: 10px;
+  }
+  #fudosan-consulting .property-block .point-box.point-box02 {
+    padding: 35px 20px 20px 20px;
+    margin-bottom: 20px;
+  }
+  #fudosan-consulting .property-block .point-box .point-txt {
+    font-size: 16px;
+    padding: 5px 17px 9px 16px;
+    margin-bottom: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100%, 0 100%);
+  }
+  #fudosan-consulting .property-block .point-box .point-txt span {
+    font-size: 16px;
+  }
+  #fudosan-consulting .property-block .graph-arrow {
+    width: 102px;
+    padding-right: 2px;
+  }
+  #fudosan-consulting .property-block .graph-arrow01 {
+    height: 220px;
+  }
+  #fudosan-consulting .property-block .graph-arrow02 {
+    height: 108px;
+  }
+  #fudosan-consulting .property-block .graph-arrow03 {
+    height: 62px;
+    padding-bottom: 8px;
+  }
+  #fudosan-consulting .property-block .graph-contents {
+    width: calc(100% - 102px);
+  }
+  #fudosan-consulting .property-block .graph-contents-wrapper {
+    gap: 20px;
+  }
+  #fudosan-consulting .graph-contents ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  #fudosan-consulting .graph-contents ul li {
+    min-height: auto;
+    padding: 10px 0;
+  }
+}
+#fudosan-consulting .sub-container {
+  border: none;
+}
+#fudosan-consulting .consulting_tab {
+  padding-top: 40px;
+}
+#fudosan-consulting .consulting_tab .tab_container {
+  margin-top: 40px;
+  display: flex;
+}
+#fudosan-consulting .consulting_tab .tab_item {
+  width: calc((100% - 20px) / 3);
+}
+#fudosan-consulting .consulting_tab .tab_item:not(:last-child) {
+  margin-right: 10px;
+}
+#fudosan-consulting .consulting_tab .tab_header_title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 22px;
+  padding-block: 13px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #f2dddd;
+  color: #333;
+  cursor: pointer;
+}
+#fudosan-consulting .consulting_tab .tab_header_title p {
+  margin-right: 8px;
+}
+#fudosan-consulting .consulting_tab .tab_header_title.active {
+  background-color: #c10000;
+  color: #ffffff;
+}
+#fudosan-consulting .consulting_tab .content_hide {
+  display: none;
+}
+#fudosan-consulting .consulting_tab .tap_content_wrapper {
+  background-color: #faf7f7;
+  padding: 35px 60px 40px 60px;
+  padding-inline: 30px 40px;
+}
+#fudosan-consulting .consulting_tab .inner_tab_content {
+  color: #fff;
+}
+#fudosan-consulting .consulting_tab .content_wrapper {
+  margin-bottom: 40px;
+}
+#fudosan-consulting .consulting_tab .gray_btn {
+  font-size: 14px;
+  padding: 4px 10px;
+  background-color: #543f22;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+#fudosan-consulting .consulting_tab .content_info {
+  color: #333;
+  line-height: 1.75;
+  font-size: 16px;
+}
+#fudosan-consulting .consulting_tab .btn_bg_red {
+  background-color: #c10000;
+}
+#fudosan-consulting .consulting_tab .hideon_pc {
+  display: none;
+}
+#fudosan-consulting .consulting_tab .second_div {
+  background-color: #fff;
+  padding-block: 20px;
+  padding-inline: 27px 21px;
+}
+#fudosan-consulting .consulting_tab .content_4 {
+  margin-bottom: 0px;
+}
+#fudosan-consulting .consulting_tab .second_div {
+  display: flex;
+  gap: 26px;
+}
+#fudosan-consulting .consulting_tab .img_wrapper {
+  width: 100%;
+  display: flex;
+}
+#fudosan-consulting .consulting_tab .person_img_container {
+  max-width: 100px;
+  margin: auto;
+}
+#fudosan-consulting .consulting_tab .person_info {
+  flex-basis: 150px;
+}
+#fudosan-consulting .consulting_tab .content_4 {
+  flex: 1;
+}
+#fudosan-consulting .consulting_tab .info_detail {
+  display: flex;
+  gap: 2px;
+  margin-top: 15px;
+}
+#fudosan-consulting .consulting_tab .info_detail p {
+  color: #333;
+  font-weight: normal;
+  line-height: 1.4;
+}
+@media screen and (max-width: 640px) {
+  #fudosan-consulting .consulting_tab {
+    padding-top: 10px;
+  }
+  #fudosan-consulting .container_2 {
+    width: 100%;
+    padding-inline: 15px;
+  }
+  #fudosan-consulting .sub_container_2 {
+    width: 100%;
+  }
+  #fudosan-consulting .consulting_tab .tab_title {
+    font-size: 20px;
+  }
+  #fudosan-consulting .consulting_tab .para {
+    font-size: 14px;
+  }
+  #fudosan-consulting .consulting_tab .tab_container {
+    margin-top: 20px;
+  }
+  #fudosan-consulting .consulting_tab .inner_tab_content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #fudosan-consulting .hideon_sp {
+    display: none;
+  }
+  #fudosan-consulting .consulting_tab .second_div {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  #fudosan-consulting .consulting_tab .second_div .person_info {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+  }
+  #fudosan-consulting .consulting_tab .info_detail p {
+    font-size: 14px;
+  }
+  #fudosan-consulting .consulting_tab .info_detail {
+    align-items: center;
+    margin-top: 0px;
+  }
+  #fudosan-consulting .consulting_tab .img_wrapper {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  #fudosan-consulting .consulting_tab .person_img_container {
+    max-width: 70px;
+  }
+  #fudosan-consulting .consulting_tab .tab_header_title p {
+    font-size: 11px;
+    margin-right: 4px;
+  }
+  #fudosan-consulting .consulting_tab .tab_header_title > span {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  #fudosan-consulting .consulting_tab .tab_item {
+    width: calc((100% - 10px) / 3);
+  }
+  #fudosan-consulting .consulting_tab .tab_item:not(:last-child) {
+    margin-right: 5px;
+  }
+  #fudosan-consulting .consulting_tab .tab_header_title {
+    padding-block: 7px;
+    border-radius: 5px 5px 0 0;
+  }
+  #fudosan-consulting .consulting_tab .tap_content_wrapper {
+    padding: 25px 20px;
+  }
+  #fudosan-consulting .consulting_tab .content_3 {
+    margin-bottom: 0px !important;
+  }
+  #fudosan-consulting .consulting_tab .content_info {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  #fudosan-consulting .consulting_tab .content_wrapper {
+    margin-bottom: 17px;
+  }
+  #fudosan-consulting .consulting_tab .gray_btn {
+    font-size: 12px;
+    border-radius: 2.5px;
+    margin-bottom: 7px;
+  }
+  #fudosan-consulting .consulting_tab .hideon_pc {
+    display: block !important;
+  }
+  #fudosan-consulting .consulting_tab .red-txt-sm {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+}
+#fudosan-consulting .quiz-block {
+  margin-top: 60px;
+}
+#fudosan-consulting .quiz-block .red-wrapper {
+  width: 100%;
+  border: 6px solid #a00432;
+}
+#fudosan-consulting .quiz-block .quiz-black-txt {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #000;
+}
+#fudosan-consulting .quiz-block .quiz-red-txt {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #c10000;
+}
+#fudosan-consulting .quiz-block .quiz-span-txt {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #000;
+}
+@media screen and (max-width: 640px) {
+  #fudosan-consulting .quiz-block .quiz-black-txt,
+  #fudosan-consulting .quiz-block .quiz-black-txt {
+    font-size: 20px;
+  }
+}
+/* strengths of legacy */
+
+#fudosan-consulting .strength-block {
+  background-color: #f7f5f2;
+}
+
+#fudosan-consulting .legacy_strength {
+  margin: auto;
+
+  color: #333333;
+
+  background-color: #f7f5f2;
+  margin-bottom: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 980px;
+}
+
+#fudosan-consulting .legacy_strength .container {
+  padding-block: 30px 40px;
+}
+
+#fudosan-consulting .legacy_strength .legacy_title {
+  display: flex;
+}
+
+#fudosan-consulting .legacy_strength .legacy_title h4 {
+  margin: auto;
+  font-size: 26px;
+  width: max-content;
+  padding-left: 0px;
+  padding-inline: 70px;
+  border-bottom: 3px solid #c10000;
+  padding-bottom: 6px;
+  font-weight: 700;
+}
+
+#fudosan-consulting .legacy_strength .legacy_title h3::before {
+  content: "";
+  height: 0 !important;
+}
+
+#fudosan-consulting .legacy_strength .legacy_infos {
+  margin-block: 40px 30px;
+  text-align: center;
+}
+
+#fudosan-consulting .legacy_strength .legacy_infos p {
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 26px;
+}
+#fudosan-consulting .legacy_strength .color_red {
+  color: #c10000;
+}
+#fudosan-consulting .legacy_strength .inlineon_pc {
+  display: inline-block;
+}
+
+#fudosan-consulting .legacy_strength .strength_cards {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+#fudosan-consulting .legacy_strength .strength_cards > div {
+  width: 100%;
+}
+#fudosan-consulting .legacy_strength .strength_card_1 {
+  /* background: url(../img/fudosan_consulting/strength_card_img_1.png) #fff; */
+  background: url(../img/fudosan_consulting/fudosan_strength_bg01.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 53px 50px 50px;
+  border-radius: 10px;
+}
+#fudosan-consulting .legacy_strength .strength_card_2 {
+  /* background: url(../img/fudosan_consulting/strength_card_img_2.png) #fff; */
+  background: url(../img/fudosan_consulting/fudosan_strength_bg02.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 130px 50px 52px;
+  border-radius: 10px;
+}
+#fudosan-consulting .legacy_strength .inner_strength_card.inner_strength_card_1 {
+  padding-left: 110px;
+}
+
+#fudosan-consulting .legacy_strength .strength_card_info_1 {
+  width: 100%;
+}
+
+#fudosan-consulting .legacy_strength .strength_card_info_2 {
+  margin-inline: 0 auto;
+  width: 90%;
+  }
+
+#fudosan-consulting .legacy_strength .strength_card_title {
+  font-size: 26px;
+  color: #c10000;
+  position: relative;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+#fudosan-consulting .legacy_strength .strength_card_title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #c10000;
+  left: 0;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#fudosan-consulting .legacy_strength .strength_infos {
+  margin-top: 45px;
+}
+
+#fudosan-consulting .legacy_strength .strength_info_item {
+  display: flex;
+  align-items: flex-start;
+}
+#fudosan-consulting .legacy_strength .info_num {
+  margin-right: 5px;
+  font-size: 12px !important;
+  font-weight: 700;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1;
+  border: 1px solid #000;
+  border-radius: 50%;
+  min-height: 14px;
+  max-height: 14px;
+  min-width: 14px;
+  max-width: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#fudosan-consulting .legacy_strength .info_text p {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.2;
+}
+
+#fudosan-consulting .legacy_strength .strength_info_item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+#fudosan-consulting .inner_strength_card_1 .card_title_wrapper {
+  width: 100%;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  #fudosan-consulting .legacy_strength {
+    margin-bottom: 30px;
+  }
+  #fudosan-consulting .legacy_strength .inlineon_sp {
+    display: inline;
+    line-height: 1;
+  }
+  #fudosan-consulting .legacy_strength {
+    min-width: auto;
+    padding-block: 0px 10px;
+  }
+
+  #fudosan-consulting .str_container {
+    width: 100%;
+  }
+  #fudosan-consulting .legacy_strength .container {
+    padding-block: 20px;
+  }
+  #fudosan-consulting .legacy_strength .sub-container {
+    width: 100%;
+  }
+
+  #fudosan-consulting .legacy_strength .legacy_infos {
+    margin-block: 20px 20px;
+  }
+
+  #fudosan-consulting .legacy_strength .legacy_infos p {
+    font-size: 20px;
+  }
+  #fudosan-consulting .legacy_strength .color_red {
+    font-size: 25px;
+  }
+  #fudosan-consulting .legacy_strength .strength_cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  #fudosan-consulting .legacy_strength .strength_cards > div {
+    width: 100%;
+  }
+  #fudosan-consulting .legacy_strength .inner_strength_card.inner_strength_card_1 {
+    padding-left: 0;
+  }
+  #fudosan-consulting .legacy_strength .strength_card {
+    padding: 15px 20px;
+  }
+  #fudosan-consulting .legacy_strength .strength_card:not(:last-child) {
+    margin-right: 0px;
+  }
+  #fudosan-consulting .inner_strength_card_1 .card_title_wrapper {
+    width: 100%;
+    padding: 0;
+  }
+  #fudosan-consulting .inner_strength_card_1 .card_title_wrapper .strength_card_title,
+  #fudosan-consulting .inner_strength_card_2 .card_title_wrapper .strength_card_title {
+    text-align: center;
+  }
+  #fudosan-consulting
+    .inner_strength_card_1
+    .card_title_wrapper
+    .strength_card_title {
+    margin: auto;
+  }
+  #fudosan-consulting
+    .inner_strength_card_2
+    .card_title_wrapper
+    .strength_card_title {
+    margin: auto;
+  }
+
+  #fudosan-consulting .legacy_strength .strength_card_title {
+    font-size: 16px;
+  }
+
+  #fudosan-consulting .legacy_strength .strength_card_title::after {
+    bottom: -10px;
+    width: 50px;
+    height: 2px;
+  }
+  #fudosan-consulting .legacy_strength .strength_infos {
+    margin-top: 22px;
+  }
+
+  #fudosan-consulting .legacy_strength .info_text p {
+    font-size: 14px;
+  }
+
+  #fudosan-consulting .legacy_strength .strength_card_info_1 {
+    width: 100%;
+
+    padding-left: 72px;
+  }
+
+  #fudosan-consulting .legacy_strength .strength_card_info_2 {
+    width: 100%;
+
+    padding-right: 80px;
+  }
+
+  #fudosan-consulting .legacy_strength .strength_card_1 {
+    background: url(../img/fudosan_consulting/fudosan_strength_bg01_sp.png) no-repeat center;
+    background-size: contain;
+    background-position: bottom left;
+    background-color: #fff;
+  }
+  #fudosan-consulting .legacy_strength .strength_card_2 {
+    background: url(../img/fudosan_consulting/fudosan_strength_bg02_sp.png) no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    background-color: #fff;
+    padding: 15px;
+  }
+  #fudosan-consulting .legacy_strength .strength_info_item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+  #fudosan-consulting .legacy_strength .info_text p {
+    line-height: 1.45;
+    letter-spacing: 0;
+  }
+  #fudosan-consulting .legacy_strength .legacy_title h4 {
+    padding: 0 0 5px 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #fudosan-consulting .legacy_strength .info_num {
+    margin-top: 3px;
+  }
+}
+/* Fudosan Main MV */
+#fudosan_mainv {
+  min-width: 980px;
+  margin-top: 130px;
+  background: url(../img/fudosan_consulting/fudosan_consulting_mv.png) center top no-repeat;
+  background-size: cover;
+}
+#fudosan_mainv .mainv_ttl {
+  position: relative;
+  padding: 66px 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 32px;
+}
+#fudosan_mainv .mainv_ttl:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 6px;
+  content: "";
+  background: #c10000;
+}
+#fudosan_mainv .ttl {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 32px;
+}
+#fudosan_mainv .main_txt {
+  position: absolute;
+  top: 50%;
+  right: 17%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+  transform: translate(-17%, -50%);
+}
+@media screen and (max-width: 640px) {
+  #fudosan_mainv {
+      width: 100%;
+      min-width: 100%;
+      min-height: 85px;
+      margin-top: 60px;
+      background: none;
+  }
+  #fudosan_mainv .mainv_ttl {
+      padding: 30px 0;
+  }
+  #fudosan_mainv .ttl {
+      font-size: 22px;
+  }
+}
+/* Quiz Block  */
+#fudosan-consulting .hidden {
+  display: none;
+}
+#fudosan-consulting .starter {
+  padding: 5px 0 18px;
+  position: relative;
+}
+#fudosan-consulting .starter::after {
+  content: "";
+  display: block;
+  width: 177px;
+  height: 163px;
+  background: url(../img/fudosan_consulting/suggest_00.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  bottom: -43px;
+  right: 4px;
+}
+#fudosan-consulting .starter_text {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 44px;
+}
+#fudosan-consulting .starter_text strong {
+  font-size: 30px;
+}
+#fudosan-consulting .starter_text strong.red {
+  color: #c10000;
+}
+#fudosan-consulting .quiz_container {
+  border: 6px solid #a00432;
+  padding: 43px 26px;
+}
+#fudosan-consulting .quiz_ttl {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+#fudosan-consulting .quiz_ttl h4 {
+  color: #c10000;
+}
+#fudosan-consulting .quiz_ttl .term {
+  font-size: 25px;
+}
+#fudosan-consulting .quiz .answers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-auto-rows: 1fr; */
+  grid-auto-rows: auto;
+  gap: 20px;
+  margin: 35px 0;
+}
+#fudosan-consulting .quiz .answer {
+  background-color: #faf7f7;
+  border: none;
+  border-radius: 5px;
+}
+#fudosan-consulting .quiz .answer > label {
+  cursor: pointer;
+  display: block;
+  padding: 28px 33px;
+  height: 100%;
+  font-size: 18px;
+}
+#fudosan-consulting .quiz input[type=radio] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+#fudosan-consulting .quiz input[type=radio] + label {
+  border: 4px solid #faf7f7;
+}
+#fudosan-consulting .quiz input[type=radio]:checked + label {
+  border: 4px solid #c10000;
+}
+#fudosan-consulting .btns_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+#fudosan-consulting .quiz_container button[disabled=disabled],
+#fudosan-consulting .quiz_container button:disabled {
+  cursor: not-allowed;
+  position: relative;
+}
+#fudosan-consulting .quiz_btn {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: inherit;
+  border: none;
+  border-radius: 10px;
+  width: 400px;
+  height: 60px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  color: #333;
+}
+#fudosan-consulting .quiz_btn.red {
+  color: #fff;
+  background-color: #c10000;
+}
+#fudosan-consulting .quiz_btn:hover {
+  opacity: 0.8;
+}
+#fudosan-consulting .quiz_btn::after,
+#fudosan-consulting .quiz_btn.red::after {
+  content: "";
+  height: 12px;
+  width: 8px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background: url(../img/fudosan_consulting/chevron_right_brown.png) no-repeat center;
+  background-size: contain;
+}
+#fudosan-consulting .quiz_btn.red::after {
+  background: url(../img/fudosan_consulting/chevron_right_white.png) no-repeat center;
+  background-size: contain;
+}
+#fudosan-consulting .quiz_btn:not(:last-child) {
+  margin-bottom: 20px;
+}
+#fudosan-consulting progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+#fudosan-consulting progress[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 4px;
+}
+#fudosan-consulting progress[value]::-webkit-progress-value {
+  background-color: #c10000;
+  border-radius: 2px;
+}
+#fudosan-consulting .result_container {
+  text-align: center;
+}
+#fudosan-consulting .suggest_block {
+  border-radius: 10px;
+  padding: 22px 0 40px;
+  background-color: #faf7f7;
+  position: relative;
+}
+#fudosan-consulting .suggest_block::after {
+  content: "";
+  display: block;
+  width: 203px;
+  height: 234px;
+  width: 205px;
+  background: url(../img/fudosan_consulting/suggest_01.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#fudosan-consulting .res_text {
+  font-size: 20px;
+  font-weight: 500;
+}
+#fudosan-consulting .res_percent {
+  font-weight: bold;
+  color: #c10000;
+  font-size: 60px;
+  margin-left: 20px;
+}
+#fudosan-consulting .suggest {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 14px;
+}
+#fudosan-consulting .suggest strong {
+  font-weight: 500;
+  color: #c10000;
+}
+#fudosan-consulting .suggest .break {
+  display: block;
+}
+#fudosan-consulting .yellow_border {
+  border: 20px solid #f2d100;
+  border-radius: 10px;
+  margin: 40px 0;
+  padding: 20px 95px;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+}
+#fudosan-consulting .yellow_border::before,
+#fudosan-consulting .yellow_border::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+}
+#fudosan-consulting .yellow_border::before {
+  background: url(../img/fudosan_consulting/suggest_02.png) no-repeat center;
+  background-size: contain;
+  height: 157px;
+  width: 93px;
+  left: 19px;
+}
+#fudosan-consulting .yellow_border::after {
+  background: url(../img/fudosan_consulting/suggest_03.png) no-repeat center;
+  background-size: contain;
+  height: 180px;
+  width: 82px;
+  right: 20px;
+}
+#fudosan-consulting .yellow_border .medium_text {
+  background-color: #faf7f7;
+  border-radius: inherit;
+  font-size: 20px;
+  padding: 0 0 5px;
+}
+#fudosan-consulting .yellow_border .medium_text strong {
+  font-size: 36px;
+  color: #c10000;
+}
+#fudosan-consulting .yellow_border .small_text {
+  font-size: 22px;
+  margin-top: 10px;
+}
+#fudosan-consulting .yellow_border .large_text > span {
+  font-size: 40px;
+  color: #c10000;
+  line-height: 1;
+  background: linear-gradient(0deg, #f2dddd, #f2dddd, transparent 50%);
+}
+#fudosan-consulting a.quiz_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+@media screen and (max-width: 640px) {
+  #fudosan-consulting .quiz_container {
+    padding: 22px 17px;
+    border: 3px solid #a00432;
+  }
+  #fudosan-consulting .starter {
+    padding: 0;
+  }
+  #fudosan-consulting .starter::after {
+    display: none;
+  }
+  #fudosan-consulting .starter_text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  #fudosan-consulting .starter_text strong {
+    font-size: 20px;
+    display: block;
+  }
+  #fudosan-consulting .quiz_ttl {
+    margin-top: -10px;
+  }
+  #fudosan-consulting .quiz_btn {
+    max-width: 305px;
+    width: 100%;
+    height: 41px;
+    font-size: 16px;
+    padding: 0;
+  }
+  #fudosan-consulting .quiz .answers {
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 15px 0 20px;
+  }
+  #fudosan-consulting .quiz input[type=radio]:checked + label {
+    border: 2px solid #c10000;
+    border-radius: inherit;
+  }
+  #fudosan-consulting .quiz .answer > label {
+    padding: 17px 20px;
+    font-size: 16px;
+  }
+  #fudosan-consulting .quiz_ttl .term,
+#fudosan-consulting .quiz_ttl {
+    font-size: 16px;
+  }
+  #fudosan-consulting .quiz_btn {
+    margin-bottom: 10px !important;
+    border-radius: 5px;
+  }
+  #fudosan-consulting .res_percent {
+    font-size: 30px;
+    display: block;
+    margin-left: 0;
+  }
+  #fudosan-consulting .res_text {
+    font-size: 14px;
+  }
+  #fudosan-consulting .suggest {
+    font-size: 14px;
+  }
+  #fudosan-consulting .suggest_block {
+    border-radius: 5px;
+  }
+  #fudosan-consulting .suggest_block::after {
+    width: 87px;
+    height: 100px;
+    right: -14px;
+    bottom: -13px;
+  }
+  #fudosan-consulting .yellow_border {
+    padding: 20px 17px;
+    margin: 20px 0;
+    border: 10px solid #f2d100;
+    border-radius: 5px;
+  }
+  #fudosan-consulting .yellow_border .medium_text {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  #fudosan-consulting .yellow_border .medium_text strong {
+    font-size: 25px;
+  }
+  #fudosan-consulting .yellow_border .small_text {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+  #fudosan-consulting .yellow_border .large_text {
+    max-width: 170px;
+    margin: 0 auto;
+    line-height: 1.75;
+  }
+  #fudosan-consulting .yellow_border .large_text > span {
+    font-size: 20px;
+  }
+  #fudosan-consulting a.quiz_btn {
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+    max-width: 160px;
+    font-size: 14px;
+  }
+  #fudosan-consulting a.quiz_btn.red::after {
+    right: 5px;
+    width: 4px;
+    height: 6px;
+  }
+  #fudosan-consulting .yellow_border::before {
+    width: 46px;
+    height: 77px;
+    left: 10px;
+  }
+  #fudosan-consulting .yellow_border::after {
+    height: 90px;
+    width: 41px;
+    right: 10px;
+  }
+}
+/* ---------------- */
