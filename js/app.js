@@ -77,7 +77,8 @@ function app() {
     total() {
       const total =
         Number(this.savings.digit) + Number(this.realEstate.digit) + Number(this.securities.digit) + Number(this.others.digit) - Number(this.debts.digit);
-      isan_sogaku = total;
+      isan_sogaku = total * 10_000;
+      heritage = isan_sogaku;
       return total;
     },
     reset() {

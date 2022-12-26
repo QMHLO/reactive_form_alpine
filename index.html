@@ -201,7 +201,8 @@
                     <div class="input_right_row">
                       <div class="input_gp_row">
                         <div class="input_gp">
-                          <select name="inherit_rate" id="inherit_rate" :disabled="!spouse" x-model="inherit_rate">
+                          <select name="inherit_rate" id="inherit_rate" :disabled="!spouse" x-model="inherit_rate"
+                            @change="haiwari = Number(inherit_rate)">
                             <option value="0">0</option>
                             <option value="10">10</option>
                             <option value="20">20</option>

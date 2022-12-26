@@ -28,10 +28,11 @@ $(document).ready(function () {
   };
 });
 
-let sozokunin;
 let isan_sogaku;
+let sozokunin;
 let haigusya;
 let zokugara = 0;
+let haiwari;
 
 //相続税額概算シミュレーション
 function tax_form(e) {
@@ -39,7 +40,7 @@ function tax_form(e) {
 
   // var haigusya = $('input[name="spouse"]:checked').val();
   // var zokugara = get_value_num('input[name="relationship"]:checked');
-  var haiwari = get_value_num('select[name="rate"]');
+  // var haiwari = get_value_num('select[name="rate"]');
   var zei_taisho = isan_sogaku - (30000000 + 6000000 * sozokunin);
   var hai_keigen = 0;
   var hai_tori = 0;
