@@ -181,14 +181,14 @@
                         <div class="input_gp">
                           <div class="rdo_item">
                             <input id="have_spouse" name="spouse" type="radio"
-                              @click="spouse = true; relative === 'no_relative' && (heirs_count = 1)" />
+                              @click="spouse = true; relative === 'no_relative' && (heirs_count = 1); haigusya = 2" />
                             <label for="have_spouse">あり</label>
                           </div>
                         </div>
                         <div class="input_gp">
                           <div class="rdo_item">
                             <input id="not_have_spouse" name="spouse" type="radio"
-                              @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0)" />
+                              @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0); haigusya = 1" />
                             <label for="not_have_spouse">なし</label>
                           </div>
                         </div>
@@ -226,13 +226,14 @@
                       <div class="input_gp_row">
                         <div class="input_gp">
                           <div class="rdo_item">
-                            <input id="child" name="relative" type="radio" @click="relative = 'child'" />
+                            <input id="child" name="relative" type="radio" @click="relative = 'child'; zokugara = 1;" />
                             <label for="child">子</label>
                           </div>
                         </div>
                         <div class="input_gp">
                           <div class="rdo_item max">
-                            <input id="siblings" name="relative" type="radio" @click="relative = 'siblings'" />
+                            <input id="siblings" name="relative" type="radio"
+                              @click="relative = 'siblings'; zokugara = 3;" />
                             <label for="siblings">兄弟姉妹</label>
                           </div>
                         </div>
@@ -240,14 +241,15 @@
                       <div class="input_gp_row">
                         <div class="input_gp">
                           <div class="rdo_item">
-                            <input id="parents" name="relative" type="radio" @click="relative = 'parents'" />
+                            <input id="parents" name="relative" type="radio"
+                              @click="relative = 'parents'; zokugara = 2;" />
                             <label for="parents">父母</label>
                           </div>
                         </div>
                         <div class="input_gp">
                           <div class="rdo_item">
                             <input id="no_relative" name="relative" type="radio"
-                              @click="relative='no_relative'; !spouse && (heirs_count = 0) " />
+                              @click="relative='no_relative'; !spouse && (heirs_count = 0); zokugara = 0; " />
                             <label for="no_relative">いない</label>
                           </div>
                         </div>
