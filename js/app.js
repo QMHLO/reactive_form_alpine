@@ -75,7 +75,8 @@ function app() {
       },
     },
     total() {
-      const total = Number(this.savings.digit) + Number(this.realEstate.digit) + Number(this.securities.digit) + Number(this.others.digit) - Number(this.debts.digit);
+      const total =
+        Number(this.savings.digit) + Number(this.realEstate.digit) + Number(this.securities.digit) + Number(this.others.digit) - Number(this.debts.digit);
       isan_sogaku = total * 10000;
       heritage_interval = isan_sogaku;
       modifyHeritage();

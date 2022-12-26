@@ -33,14 +33,13 @@ let sozokunin;
 let haigusya;
 let zokugara = 0;
 let haiwari;
+let lands_value;
+let stock_value;
 
 //相続税額概算シミュレーション
 function tax_form(e) {
   e.preventDefault();
 
-  // var haigusya = $('input[name="spouse"]:checked').val();
-  // var zokugara = get_value_num('input[name="relationship"]:checked');
-  // var haiwari = get_value_num('select[name="rate"]');
   var zei_taisho = isan_sogaku - (30000000 + 6000000 * sozokunin);
   var hai_keigen = 0;
   var hai_tori = 0;
@@ -392,4 +391,8 @@ function modifyHeritage() {
     heritage = undefined;
     console.log(heritage);
   }
+}
+
+function land_factor(x) {
+  return x > 0 ? 5 * (x - 1) + 4 : 0;
 }
