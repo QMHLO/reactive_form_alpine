@@ -2,15 +2,17 @@ $(document).ready(function () {
   // $("#tax_submit").on("click", function (e) {
   //   tax_form(e);
   // });
-
   $("#show_result").on("click", function (e) {
     tax_form(e);
-
     const answerBlock = document.querySelector(".answer_block");
     answerBlock.style.display = "block";
+
     document.getElementById("yresult").innerText = y_result_text();
-    document.getElementById("zresult").innerText = z_result_text();
-    console.log("sozokuzei", sozokuzei);
+    if (sozokuzei < 0 || isNaN(sozokuzei)) {
+      document.getElementById("zresult").innerText = y_result_text();
+    } else {
+      document.getElementById("zresult").innerText = z_result_text();
+    }
     document.getElementById("zresult1")?.remove();
   });
 
@@ -63,8 +65,6 @@ function tax_form(e) {
   var oya_zei = 0;
   var kyo_zei = 0;
   var test = 0;
-
-  // console.log(isan_sogaku, sozokunin, haigusya, zokugara, haiwari);
 
   if (haigusya == 2) {
     //配偶者有り
@@ -206,9 +206,12 @@ function tax_form(e) {
   // 元
   // sozokuzei = sozokuzei - hai_keigen;
 
-  console.log(validation());
   document.getElementById("xresult1")?.remove();
-  document.getElementById("xresult").innerText = sozokuzei;
+  if (sozokuzei < 0 || isNaN(sozokuzei)) {
+    document.getElementById("xresult").innerText = 0;
+  } else {
+    document.getElementById("xresult").innerText = sozokuzei;
+  }
 
   if (validation()) {
     validation();
@@ -398,8 +401,6 @@ function modifyHeritage(heritage_interval) {
       Yresult.innerHTML = "別途お見積り";
     }
   }
-
-  // console.log(heritage);
 }
 
 function land_factor(x) {
@@ -419,8 +420,6 @@ function changeHeirs() {
 }
 
 function y_result_text() {
-  // console.log(heritage, heirs, lands_value, stock_value);
-
   if (heritage === undefined) {
     return "別途お見積り";
   } else if (lands_value === undefined && stock_value === undefined) {
