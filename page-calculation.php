@@ -394,8 +394,8 @@ get_header('2'); ?>
 								<span>相続税</span>
 							</div>
 							<div class="result_txt_box">
-								<span>〇〇億</span>
-								<span>〇〇〇〇万円</span>
+								<span id="xresult1">〇〇億</span>
+								<span id="xresult">〇〇〇〇万円</span>
 							</div>
 						</div>
 						<div class="result_row">
