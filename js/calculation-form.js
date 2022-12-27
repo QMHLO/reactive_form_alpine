@@ -32,13 +32,13 @@ $(document).ready(function () {
   };
 });
 
-let isan_sogaku;
-let sozokunin;
-let haigusya;
-let zokugara = 0;
-let haiwari;
-let lands_value;
-let stock_value;
+var isan_sogaku;
+var sozokunin;
+var haigusya;
+var zokugara = 0;
+var haiwari;
+var lands_value;
+var stock_value;
 
 //相続税額概算シミュレーション
 function tax_form(e) {
@@ -198,6 +198,8 @@ function tax_form(e) {
 
   // 元
   // sozokuzei = sozokuzei - hai_keigen;
+  console.log(validation());
+  console.log("X", sozokuzei);
 
   if (validation()) {
     validation();
@@ -233,20 +235,20 @@ function tax_form(e) {
 
 //バリデーション
 function validation() {
-  var souzokunin = parseInt($("#souzokunin").val());
-  var haigusha = parseInt($(".haigusha:checked").val());
+  var souzokunin = parseInt(sozokunin);
+  var haigusha = parseInt(haigusya);
   var error_flg_01 = false;
   var error_flg_02 = false;
   var error_flg_03 = false;
   var error_flg_04 = false;
-  if (!$('input[name = "isan_oku"]').val() && !$('input[name = "isan_man"]').val()) {
+  if (!isan_sogaku) {
     error_flg_01 = true;
   } else {
     error_flg_02 = true;
   }
-  $('input[name = "legal_heir"]').val() ? (error_flg_02 = false) : (error_flg_02 = true);
-  $('input[name="spouse"]:checked').val() ? (error_flg_03 = false) : (error_flg_03 = true);
-  if (souzokunin >= 2 && haigusha == 2 && !$('input[name="relationship"]:checked').val()) {
+  sozokunin ? (error_flg_02 = false) : (error_flg_02 = true);
+  haigusya ? (error_flg_03 = false) : (error_flg_03 = true);
+  if (souzokunin >= 2 && haigusha == 2 && zokugara) {
     error_flg_04 = true;
   } else {
     error_flg_04 = false;
