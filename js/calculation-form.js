@@ -6,15 +6,12 @@ $(document).ready(function () {
   $("#show_result").on("click", function (e) {
     tax_form(e);
 
-    const showResult = document.getElementById("show_result");
     const answerBlock = document.querySelector(".answer_block");
-    showResult.addEventListener("click", () => {
-      answerBlock.style.display = "block";
-      document.getElementById("yresult").innerText = y_result_text();
-      document.getElementById("zresult").innerText = z_result_text();
-      console.log("sozokuzei", sozokuzei);
-      document.getElementById("zresult1")?.remove();
-    });
+    answerBlock.style.display = "block";
+    document.getElementById("yresult").innerText = y_result_text();
+    document.getElementById("zresult").innerText = z_result_text();
+    console.log("sozokuzei", sozokuzei);
+    document.getElementById("zresult1")?.remove();
   });
 
   $(".estimation_selecter").on("change", function (e) {
