@@ -200,6 +200,8 @@ function tax_form(e) {
   // sozokuzei = sozokuzei - hai_keigen;
   console.log(validation());
   console.log("X", sozokuzei);
+  document.getElementById("xresult1")?.remove();
+  document.getElementById("xresult").innerText = sozokuzei;
 
   if (validation()) {
     validation();
