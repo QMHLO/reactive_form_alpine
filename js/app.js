@@ -78,8 +78,8 @@ function app() {
       const total =
         Number(this.savings.digit) + Number(this.realEstate.digit) + Number(this.securities.digit) + Number(this.others.digit) - Number(this.debts.digit);
       isan_sogaku = total * 10000;
-      heritage_interval = total;
-      modifyHeritage();
+      let heritage_interval = total;
+      modifyHeritage(heritage_interval);
       return total;
     },
     reset() {
@@ -129,12 +129,6 @@ function app() {
     },
   }));
 }
-
-const showResult = document.getElementById("show_result");
-const answerBlock = document.querySelector(".answer_block");
-showResult.addEventListener("click", () => {
-  answerBlock.style.display = "block";
-});
 
 const inputs = document.querySelectorAll(".calculate_inner_block .form_wrapper .input_gp.w160 input");
 inputs.forEach((input) => {
