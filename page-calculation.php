@@ -224,7 +224,8 @@ get_header('2'); ?>
 											<div class="input_right_row">
 												<div class="input_gp_row">
 													<div class="input_gp">
-														<select name="inherit_rate" id="inherit_rate" :disabled="!spouse" x-model="inherit_rate">
+														<select name="inherit_rate" id="inherit_rate" :disabled="!spouse" x-model="inherit_rate"
+														@change="haiwari=Number(inherit_rate)">
 															<option value="0">0</option>
 															<option value="10">10</option>
 															<option value="20">20</option>
@@ -417,8 +418,8 @@ get_header('2'); ?>
 						<p class="result_alert">※税理士法人レガシィにて相続税申告を行った場合の概算報酬です。</p>
 					</div>
 					<div class="poster">
-						<img class="block sp:hidden" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img.jpg" alt="問い合わせする" />
-						<img class="hidden sp:block" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img_sp.jpg" alt="問い合わせする" />
+						<img class="pc-on" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img.jpg" alt="問い合わせする" />
+						<img class="sp-on" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img_sp.jpg" alt="問い合わせする" />
 						<a href="#" class="link_btn red"> 問い合わせする </a>
 					</div>
 					<a href="#" class="simulation_btn">シミュレーション結果を印刷する</a>
