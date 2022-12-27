@@ -353,10 +353,7 @@ let heritage;
 const Yresult = document.getElementById("yresult");
 
 function modifyHeritage() {
-  if (heritage_interval <= 0) {
-    heritage = 0;
-    console.log(heritage);
-  } else if (heritage_interval <= 5000) {
+  if (heritage_interval <= 5000) {
     heritage = 25;
     console.log(heritage);
   } else if (heritage_interval <= 6000) {
