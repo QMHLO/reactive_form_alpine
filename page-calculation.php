@@ -130,7 +130,7 @@ get_header('2'); ?>
 											<div class="input_row">
 												<div class="txt">
 													<label for="">その他財産<br class="pc-on" />
-														（金、車、時計など）</label>
+													（金、車、時計など）</label>
 												</div>
 												<div class="input_right_row">
 													<div class="input_gp_row">
@@ -203,15 +203,15 @@ get_header('2'); ?>
 												<div class="input_gp_row">
 													<div class="input_gp">
 														<div class="rdo_item ">
-														<input id="have_spouse" name="spouse" type="radio"
-                              @click="spouse = true; relative === 'no_relative' && (heirs_count = 1); haigusya = 2" />
+															<input id="have_spouse" name="spouse" type="radio"
+															@click="spouse = true; relative === 'no_relative' && (heirs_count = 1); haigusya = 2" />
 															<label for="have_spouse">いる</label>
 														</div>
 													</div>
 													<div class="input_gp">
 														<div class="rdo_item max rdo_item_02">
-														<input id="not_have_spouse" name="spouse" type="radio"
-                              @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0); haigusya = 1" />
+															<input id="not_have_spouse" name="spouse" type="radio"
+															@click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0); haigusya = 1" />
 															<label for="not_have_spouse">いない</label>
 														</div>
 													</div>
@@ -269,7 +269,7 @@ get_header('2'); ?>
 													<div class="input_gp">
 														<div class="rdo_item max">
 															<input id="siblings" name="relative" type="radio"
-                              @click="relative = 'siblings'; zokugara = 3;" />
+															@click="relative = 'siblings'; zokugara = 3;" />
 															<label for="siblings">兄弟姉妹</label>
 														</div>
 													</div>
@@ -278,14 +278,14 @@ get_header('2'); ?>
 													<div class="input_gp">
 														<div class="rdo_item">
 															<input id="parents" name="relative" type="radio"
-                              @click="relative = 'parents'; zokugara = 2;" />
+															@click="relative = 'parents'; zokugara = 2;" />
 															<label for="parents">父母</label>
 														</div>
 													</div>
 													<div class="input_gp">
 														<div class="rdo_item max">
 															<input id="no_relative" name="relative" type="radio"
-                              @click="relative='no_relative'; !spouse && (heirs_count = 0); zokugara = 0; " />
+															@click="relative='no_relative'; !spouse && (heirs_count = 0); zokugara = 0; " />
 															<label for="no_relative">いない</label>
 														</div>
 													</div>
@@ -311,478 +311,478 @@ get_header('2'); ?>
 											<div class="input_right_row">
 												<div class="input_gp_row">
 													<div class="input_gp">
-													<select name="legal_heirs" id="heirs" :disabled="relative === 'no_relative'"
-                            x-model="heirs_count" @change="sozokunin = Number(heirs_count); changeHeirs();">
-                            <option :disabled="spouse" selected="!spouse && relative === 'no_relative'" value></option>
-                            <option :selected="spouse && relative === 'no_relative'" value="1"
-                              x-show="!spouse && relative !== 'no_relative'">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                          </select>
-														<label for="">人</label>
-													</div>
+														<select name="legal_heirs" id="heirs" :disabled="relative === 'no_relative'"
+														x-model="heirs_count" @change="sozokunin = Number(heirs_count); changeHeirs();">
+														<option :disabled="spouse" selected="!spouse && relative === 'no_relative'" value></option>
+														<option :selected="spouse && relative === 'no_relative'" value="1"
+														x-show="!spouse && relative !== 'no_relative'">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option>
+														<option value="8">8</option>
+														<option value="9">9</option>
+														<option value="10">10</option>
+													</select>
+													<label for="">人</label>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</fieldset>
-							<fieldset x-data="step3">
-								<div class="form_wrapper">
-									<h4 class="form_ttl">
-										<div class="date_block">
-											<div class="date_box">
-												<span class="month">STEP</span>
-												<span class="day">3</span>
-											</div>
+							</div>
+						</fieldset>
+						<fieldset x-data="step3">
+							<div class="form_wrapper">
+								<h4 class="form_ttl">
+									<div class="date_block">
+										<div class="date_box">
+											<span class="month">STEP</span>
+											<span class="day">3</span>
 										</div>
-										土地・株式について<br class="sp-on" />入力してください
-									</h4>
-									<p class="para_under_step_title">STEP3は任意入力です。未入力でも相続税計算ができます。レガシィに依頼した場合の概算の申告報酬も計算したい方はご入力ください。</p>
-									<div class="input_block">
-										<div class="input_row style3">
-											<div class="txt"><label for="">所有されている土地の数</label></div>
-											<div class="input_right_row">
-												<div class="input_gp_row">
-													<div class="input_gp">
-														<input @keydown.enter.prevent @change="lands_value = land_factor(Number(lands.digit))" x-model="lands.digit" type="number" min="0" />
-														<label for="">ヶ所</label>
-													</div>
-												</div>
-												<div class="btn_gp">
-													<div class="minus radius" @click="lands.decrease"></div>
-													<div class="plus radius" @click="lands.increase"></div>
+									</div>
+									土地・株式について<br class="sp-on" />入力してください
+								</h4>
+								<p class="para_under_step_title">STEP3は任意入力です。未入力でも相続税計算ができます。レガシィに依頼した場合の概算の申告報酬も計算したい方はご入力ください。</p>
+								<div class="input_block">
+									<div class="input_row style3">
+										<div class="txt"><label for="">所有されている土地の数</label></div>
+										<div class="input_right_row">
+											<div class="input_gp_row">
+												<div class="input_gp">
+													<input @keydown.enter.prevent @change="lands_value = land_factor(Number(lands.digit))" x-model="lands.digit" type="number" min="0" />
+													<label for="">ヶ所</label>
 												</div>
 											</div>
+											<div class="btn_gp">
+												<div class="minus radius" @click="lands.decrease"></div>
+												<div class="plus radius" @click="lands.increase"></div>
+											</div>
 										</div>
-										<div class="input_row style3">
-											<div class="txt"><label for="">非上場株式の数</label></div>
-											<div class="input_right_row">
-												<div class="input_gp_row">
-													<div class="input_gp">
-														<input @keydown.enter.prevent @change="stock_value = Number(unlistedshares.digit) * 15" x-model="unlistedshares.digit" type="number" min="0" />
-														<label for="">社</label>
-													</div>
+									</div>
+									<div class="input_row style3">
+										<div class="txt"><label for="">非上場株式の数</label></div>
+										<div class="input_right_row">
+											<div class="input_gp_row">
+												<div class="input_gp">
+													<input @keydown.enter.prevent @change="stock_value = Number(unlistedshares.digit) * 15" x-model="unlistedshares.digit" type="number" min="0" />
+													<label for="">社</label>
 												</div>
-												<div class="btn_gp">
-													<div class="minus radius" @click="unlistedshares.decrease"></div>
-													<div class="plus radius" @click="unlistedshares.increase"></div>
-												</div>
+											</div>
+											<div class="btn_gp">
+												<div class="minus radius" @click="unlistedshares.decrease"></div>
+												<div class="plus radius" @click="unlistedshares.increase"></div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</fieldset>
-							<div class="submit_btn">
-								<input type="button" value="計算する" id="show_result" />
 							</div>
-						</form>
-					</div>
-					<div class="answer_block">
-						<div class="result_block">
-							<p class="result_ttl">相続税・申告報酬<br class="sp" />概算シミュレーション結果</p>
-							<div class="result_row">
-								<div class="result_label">
-									<span>相続税</span>
-								</div>
-								<div class="result_txt_box">
-									<span>〇〇億</span>
-									<span>〇〇〇〇万円</span>
-								</div>
-							</div>
-							<div class="result_row">
-								<div class="result_label">
-									<span>申告報酬<span class="required">※</span></span>
-								</div>
-								<div class="result_txt_box">
-									<span id="yresult">〇〇〇〇万円</span>
-								</div>
-							</div>
-							<div class="result_row">
-								<div class="result_label">
-									<span>相続税 ＋ 申告報酬<span class="required">※</span></span>
-								</div>
-								<div class="result_txt_box">
-									<span id="zresult1">〇〇億</span>
-                  					<span id="zresult">〇〇〇〇万円</span>
-								</div>
-							</div>
-							<p class="result_alert">※税理士法人レガシィにて相続税申告を行った場合の概算報酬です。</p>
+						</fieldset>
+						<div class="submit_btn">
+							<input type="button" value="計算する" id="show_result" />
 						</div>
-						<div class="poster">
-							<img class="block sp:hidden" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img.jpg" alt="問い合わせする" />
-							<img class="hidden sp:block" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img_sp.jpg" alt="問い合わせする" />
-							<a href="#" class="link_btn red"> 問い合わせする </a>
+					</form>
+				</div>
+				<div class="answer_block">
+					<div class="result_block">
+						<p class="result_ttl">相続税・申告報酬<br class="sp" />概算シミュレーション結果</p>
+						<div class="result_row">
+							<div class="result_label">
+								<span>相続税</span>
+							</div>
+							<div class="result_txt_box">
+								<span>〇〇億</span>
+								<span>〇〇〇〇万円</span>
+							</div>
 						</div>
-						<a href="#" class="simulation_btn">シミュレーション結果を印刷する</a>
-						<p class="situation_txt">レガシィはあなたの状況に合わせた様々なサービスをご提供しております。</p>
-						<a href="/service/" class="simulation_btn service_btn">サービス案内はこちら</a>
+						<div class="result_row">
+							<div class="result_label">
+								<span>申告報酬<span class="required">※</span></span>
+							</div>
+							<div class="result_txt_box">
+								<span id="yresult">〇〇〇〇万円</span>
+							</div>
+						</div>
+						<div class="result_row">
+							<div class="result_label">
+								<span>相続税 ＋ 申告報酬<span class="required">※</span></span>
+							</div>
+							<div class="result_txt_box">
+								<span id="zresult1">〇〇億</span>
+								<span id="zresult">〇〇〇〇万円</span>
+							</div>
+						</div>
+						<p class="result_alert">※税理士法人レガシィにて相続税申告を行った場合の概算報酬です。</p>
 					</div>
-					<div class="precaution">
+					<div class="poster">
+						<img class="block sp:hidden" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img.jpg" alt="問い合わせする" />
+						<img class="hidden sp:block" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img_sp.jpg" alt="問い合わせする" />
+						<a href="#" class="link_btn red"> 問い合わせする </a>
+					</div>
+					<a href="#" class="simulation_btn">シミュレーション結果を印刷する</a>
+					<p class="situation_txt">レガシィはあなたの状況に合わせた様々なサービスをご提供しております。</p>
+					<a href="/service/" class="simulation_btn service_btn">サービス案内はこちら</a>
+				</div>
+				<div class="precaution">
+					<p>
+						＜シミュレーションの注意＞<br />
+						現行の税制（2015年1月1日以降に相続が発生された方）をもとに自動計算した金額で、あくまでも目安の金額となります。<br />
+						遺産総額の金額は、各種特例や非課税枠及び債務控除等を控除済みの課税価格（基礎控除前）の金額を入力してください。<br />
+						上記金額には小規模宅地の評価減等の特例は考慮しておりません。特例を含めた詳細についてはご面談でご案内いたします。（ご面談は予約制となります。ご面談予約はお問い合わせフォームよりお問い合わせください）<br />
+						配偶者が取得する財産については申告によって適用出来る軽減措置があるため、相続税が発生しない場合でも申告が必要となる場合がございます。<br />
+						＜申告報酬の加算について＞<br />
+						相続人2人目より1人あたり基本報酬×10％の金額を加算します。当該加算については4人を上限とします。<br />
+						土地最初の1利用単位につき4.4万円、２利用単位目以降1利用単位につき5.5万円を加算します。<br />
+						非上場株式は1銘柄につき15万円を加算します（会社規模によっては別途見積もり）<br />
+						お客様の御要望により生じる上記以外の業務については別途ご案内します。
+					</p>
+				</div>
+			</div>
+			<div class="block_two" id="two">
+				<div class="tax_block">
+					<h2>相続税はどのくらい？<br class="sp-on" />計算方法を紹介</h2>
+					<div class="tax_amount">
 						<p>
-							＜シミュレーションの注意＞<br />
-							現行の税制（2015年1月1日以降に相続が発生された方）をもとに自動計算した金額で、あくまでも目安の金額となります。<br />
-							遺産総額の金額は、各種特例や非課税枠及び債務控除等を控除済みの課税価格（基礎控除前）の金額を入力してください。<br />
-							上記金額には小規模宅地の評価減等の特例は考慮しておりません。特例を含めた詳細についてはご面談でご案内いたします。（ご面談は予約制となります。ご面談予約はお問い合わせフォームよりお問い合わせください）<br />
-							配偶者が取得する財産については申告によって適用出来る軽減措置があるため、相続税が発生しない場合でも申告が必要となる場合がございます。<br />
-							＜申告報酬の加算について＞<br />
-							相続人2人目より1人あたり基本報酬×10％の金額を加算します。当該加算については4人を上限とします。<br />
-							土地最初の1利用単位につき4.4万円、２利用単位目以降1利用単位につき5.5万円を加算します。<br />
-							非上場株式は1銘柄につき15万円を加算します（会社規模によっては別途見積もり）<br />
-							お客様の御要望により生じる上記以外の業務については別途ご案内します。
+							１　相続税の対象となる金額<br />
+							相続税の計算の対象となる金額は
+						</p>
+						<p class="txt_box">遺産総額＋生前贈与財産＋みなし相続財産－非課税財産－葬式費用－債務など</p>
+						<p class="mb20">ということになります。</p>
+					</div>
+					<div class="tax_amount">
+						<p>
+							２　そこからの基礎控除<br />
+							相続税は課税対象の遺産から基礎控除額を引いた金額に対して課税されます。<br />
+							この基礎控除は次の式で求められます。
+						</p>
+						<p class="txt_box">3,000万円＋600万円×法定相続人の数</p>
+						<p class="mb30">
+							たとえば、夫婦二人と子ども二人の家族で夫が亡くなった場合。<br />
+							法定相続人は3人なので、3,000万円＋600万円×3人＝4,800万円が基礎控除額となります。
 						</p>
 					</div>
+					<p>相続税は財産の内容ごとに算出するのではなく、すべての財産の評価額の合計をもとに計算していきます。「現金に対する相続税はいくら、不動産ではいくら」というわけではないのです。資産や負債の数や内訳を考慮したより具体的な概算相続税額を知りたい場合は<a href="#one">相続税額・申告報酬概算シミュレーション</a>をお試しください。</p>
 				</div>
-				<div class="block_two" id="two">
-					<div class="tax_block">
-						<h2>相続税はどのくらい？<br class="sp-on" />計算方法を紹介</h2>
-						<div class="tax_amount">
-							<p>
-								１　相続税の対象となる金額<br />
-								相続税の計算の対象となる金額は
-							</p>
-							<p class="txt_box">遺産総額＋生前贈与財産＋みなし相続財産－非課税財産－葬式費用－債務など</p>
-							<p class="mb20">ということになります。</p>
+			</div>
+			<div class="block_three" id="three">
+				<div class="tax_block">
+					<h2>相続税の計算がわかる！<br class="sp-on" />相続税の早見表</h2>
+					<p class="mb30">相続税は、「法定相続人の数」や「法定相続人と被相続人との関係」によって異なってくるため、一目で目安がわかる早見表は便利な存在といっていいでしょう。たとえば配偶者と子どもで相続をする場合や、子どもだけで相続する場合などに「相続税がいくらになるか」を簡単に把握することができるのです。</p>
+					<p>
+						「相続税早見表」とは「相続税がだいたいいくらになるのか」を表にして示したものです。細かい計算は後でもいいので、ひとまずは概算を知りたいという人には使い勝手のいい表といえるでしょう。<br />
+						相続税は「累進課税方式」を採用しており、相続する財産の評価額が高ければ高いほど、相続税額もまた増えていくという仕組みになっています。税率は一律ではないため、こうした早見表があると重宝するというわけです。
+					</p>
+				</div>
+				<div class="table_block">
+					<div class="table_row">
+						<div class="table_col">
+							<h3>配偶者と子が法定相続人の場合の早見表</h3>
+							<span>（単位：万円）</span>
+							<table>
+								<tr>
+									<th>財産の評価額 <br>（基礎控除前）</th>
+									<th>
+										配偶者<br />
+										子ども1人
+									</th>
+									<th>
+										配偶者<br />
+										子ども2人
+									</th>
+									<th>
+										配偶者<br />
+										子ども3人
+									</th>
+									<th>
+										配偶者<br />
+										子ども4人
+									</th>
+								</tr>
+								<tr>
+									<td>5,000万円</td>
+									<td>40</td>
+									<td>10</td>
+									<td>なし</td>
+									<td>なし</td>
+								</tr>
+								<tr>
+									<td>6,000万円</td>
+									<td>90</td>
+									<td>60</td>
+									<td>30</td>
+									<td>なし</td>
+								</tr>
+								<tr>
+									<td>7,000万円</td>
+									<td>160</td>
+									<td>113</td>
+									<td>80</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td>8,000万円</td>
+									<td>235</td>
+									<td>175</td>
+									<td>138</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>9,000万円</td>
+									<td>310</td>
+									<td>240</td>
+									<td>200</td>
+									<td>163</td>
+								</tr>
+								<tr>
+									<td>1億円</td>
+									<td>385</td>
+									<td>315</td>
+									<td>263</td>
+									<td>225</td>
+								</tr>
+								<tr>
+									<td>2億円</td>
+									<td>1,670</td>
+									<td>1,350</td>
+									<td>1,218</td>
+									<td>1,125</td>
+								</tr>
+								<tr>
+									<td>3億円</td>
+									<td>3,460</td>
+									<td>2,860</td>
+									<td>2,540</td>
+									<td>2,350</td>
+								</tr>
+								<tr>
+									<td>4億円</td>
+									<td>5,460</td>
+									<td>4,610</td>
+									<td>4,155</td>
+									<td>3,850</td>
+								</tr>
+								<tr>
+									<td>5億円</td>
+									<td>7,605</td>
+									<td>6,555</td>
+									<td>5,963</td>
+									<td>5,500</td>
+								</tr>
+								<tr>
+									<td>10億円</td>
+									<td>19,750</td>
+									<td>17,810</td>
+									<td>16,635</td>
+									<td>15,650</td>
+								</tr>
+								<tr>
+									<td>20億円</td>
+									<td>46,645</td>
+									<td>43,440</td>
+									<td>41,183</td>
+									<td>39,500</td>
+								</tr>
+								<tr>
+									<td>30億円</td>
+									<td>74,145</td>
+									<td>70,380</td>
+									<td>67,433</td>
+									<td>65,175</td>
+								</tr>
+								<tr>
+									<td>40億円</td>
+									<td>101,645</td>
+									<td>97,880</td>
+									<td>94,115</td>
+									<td>91,425</td>
+								</tr>
+								<tr>
+									<td>50億円</td>
+									<td>129,145</td>
+									<td>125,380</td>
+									<td>121,615</td>
+									<td>117,850</td>
+								</tr>
+							</table>
 						</div>
-						<div class="tax_amount">
-							<p>
-								２　そこからの基礎控除<br />
-								相続税は課税対象の遺産から基礎控除額を引いた金額に対して課税されます。<br />
-								この基礎控除は次の式で求められます。
-							</p>
-							<p class="txt_box">3,000万円＋600万円×法定相続人の数</p>
-							<p class="mb30">
-								たとえば、夫婦二人と子ども二人の家族で夫が亡くなった場合。<br />
-								法定相続人は3人なので、3,000万円＋600万円×3人＝4,800万円が基礎控除額となります。
-							</p>
+						<div class="table_col">
+							<h3>子が法定相続人の場合の早見表</h3>
+							<span>（単位：万円）</span>
+							<table>
+								<tr>
+									<th>財産の評価額 <br />（基礎控除前）</th>
+									<th>子1人</th>
+									<th>子2人</th>
+									<th>子3人</th>
+									<th>子4人</th>
+								</tr>
+								<tr>
+									<td>5,000万円</td>
+									<td>160</td>
+									<td>80</td>
+									<td>20</td>
+									<td>なし</td>
+								</tr>
+								<tr>
+									<td>6,000万円</td>
+									<td>310</td>
+									<td>180</td>
+									<td>120</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td>7,000万円</td>
+									<td>480</td>
+									<td>320</td>
+									<td>220</td>
+									<td>160</td>
+								</tr>
+								<tr>
+									<td>8,000万円</td>
+									<td>680</td>
+									<td>470</td>
+									<td>330</td>
+									<td>260</td>
+								</tr>
+								<tr>
+									<td>9,000万円</td>
+									<td>920</td>
+									<td>620</td>
+									<td>480</td>
+									<td>360</td>
+								</tr>
+								<tr>
+									<td>1億円</td>
+									<td>1,220</td>
+									<td>770</td>
+									<td>630</td>
+									<td>490</td>
+								</tr>
+								<tr>
+									<td>2億円</td>
+									<td>4,860</td>
+									<td>3,340</td>
+									<td>2,460</td>
+									<td>2,120</td>
+								</tr>
+								<tr>
+									<td>3億円</td>
+									<td>9,180</td>
+									<td>6,920</td>
+									<td>5,460</td>
+									<td>4,580</td>
+								</tr>
+								<tr>
+									<td>4億円</td>
+									<td>14,000</td>
+									<td>1,920</td>
+									<td>8,980</td>
+									<td>7,580</td>
+								</tr>
+								<tr>
+									<td>5億円</td>
+									<td>19,000</td>
+									<td>15,210</td>
+									<td>12,980</td>
+									<td>11,040</td>
+								</tr>
+								<tr>
+									<td>10億円</td>
+									<td>45,820</td>
+									<td>39,500</td>
+									<td>35,000</td>
+									<td>31,770</td>
+								</tr>
+								<tr>
+									<td>20億円</td>
+									<td>100,820</td>
+									<td>93,290</td>
+									<td>85,760</td>
+									<td>80,500</td>
+								</tr>
+								<tr>
+									<td>30億円</td>
+									<td>155,820</td>
+									<td>148,290</td>
+									<td>140,760</td>
+									<td>133,230</td>
+								</tr>
+								<tr>
+									<td>40億円</td>
+									<td>210,820</td>
+									<td>203,290</td>
+									<td>195,760</td>
+									<td>188,230</td>
+								</tr>
+								<tr>
+									<td>50億円</td>
+									<td>265,820</td>
+									<td>258,290</td>
+									<td>250,760</td>
+									<td>243,230</td>
+								</tr>
+							</table>
 						</div>
-						<p>相続税は財産の内容ごとに算出するのではなく、すべての財産の評価額の合計をもとに計算していきます。「現金に対する相続税はいくら、不動産ではいくら」というわけではないのです。資産や負債の数や内訳を考慮したより具体的な概算相続税額を知りたい場合は<a href="#one">相続税額・申告報酬概算シミュレーション</a>をお試しください。</p>
 					</div>
+					<p>上記の早見表は資産や負債の数や内訳を詳細に考慮できたものではないため、資産や負債の数や内訳を考慮したより具体的な概算相続税額を知りたい場合は<a href="#one">相続税額・申告報酬概算シミュレーション</a>をお試しください。</p>
 				</div>
-				<div class="block_three" id="three">
-					<div class="tax_block">
-						<h2>相続税の計算がわかる！<br class="sp-on" />相続税の早見表</h2>
-						<p class="mb30">相続税は、「法定相続人の数」や「法定相続人と被相続人との関係」によって異なってくるため、一目で目安がわかる早見表は便利な存在といっていいでしょう。たとえば配偶者と子どもで相続をする場合や、子どもだけで相続する場合などに「相続税がいくらになるか」を簡単に把握することができるのです。</p>
+			</div>
+			<div class="block_four" id="four">
+				<div class="knowledge_block knowledge_block_02">
+					<h2>あなたに役立つ相続の知識は</h2>
+					<a href="/knowledge/now/souzoku-zei/531-souzokuzei-taishou-kisokoujogaku-kaisetsu/" class="knowledge_item">
+						<h3>相続税は誰が払う？対象となる人や基礎控除額なども解説</h3>
+						<p>相続税は、相続が発生した場合にかかる税金です。では一体、この相続税は誰が支払う対象なのでしょうか。また、相続税の負担が大きい場合、遺産の中から支払うことは可能なのでしょうか。相続税には支払期限があるため、税金の滞納をしないためにも本記事で相続税の支払いについて基本を押さえていきましょう。</p>
+					</a>
+					<a href="/knowledge/now/souzoku-zei/150-rosenka-keisanhouhou-kihonchishiki/" class="knowledge_item">
+						<h3>土地を相続するときにでてくる「相続税の路線価」とは？</h3>
+						<p>相続税の計算には財産をすべて金額に直す必要があります。そのときに大きな障害となるのが土地の評価です。土地の評価額の計算には大きく二つの方法がありますが、基本は相続税路線価を使うやり方です。路線価は土地の面する道路（路線）ごとに決まっていて、国税庁のホームページで公開しているので、住所からすぐ調べることができます。土地の相続が発生するときには、自分で計算するかどうかにかかわらず必ず知っておいたほうがいい考え方なので、概要を確認しておきましょう。</p>
+					</a>
+					<a href="/knowledge/now/souzoku-zei/551-kabu-jyoujyou-hijyoujyou-chigai/" class="knowledge_item">
+						<h3>株の相続税評価額はいくら？上場・非上場それぞれの計算方法を解説</h3>
+						<p>相続が発生したら、相続人同士で誰がどの遺産を相続するか話し合います。遺産の種類として、不動産や預金のほか、株式を相続する場合もあるでしょう。<br>相続財産のなかに株式がある場合、相続税の計算はどのようにすればよいのでしょうか。上場株式と非上場株式の違いや、株式を相続した際の注意点について解説します。</p>
+					</a>
+					<a href="/knowledge/now/souzoku-zei/526-mansion-souzokuzei-setsuzei/" class="knowledge_item">
+						<h3>マンションの相続税はいくら必要？評価額の計算方法や節税のコツを紹介</h3>
+						<p>配偶者や親が所有していたマンションを相続することになった、または今後相続する予定の人は多くいらっしゃるでしょう。今回は、マンションを相続する際にかかる税金について、計算方法や必要な手続きをご紹介します。節税に効果的な控除についても解説しますので、マンション相続について理解を深め、相続手続きをスムーズに行いましょう。</p>
+					</a>
+					<a href="/knowledge/now/souzoku-zei/535-souzokuzei-koujyo-ichiran-kaisetsu/" class="knowledge_item">
+						<h3>相続税で使える主な特例・控除とは？一覧でまとめて解説</h3>
+						<p>この記事では相続税の特例や控除制度についてご説明します。相続税には、一般的に知られている基礎控除の他にも小規模宅地等の特例などさまざまな制度があり、税負担を軽くできる場合があります。ご自身のケースでどの制度を利用できるのか、この記事を参考にしてみてください。</p>
+					</a>
+				</div>
+			</div>
+			<div class="block_five" id="five">
+				<div class="knowledge_block">
+					<h2>用語の説明</h2>
+					<p class="calculate_tax">相続税を計算するのに関係する用語をピックアップしました。</p>
+					<div class="knowledge_item">
+						<h4>法定相続人とは</h4>
 						<p>
-							「相続税早見表」とは「相続税がだいたいいくらになるのか」を表にして示したものです。細かい計算は後でもいいので、ひとまずは概算を知りたいという人には使い勝手のいい表といえるでしょう。<br />
-							相続税は「累進課税方式」を採用しており、相続する財産の評価額が高ければ高いほど、相続税額もまた増えていくという仕組みになっています。税率は一律ではないため、こうした早見表があると重宝するというわけです。
+							民法で定められている相続権がある人のこと。
+							<br>配偶者は必ず相続人になります。
+							<br>配偶者以外の法定相続人では、
+							<br>第一順位：子
+							<br>第二順位：親、祖父母
+							<br>第三順位：兄弟姉妹
+							<br>の順に優先されます。
 						</p>
 					</div>
-					<div class="table_block">
-						<div class="table_row">
-							<div class="table_col">
-								<h3>配偶者と子が法定相続人の場合の早見表</h3>
-								<span>（単位：万円）</span>
-								<table>
-									<tr>
-										<th>財産の評価額 <br>（基礎控除前）</th>
-										<th>
-											配偶者<br />
-											子ども1人
-										</th>
-										<th>
-											配偶者<br />
-											子ども2人
-										</th>
-										<th>
-											配偶者<br />
-											子ども3人
-										</th>
-										<th>
-											配偶者<br />
-											子ども4人
-										</th>
-									</tr>
-									<tr>
-										<td>5,000万円</td>
-										<td>40</td>
-										<td>10</td>
-										<td>なし</td>
-										<td>なし</td>
-									</tr>
-									<tr>
-										<td>6,000万円</td>
-										<td>90</td>
-										<td>60</td>
-										<td>30</td>
-										<td>なし</td>
-									</tr>
-									<tr>
-										<td>7,000万円</td>
-										<td>160</td>
-										<td>113</td>
-										<td>80</td>
-										<td>50</td>
-									</tr>
-									<tr>
-										<td>8,000万円</td>
-										<td>235</td>
-										<td>175</td>
-										<td>138</td>
-										<td>100</td>
-									</tr>
-									<tr>
-										<td>9,000万円</td>
-										<td>310</td>
-										<td>240</td>
-										<td>200</td>
-										<td>163</td>
-									</tr>
-									<tr>
-										<td>1億円</td>
-										<td>385</td>
-										<td>315</td>
-										<td>263</td>
-										<td>225</td>
-									</tr>
-									<tr>
-										<td>2億円</td>
-										<td>1,670</td>
-										<td>1,350</td>
-										<td>1,218</td>
-										<td>1,125</td>
-									</tr>
-									<tr>
-										<td>3億円</td>
-										<td>3,460</td>
-										<td>2,860</td>
-										<td>2,540</td>
-										<td>2,350</td>
-									</tr>
-									<tr>
-										<td>4億円</td>
-										<td>5,460</td>
-										<td>4,610</td>
-										<td>4,155</td>
-										<td>3,850</td>
-									</tr>
-									<tr>
-										<td>5億円</td>
-										<td>7,605</td>
-										<td>6,555</td>
-										<td>5,963</td>
-										<td>5,500</td>
-									</tr>
-									<tr>
-										<td>10億円</td>
-										<td>19,750</td>
-										<td>17,810</td>
-										<td>16,635</td>
-										<td>15,650</td>
-									</tr>
-									<tr>
-										<td>20億円</td>
-										<td>46,645</td>
-										<td>43,440</td>
-										<td>41,183</td>
-										<td>39,500</td>
-									</tr>
-									<tr>
-										<td>30億円</td>
-										<td>74,145</td>
-										<td>70,380</td>
-										<td>67,433</td>
-										<td>65,175</td>
-									</tr>
-									<tr>
-										<td>40億円</td>
-										<td>101,645</td>
-										<td>97,880</td>
-										<td>94,115</td>
-										<td>91,425</td>
-									</tr>
-									<tr>
-										<td>50億円</td>
-										<td>129,145</td>
-										<td>125,380</td>
-										<td>121,615</td>
-										<td>117,850</td>
-									</tr>
-								</table>
-							</div>
-							<div class="table_col">
-								<h3>子が法定相続人の場合の早見表</h3>
-								<span>（単位：万円）</span>
-								<table>
-									<tr>
-										<th>財産の評価額 <br />（基礎控除前）</th>
-										<th>子1人</th>
-										<th>子2人</th>
-										<th>子3人</th>
-										<th>子4人</th>
-									</tr>
-									<tr>
-										<td>5,000万円</td>
-										<td>160</td>
-										<td>80</td>
-										<td>20</td>
-										<td>なし</td>
-									</tr>
-									<tr>
-										<td>6,000万円</td>
-										<td>310</td>
-										<td>180</td>
-										<td>120</td>
-										<td>60</td>
-									</tr>
-									<tr>
-										<td>7,000万円</td>
-										<td>480</td>
-										<td>320</td>
-										<td>220</td>
-										<td>160</td>
-									</tr>
-									<tr>
-										<td>8,000万円</td>
-										<td>680</td>
-										<td>470</td>
-										<td>330</td>
-										<td>260</td>
-									</tr>
-									<tr>
-										<td>9,000万円</td>
-										<td>920</td>
-										<td>620</td>
-										<td>480</td>
-										<td>360</td>
-									</tr>
-									<tr>
-										<td>1億円</td>
-										<td>1,220</td>
-										<td>770</td>
-										<td>630</td>
-										<td>490</td>
-									</tr>
-									<tr>
-										<td>2億円</td>
-										<td>4,860</td>
-										<td>3,340</td>
-										<td>2,460</td>
-										<td>2,120</td>
-									</tr>
-									<tr>
-										<td>3億円</td>
-										<td>9,180</td>
-										<td>6,920</td>
-										<td>5,460</td>
-										<td>4,580</td>
-									</tr>
-									<tr>
-										<td>4億円</td>
-										<td>14,000</td>
-										<td>1,920</td>
-										<td>8,980</td>
-										<td>7,580</td>
-									</tr>
-									<tr>
-										<td>5億円</td>
-										<td>19,000</td>
-										<td>15,210</td>
-										<td>12,980</td>
-										<td>11,040</td>
-									</tr>
-									<tr>
-										<td>10億円</td>
-										<td>45,820</td>
-										<td>39,500</td>
-										<td>35,000</td>
-										<td>31,770</td>
-									</tr>
-									<tr>
-										<td>20億円</td>
-										<td>100,820</td>
-										<td>93,290</td>
-										<td>85,760</td>
-										<td>80,500</td>
-									</tr>
-									<tr>
-										<td>30億円</td>
-										<td>155,820</td>
-										<td>148,290</td>
-										<td>140,760</td>
-										<td>133,230</td>
-									</tr>
-									<tr>
-										<td>40億円</td>
-										<td>210,820</td>
-										<td>203,290</td>
-										<td>195,760</td>
-										<td>188,230</td>
-									</tr>
-									<tr>
-										<td>50億円</td>
-										<td>265,820</td>
-										<td>258,290</td>
-										<td>250,760</td>
-										<td>243,230</td>
-									</tr>
-								</table>
-							</div>
+					<div class="knowledge_item">
+						<h4>債務・葬式費用とは</h4>
+						<div class="tooltip">
+							<span class="tooltiptext tooltip_on_txt">「債務・葬式費用」の横にツールチ</span>
+							<p class="tooltip_item">亡くなった方の負債や葬式費用は、相続税の対象から引くことができます。</p>
 						</div>
-						<p>上記の早見表は資産や負債の数や内訳を詳細に考慮できたものではないため、資産や負債の数や内訳を考慮したより具体的な概算相続税額を知りたい場合は<a href="#one">相続税額・申告報酬概算シミュレーション</a>をお試しください。</p>
 					</div>
-				</div>
-				<div class="block_four" id="four">
-					<div class="knowledge_block knowledge_block_02">
-						<h2>あなたに役立つ相続の知識は</h2>
-						<a href="/knowledge/now/souzoku-zei/531-souzokuzei-taishou-kisokoujogaku-kaisetsu/" class="knowledge_item">
-							<h3>相続税は誰が払う？対象となる人や基礎控除額なども解説</h3>
-							<p>相続税は、相続が発生した場合にかかる税金です。では一体、この相続税は誰が支払う対象なのでしょうか。また、相続税の負担が大きい場合、遺産の中から支払うことは可能なのでしょうか。相続税には支払期限があるため、税金の滞納をしないためにも本記事で相続税の支払いについて基本を押さえていきましょう。</p>
-						</a>
-						<a href="/knowledge/now/souzoku-zei/150-rosenka-keisanhouhou-kihonchishiki/" class="knowledge_item">
-							<h3>土地を相続するときにでてくる「相続税の路線価」とは？</h3>
-							<p>相続税の計算には財産をすべて金額に直す必要があります。そのときに大きな障害となるのが土地の評価です。土地の評価額の計算には大きく二つの方法がありますが、基本は相続税路線価を使うやり方です。路線価は土地の面する道路（路線）ごとに決まっていて、国税庁のホームページで公開しているので、住所からすぐ調べることができます。土地の相続が発生するときには、自分で計算するかどうかにかかわらず必ず知っておいたほうがいい考え方なので、概要を確認しておきましょう。</p>
-						</a>
-						<a href="/knowledge/now/souzoku-zei/551-kabu-jyoujyou-hijyoujyou-chigai/" class="knowledge_item">
-							<h3>株の相続税評価額はいくら？上場・非上場それぞれの計算方法を解説</h3>
-							<p>相続が発生したら、相続人同士で誰がどの遺産を相続するか話し合います。遺産の種類として、不動産や預金のほか、株式を相続する場合もあるでしょう。<br>相続財産のなかに株式がある場合、相続税の計算はどのようにすればよいのでしょうか。上場株式と非上場株式の違いや、株式を相続した際の注意点について解説します。</p>
-						</a>
-						<a href="/knowledge/now/souzoku-zei/526-mansion-souzokuzei-setsuzei/" class="knowledge_item">
-							<h3>マンションの相続税はいくら必要？評価額の計算方法や節税のコツを紹介</h3>
-							<p>配偶者や親が所有していたマンションを相続することになった、または今後相続する予定の人は多くいらっしゃるでしょう。今回は、マンションを相続する際にかかる税金について、計算方法や必要な手続きをご紹介します。節税に効果的な控除についても解説しますので、マンション相続について理解を深め、相続手続きをスムーズに行いましょう。</p>
-						</a>
-						<a href="/knowledge/now/souzoku-zei/535-souzokuzei-koujyo-ichiran-kaisetsu/" class="knowledge_item">
-							<h3>相続税で使える主な特例・控除とは？一覧でまとめて解説</h3>
-							<p>この記事では相続税の特例や控除制度についてご説明します。相続税には、一般的に知られている基礎控除の他にも小規模宅地等の特例などさまざまな制度があり、税負担を軽くできる場合があります。ご自身のケースでどの制度を利用できるのか、この記事を参考にしてみてください。</p>
-						</a>
-					</div>
-				</div>
-				<div class="block_five" id="five">
-					<div class="knowledge_block">
-						<h2>用語の説明</h2>
-						<p class="calculate_tax">相続税を計算するのに関係する用語をピックアップしました。</p>
-						<div class="knowledge_item">
-							<h4>法定相続人とは</h4>
-							<p>
-								民法で定められている相続権がある人のこと。
-								<br>配偶者は必ず相続人になります。
-								<br>配偶者以外の法定相続人では、
-								<br>第一順位：子
-								<br>第二順位：親、祖父母
-								<br>第三順位：兄弟姉妹
-								<br>の順に優先されます。
-							</p>
-						</div>
-						<div class="knowledge_item">
-							<h4>債務・葬式費用とは</h4>
-							<div class="tooltip">
-								<span class="tooltiptext tooltip_on_txt">「債務・葬式費用」の横にツールチ</span>
-								<p class="tooltip_item">亡くなった方の負債や葬式費用は、相続税の対象から引くことができます。</p>
-    					</div>
-						</div>
 
-					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 </div>
 
 
