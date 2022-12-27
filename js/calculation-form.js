@@ -1,5 +1,9 @@
 $(document).ready(function () {
-  $("#tax_submit").on("click", function (e) {
+  // $("#tax_submit").on("click", function (e) {
+  //   tax_form(e);
+  // });
+
+  $("#show_result").on("click", function (e) {
     tax_form(e);
   });
 
@@ -52,6 +56,9 @@ function tax_form(e) {
   var kyo_zei = 0;
   var sozokuzei = 0;
   var test = 0;
+
+  console.log(isan_sogaku, sozokunin, haigusya, zokugara, haiwari);
+
   if (haigusya == 2) {
     //配偶者有り
     switch (zokugara) {
@@ -353,48 +360,36 @@ let heritage;
 const Yresult = document.getElementById("yresult");
 
 function modifyHeritage() {
-  if (heritage_interval <= 0) {
-    heritage = 0;
-    console.log(heritage);
-  } else if (heritage_interval <= 5000) {
+  if (heritage_interval <= 5000) {
     heritage = 25;
-    console.log(heritage);
   } else if (heritage_interval <= 6000) {
     heritage = 35;
-    console.log(heritage);
   } else if (heritage_interval <= 7000) {
     heritage = 40;
-    console.log(heritage);
   } else if (heritage_interval <= 8000) {
     heritage = 45;
-    console.log(heritage);
   } else if (heritage_interval <= 10000) {
     heritage = 50;
-    console.log(heritage);
   } else if (heritage_interval <= 15000) {
     heritage = 65;
   } else if (heritage_interval <= 20000) {
     heritage = 80;
-    console.log(heritage);
   } else if (heritage_interval <= 25000) {
-    console.log(heritage);
     heritage = 100;
   } else if (heritage_interval <= 30000) {
     heritage = 120;
-    console.log(heritage);
   } else if (heritage_interval <= 40000) {
     heritage = 150;
-    console.log(heritage);
   } else if (heritage_interval <= 50000) {
     heritage = 180;
-    console.log(heritage);
   } else {
     heritage = undefined;
     if (heritage === undefined) {
       Yresult.innerHTML = "別途お見積り";
     }
-    console.log(heritage);
   }
+
+  // console.log(heritage);
 }
 
 function land_factor(x) {
@@ -419,7 +414,7 @@ document.getElementById("show_result").addEventListener("click", function () {
 });
 
 function y_result_text() {
-  console.log(heritage, heirs, lands_value, stock_value);
+  // console.log(heritage, heirs, lands_value, stock_value);
 
   if (heritage === undefined) {
     return "別途お見積り";
@@ -433,10 +428,10 @@ function y_result_text() {
 
 function handle_z_result() {
   if (heritage === undefined) {
-    document.getElementById("zresult1").remove();
+    document.getElementById("zresult1")?.remove();
     document.getElementById("zresult").innerText = "別途お見積り";
   } else if (lands_value === undefined && stock_value === undefined) {
-    document.getElementById("zresult1").remove();
+    document.getElementById("zresult1")?.remove();
     document.getElementById("zresult").innerText = "STEP3を入力したら概算を計算できます";
   }
 }
