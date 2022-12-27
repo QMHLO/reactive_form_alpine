@@ -5,6 +5,16 @@ $(document).ready(function () {
 
   $("#show_result").on("click", function (e) {
     tax_form(e);
+
+    const showResult = document.getElementById("show_result");
+    const answerBlock = document.querySelector(".answer_block");
+    showResult.addEventListener("click", () => {
+      answerBlock.style.display = "block";
+      document.getElementById("yresult").innerText = y_result_text();
+      document.getElementById("zresult").innerText = z_result_text();
+      console.log("sozokuzei", sozokuzei);
+      document.getElementById("zresult1")?.remove();
+    });
   });
 
   $(".estimation_selecter").on("change", function (e) {
@@ -39,6 +49,7 @@ var zokugara = 0;
 var haiwari;
 var lands_value;
 var stock_value;
+var sozokuzei = 10;
 
 //相続税額概算シミュレーション
 function tax_form(e) {
@@ -54,10 +65,9 @@ function tax_form(e) {
   var ko_zei = 0;
   var oya_zei = 0;
   var kyo_zei = 0;
-  var sozokuzei = 0;
   var test = 0;
 
-  console.log(isan_sogaku, sozokunin, haigusya, zokugara, haiwari);
+  // console.log(isan_sogaku, sozokunin, haigusya, zokugara, haiwari);
 
   if (haigusya == 2) {
     //配偶者有り
@@ -198,8 +208,8 @@ function tax_form(e) {
 
   // 元
   // sozokuzei = sozokuzei - hai_keigen;
+
   console.log(validation());
-  console.log("X", sozokuzei);
   document.getElementById("xresult1")?.remove();
   document.getElementById("xresult").innerText = sozokuzei;
 
@@ -359,11 +369,10 @@ function zeikin(toribun) {
 //     });
 
 //Check Heritage Value
-let heritage_interval;
 let heritage;
 const Yresult = document.getElementById("yresult");
 
-function modifyHeritage() {
+function modifyHeritage(heritage_interval) {
   if (heritage_interval <= 5000) {
     heritage = 25;
   } else if (heritage_interval <= 6000) {
@@ -412,11 +421,6 @@ function changeHeirs() {
   }
 }
 
-document.getElementById("show_result").addEventListener("click", function () {
-  document.getElementById("yresult").innerText = y_result_text();
-  handle_z_result();
-});
-
 function y_result_text() {
   // console.log(heritage, heirs, lands_value, stock_value);
 
@@ -425,17 +429,17 @@ function y_result_text() {
   } else if (lands_value === undefined && stock_value === undefined) {
     return "STEP3を入力したら概算を計算できます";
   } else {
-    const y = heritage + heirs + lands_value + stock_value;
+    var y = heritage + heirs + lands_value + stock_value;
     return y.toLocaleString();
   }
 }
 
-function handle_z_result() {
+function z_result_text() {
   if (heritage === undefined) {
-    document.getElementById("zresult1")?.remove();
-    document.getElementById("zresult").innerText = "別途お見積り";
+    return "別途お見積り";
   } else if (lands_value === undefined && stock_value === undefined) {
-    document.getElementById("zresult1")?.remove();
-    document.getElementById("zresult").innerText = "STEP3を入力したら概算を計算できます";
+    return "STEP3を入力したら概算を計算できます";
+  } else {
+    return String(sozokuzei + heritage + heirs + lands_value + stock_value);
   }
 }
