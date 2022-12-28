@@ -40,7 +40,8 @@
         <div class="form_block">
           <h2>相続税・申告報酬　<br class="sp-on" />概算シミュレーション</h2>
 
-          <form action="">
+          <form action="http://localhost/legacy/contact.php" method="POST">
+            <input type="" name="source" value="calculation" id="source" style="display: none;">
             <fieldset x-data="step1">
               <div class="form_wrapper">
                 <h4 class="form_ttl">
@@ -65,7 +66,7 @@
                         <div class="input_gp_row">
                           <div class="input_gp w160">
                             <input @keydown.enter.prevent @change="savings.handleChange" x-model="savings.digit"
-                              type="number" min="0" placeholder="例）10000" />
+                              name="savings" type="number" min="0" placeholder="例）10000" />
                             <label for="">万円</label>
                           </div>
                         </div>
@@ -81,7 +82,7 @@
                         <div class="input_gp_row">
                           <div class="input_gp w160">
                             <input @keydown.enter.prevent @change="realEstate.handleChange" x-model="realEstate.digit"
-                              type="number" min="0" placeholder="例）10000" />
+                              name="realEstate" type="number" min="0" placeholder="例）10000" />
                             <label for="">万円</label>
                           </div>
                         </div>
@@ -97,7 +98,7 @@
                         <div class="input_gp_row">
                           <div class="input_gp w160">
                             <input @keydown.enter.prevent @change="securities.handleChange" x-model="securities.digit"
-                              type="number" min="0" placeholder="例）10000" />
+                              name="securities" type="number" min="0" placeholder="例）10000" />
                             <label for="">万円</label>
                           </div>
                         </div>
@@ -116,7 +117,7 @@
                         <div class="input_gp_row">
                           <div class="input_gp w160">
                             <input @keydown.enter.prevent @change="others.handleChange" x-model="others.digit"
-                              type="number" min="0" placeholder="例）10000" />
+                              name="others" type="number" min="0" placeholder="例）10000" />
                             <label for="">万円</label>
                           </div>
                         </div>
@@ -140,7 +141,7 @@
                         <div class="input_gp_row">
                           <div class="input_gp w160">
                             <input @keydown.enter.prevent @change="debts.handleChange" x-model="debts.digit"
-                              type="number" min="0" placeholder="例）10000" />
+                              name="debts" type="number" min="0" placeholder="例）10000" />
                             <label for="">万円</label>
                           </div>
                         </div>
@@ -159,8 +160,7 @@
                   <div class="txt"><label class="lb_md" for="">合計（自動計算）</label></div>
                   <div class="input_gp_row">
                     <div class="input_gp w160">
-                      <input type="number" x-model="total" @click="reset" name="isan_sogaku" readonly />
-                      <label for="">万円</label>
+                      <label for=""> <span x-text="total"></span> 万円</label>
                     </div>
                   </div>
                 </div>
@@ -246,13 +246,14 @@
                       <div class="input_gp_row">
                         <div class="input_gp">
                           <div class="rdo_item">
-                            <input id="child" name="relative" type="radio" @click="relative = 'child'; zokugara = 1;" />
+                            <input id="child" name="relative" type="radio" value="child"
+                              @click="relative = 'child'; zokugara = 1;" />
                             <label for="child">子</label>
                           </div>
                         </div>
                         <div class="input_gp">
                           <div class="rdo_item max">
-                            <input id="siblings" name="relative" type="radio"
+                            <input id="siblings" name="relative" type="radio" value="siblings"
                               @click="relative = 'siblings'; zokugara = 3;" />
                             <label for="siblings">兄弟姉妹</label>
                           </div>
@@ -261,14 +262,14 @@
                       <div class="input_gp_row">
                         <div class="input_gp">
                           <div class="rdo_item">
-                            <input id="parents" name="relative" type="radio"
+                            <input id="parents" name="relative" type="radio" value="parents"
                               @click="relative = 'parents'; zokugara = 2;" />
                             <label for="parents">父母</label>
                           </div>
                         </div>
                         <div class="input_gp">
                           <div class="rdo_item max">
-                            <input id="no_relative" name="relative" type="radio"
+                            <input id="no_relative" name="relative" type="radio" value="not_have"
                               @click="relative='no_relative'; !spouse ? (heirs_count = 0) : (heirs_count = 1); zokugara = 0; sozokunin = Number(heirs_count); changeHeirs();  "" />
 															<label for=" no_relative">いない</label>
                           </div>

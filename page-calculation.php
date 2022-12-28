@@ -177,8 +177,7 @@ get_header('2'); ?>
 										<div class="txt"><label class="lb_md" for="">合計（自動計算）</label></div>
 										<div class="input_gp_row">
 											<div class="input_gp w160">
-												<input type="number" x-model="total" @click="reset" name="isan_sogaku" readonly />
-												<label for="">万円</label>
+												<label for=""> <span x-text="total"></span> 万円</label>
 											</div>
 										</div>
 									</div>

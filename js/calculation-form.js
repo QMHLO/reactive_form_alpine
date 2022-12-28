@@ -445,7 +445,7 @@ function localize_amount(value) {
 function y_result_text() {
   if (heritage === undefined) {
     return "別途お見積り";
-  } else if (lands_value === undefined && stock_value === undefined) {
+  } else if (lands_value === undefined || stock_value === undefined) {
     return "STEP3を入力したら概算を計算できます";
   } else {
     var y = (heritage + heritage * heirs + lands_value + stock_value) * 10000;
@@ -456,7 +456,7 @@ function y_result_text() {
 function z_result_text() {
   if (heritage === undefined) {
     return "別途お見積り";
-  } else if (lands_value === undefined && stock_value === undefined) {
+  } else if (lands_value === undefined || stock_value === undefined) {
     return "STEP3を入力したら概算を計算できます";
   } else {
     let z = sozokuzei + (heritage + heritage * heirs + lands_value + stock_value) * 10000;

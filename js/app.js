@@ -82,13 +82,6 @@ function app() {
       modifyHeritage(heritage_interval);
       return total;
     },
-    reset() {
-      this.savings.digit = 0;
-      this.realEstate.digit = 0;
-      this.securities.digit = 0;
-      this.others.digit = 0;
-      this.debts.digit = 0;
-    },
   }));
   Alpine.data("step2", () => ({
     spouse: false, // boolean
