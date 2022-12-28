@@ -222,7 +222,12 @@ get_header('2'); ?>
 											<div class="input_right_row">
 												<div class="input_gp_row">
 													<div class="input_gp">
+<<<<<<< HEAD
 														<select name="inherit_rate" id="inherit_rate" :disabled="!spouse" x-model="inherit_rate" @change="haiwari=Number(inherit_rate)">
+=======
+														<select name="inherit_rate" id="inherit_rate" :disabled="!spouse" x-model="inherit_rate"
+														@change="haiwari=Number(inherit_rate)">
+>>>>>>> 11b8121d369d286c58f8a6f589c651a4abc9f228
 															<option value="0">0</option>
 															<option value="10">10</option>
 															<option value="20">20</option>
@@ -376,6 +381,7 @@ get_header('2'); ?>
 							<div class="submit_btn">
 								<input type="button" value="計算する" id="show_result" />
 							</div>
+<<<<<<< HEAD
 						</form>
 					</div>
 					<div class="answer_block">
@@ -417,6 +423,49 @@ get_header('2'); ?>
 						<a href="#" class="simulation_btn">シミュレーション結果を印刷する</a>
 						<p class="situation_txt">レガシィはあなたの状況に合わせた様々なサービスをご提供しております。</p>
 						<a href="/service/" class="simulation_btn service_btn">サービス案内はこちら</a>
+=======
+						</fieldset>
+						<div class="submit_btn">
+							<input type="button" value="計算する" id="show_result" />
+						</div>
+					</form>
+				</div>
+				<div class="answer_block">
+					<div class="result_block">
+						<p class="result_ttl">相続税・申告報酬<br class="sp" />概算シミュレーション結果</p>
+						<div class="result_row">
+							<div class="result_label">
+								<span>相続税</span>
+							</div>
+							<div class="result_txt_box">
+								<span id="xresult1">〇〇億</span>
+								<span id="xresult">〇〇〇〇万円</span>
+							</div>
+						</div>
+						<div class="result_row">
+							<div class="result_label">
+								<span>申告報酬<span class="required">※</span></span>
+							</div>
+							<div class="result_txt_box">
+								<span id="yresult">〇〇〇〇万円</span>
+							</div>
+						</div>
+						<div class="result_row">
+							<div class="result_label">
+								<span>相続税 ＋ 申告報酬<span class="required">※</span></span>
+							</div>
+							<div class="result_txt_box">
+								<span id="zresult1">〇〇億</span>
+								<span id="zresult">〇〇〇〇万円</span>
+							</div>
+						</div>
+						<p class="result_alert">※税理士法人レガシィにて相続税申告を行った場合の概算報酬です。</p>
+					</div>
+					<div class="poster">
+						<img class="pc-on" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img.jpg" alt="問い合わせする" />
+						<img class="sp-on" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img_sp.jpg" alt="問い合わせする" />
+						<a href="#" class="link_btn red"> 問い合わせする </a>
+>>>>>>> 11b8121d369d286c58f8a6f589c651a4abc9f228
 					</div>
 					<div class="precaution">
 						<p>
