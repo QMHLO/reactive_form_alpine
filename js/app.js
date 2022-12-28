@@ -95,6 +95,10 @@ function app() {
     relative: "", // ["child", "siblings", "parents", "no_relative"]
     inherit_rate: 0,
     heirs_count: null,
+
+    logger() {
+      console.log(this.spouse, this.inherit_rate, this.heirs_count, this.relative);
+    },
   }));
   Alpine.data("step3", () => ({
     lands: {

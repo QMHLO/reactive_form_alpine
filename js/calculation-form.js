@@ -291,22 +291,22 @@ function validation() {
 }
 
 //相続税額概算シミュレーション入力項目監視
-function tax_form_check(e) {
-  e.preventDefault();
-  var souzokunin = parseInt($("#souzokunin").val());
-  var haigusha = parseInt($(".haigusha:checked").val());
-  if ((souzokunin >= 2 && haigusha == 2) || isNaN(souzokunin)) {
-    $(".haigusha_rate").removeAttr("disabled");
-  } else {
-    $(".haigusha_rate").attr("disabled", "disabled");
-  }
-  if ((souzokunin == 1 && haigusha == 2) || isNaN(souzokunin)) {
-    $(".zokugara").attr("disabled", "disabled");
-    $(".zokugara").attr("checked", false);
-  } else {
-    $(".zokugara").removeAttr("disabled");
-  }
-}
+// function tax_form_check(e) {
+//   e.preventDefault();
+//   var souzokunin = parseInt($("#souzokunin").val());
+//   var haigusha = parseInt($(".haigusha:checked").val());
+//   if ((souzokunin >= 2 && haigusha == 2) || isNaN(souzokunin)) {
+//     $(".haigusha_rate").removeAttr("disabled");
+//   } else {
+//     $(".haigusha_rate").attr("disabled", "disabled");
+//   }
+//   if ((souzokunin == 1 && haigusha == 2) || isNaN(souzokunin)) {
+//     $(".zokugara").attr("disabled", "disabled");
+//     $(".zokugara").attr("checked", false);
+//   } else {
+//     $(".zokugara").removeAttr("disabled");
+//   }
+// }
 
 //申告料金概算お見積もり
 function estimation_form(e) {
@@ -408,7 +408,7 @@ function land_factor(x) {
 }
 let heirs;
 function changeHeirs() {
-  if (sozokunin === 1) {
+  if (sozokunin < 2) {
     heirs = 0;
   } else if (sozokunin === 2) {
     heirs = 0.1;
@@ -425,7 +425,7 @@ function y_result_text() {
   } else if (lands_value === undefined && stock_value === undefined) {
     return "STEP3を入力したら概算を計算できます";
   } else {
-    var y = heritage + heirs + lands_value + stock_value;
+    var y = heritage + heritage * heirs + lands_value + stock_value;
     return y.toLocaleString();
   }
 }
@@ -436,6 +436,6 @@ function z_result_text() {
   } else if (lands_value === undefined && stock_value === undefined) {
     return "STEP3を入力したら概算を計算できます";
   } else {
-    return String(sozokuzei + heritage + heirs + lands_value + stock_value);
+    return String(sozokuzei + heritage + heritage * heirs + lands_value + stock_value);
   }
 }

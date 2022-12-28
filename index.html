@@ -167,7 +167,7 @@
             </fieldset>
             <fieldset x-data="step2">
               <div class="form_wrapper">
-                <h4 class="form_ttl">
+                <h4 class="form_ttl" @click="logger">
                   <div class="date_block">
                     <div class="date_box">
                       <span class="month">STEP</span>
@@ -185,14 +185,14 @@
                         <div class="input_gp">
                           <div class="rdo_item">
                             <input id="have_spouse" name="spouse" type="radio"
-                              @click="spouse = true; relative === 'no_relative' && (heirs_count = 1); haigusya = 2" />
+                              @click="spouse = true; relative === 'no_relative' && (heirs_count = 1); haigusya = 2; sozokunin = Number(heirs_count); changeHeirs(); " />
                             <label for="have_spouse">いる</label>
                           </div>
                         </div>
                         <div class="input_gp">
                           <div class="rdo_item max rdo_item_02">
                             <input id="not_have_spouse" name="spouse" type="radio"
-                              @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0); haigusya = 1" />
+                              @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0); haigusya = 1; sozokunin = Number(heirs_count); changeHeirs(); " />
                             <label for="not_have_spouse">いない</label>
                           </div>
                         </div>
@@ -268,7 +268,7 @@
                         <div class="input_gp">
                           <div class="rdo_item max">
                             <input id="no_relative" name="relative" type="radio"
-                              @click="relative='no_relative'; !spouse && (heirs_count = 0); zokugara = 0; " />
+                              @click="relative='no_relative'; !spouse ? (heirs_count = 0) : (heirs_count = 1); zokugara = 0; sozokunin = Number(heirs_count); changeHeirs();  " />
                             <label for="no_relative">いない</label>
                           </div>
                         </div>
