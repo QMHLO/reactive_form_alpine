@@ -210,7 +210,7 @@ function tax_form(e) {
   if (sozokuzei < 0 || isNaN(sozokuzei)) {
     document.getElementById("xresult").innerText = 0;
   } else {
-    document.getElementById("xresult").innerText = sozokuzei;
+    document.getElementById("xresult").innerText = localize_amount(sozokuzei);
   }
 
   if (validation()) {
@@ -419,14 +419,37 @@ function changeHeirs() {
   }
 }
 
+function localize_amount(value) {
+  let result = "";
+  if (value > 1_0000_0000) {
+    result = `${Math.floor(value / 1_0000_0000)}億 `;
+  }
+
+  if (value > 1_0000) {
+    let men_value = value % 1_0000_0000;
+    result += `${Math.floor(men_value / 1_0000)}万円`;
+  }
+
+  if (value < 1_0000) {
+    result += `${value}円`;
+  }
+
+  return result;
+}
+
+// for test case please uncomment this
+// console.log(localize_amount(2_2800_0000));
+// console.log(localize_amount(1350_0000));
+// console.log(localize_amount(3000));
+
 function y_result_text() {
   if (heritage === undefined) {
     return "別途お見積り";
   } else if (lands_value === undefined && stock_value === undefined) {
     return "STEP3を入力したら概算を計算できます";
   } else {
-    var y = heritage + heritage * heirs + lands_value + stock_value;
-    return y.toLocaleString();
+    var y = (heritage + heritage * heirs + lands_value + stock_value) * 10000;
+    return localize_amount(y);
   }
 }
 
@@ -436,6 +459,7 @@ function z_result_text() {
   } else if (lands_value === undefined && stock_value === undefined) {
     return "STEP3を入力したら概算を計算できます";
   } else {
-    return String(sozokuzei + heritage + heritage * heirs + lands_value + stock_value);
+    let z = sozokuzei + (heritage + heritage * heirs + lands_value + stock_value) * 10000;
+    return localize_amount(z);
   }
 }
