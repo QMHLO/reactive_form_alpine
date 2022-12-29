@@ -83,7 +83,7 @@ get_header('2'); ?>
 										</div>
 										<div class="right">
 											<div class="input_row">
-												<div class="txt"><label for="">現金・預貯金</label></div>
+												<div class="txt"><label for="">① 現金・預貯金</label></div>
 												<div class="input_right_row">
 													<div class="input_gp_row">
 														<div class="input_gp w160">
@@ -98,7 +98,7 @@ get_header('2'); ?>
 												</div>
 											</div>
 											<div class="input_row">
-												<div class="txt"><label for="">不動産（土地・建物）</label></div>
+												<div class="txt"><label for="">② 不動産（土地・建物）</label></div>
 												<div class="input_right_row">
 													<div class="input_gp_row">
 														<div class="input_gp w160">
@@ -113,7 +113,7 @@ get_header('2'); ?>
 												</div>
 											</div>
 											<div class="input_row">
-												<div class="txt"><label for="">有価証券（株式など）​</label></div>
+												<div class="txt"><label for="">③ 有価証券（株式など）​</label></div>
 												<div class="input_right_row">
 													<div class="input_gp_row">
 														<div class="input_gp w160">
@@ -129,7 +129,7 @@ get_header('2'); ?>
 											</div>
 											<div class="input_row">
 												<div class="txt">
-													<label for="">その他財産<br class="pc-on" />
+													<label for="">④ その他財産<br class="pc-on" />
 														（金、車、時計など）</label>
 												</div>
 												<div class="input_right_row">
@@ -154,7 +154,7 @@ get_header('2'); ?>
 										</div>
 										<div class="right">
 											<div class="input_row">
-												<div class="txt"><label for="">債務・葬式費用</label></div>
+												<div class="txt"><label for="">⑤ 債務・葬式費用</label></div>
 												<div class="input_right_row">
 													<div class="input_gp_row">
 														<div class="input_gp w160">
@@ -174,10 +174,10 @@ get_header('2'); ?>
 										<img src="<?php bloginfo('template_url'); ?>/img/service/calculation/arrow.png" alt="合計" />
 									</div>
 									<div class="input_row style2">
-										<div class="txt"><label class="lb_md" for="">合計（自動計算）</label></div>
+										<div class="txt"><label class="lb_md" for="">合計（①+②+③+④-⑤）</label></div>
 										<div class="input_gp_row">
 											<div class="input_gp w160">
-												<label for=""> <span x-text="total"></span> 万円</label>
+												<label for="" class="lb_md"> <span x-text="total"></span> 万円</label>
 											</div>
 										</div>
 									</div>

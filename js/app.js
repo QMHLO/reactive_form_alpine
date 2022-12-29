@@ -127,7 +127,7 @@ function app() {
   }));
 }
 
-const inputs = document.querySelectorAll(".calculate_inner_block .form_wrapper .input_gp.w160 input");
+const inputs = document.querySelectorAll("input");
 inputs.forEach((input) => {
   input.addEventListener("mousewheel", function (event) {
     this.blur();
