@@ -82,9 +82,13 @@ function app() {
       modifyHeritage(heritage_interval);
       return total;
     },
+
+    logger() {
+      console.log(this.savings.digit, this.realEstate.digit, this.securities.digit, this.others.digit, this.debts.digit);
+    },
   }));
   Alpine.data("step2", () => ({
-    spouse: false, // boolean
+    spouse: null, // boolean
     relative: "", // ["child", "siblings", "parents", "no_relative"]
     inherit_rate: 0,
     heirs_count: null,
@@ -95,12 +99,61 @@ function app() {
 
     have_spouse_handler() {
       this.spouse = true;
-      if (this.relative === "no_relative") {
+      if (this.relative === "" || this.relative === "no_relative") {
         this.heirs_count = 1;
         this.inherit_rate = 100;
         haiwari = 100;
+      } else if (this.heirs_count < 2) {
+        this.heirs_count = 2;
       }
       haigusya = 2;
+      sozokunin = Number(this.heirs_count);
+      changeHeirs();
+    },
+
+    not_have_spouse_handler() {
+      this.spouse = false;
+      this.inherit_rate = 0;
+      if (this.relative === "no_relative") {
+        this.heirs_count = 0;
+      }
+      haigusya = 1;
+      sozokunin = Number(this.heirs_count);
+      changeHeirs();
+    },
+
+    child_handler() {
+      this.relative = "child";
+      zokugara = 1;
+      if (this.spouse && this.heirs_count < 2) {
+        this.heirs_count = 2;
+      } else if (!this.spouse && !this.heirs_count) {
+        this.heirs_count = 1;
+      }
+      sozokunin = Number(this.heirs_count);
+      changeHeirs();
+    },
+
+    siblings_handler() {
+      this.relative = "siblings";
+      zokugara = 3;
+      if (this.spouse && this.heirs_count < 2) {
+        this.heirs_count = 2;
+      } else if (!this.spouse && !this.heirs_count) {
+        this.heirs_count = 1;
+      }
+      sozokunin = Number(this.heirs_count);
+      changeHeirs();
+    },
+
+    parents_handler() {
+      this.relative = "parents";
+      zokugara = 2;
+      if (this.spouse && this.heirs_count < 2) {
+        this.heirs_count = 2;
+      } else if (!this.spouse && !this.heirs_count) {
+        this.heirs_count = 1;
+      }
       sozokunin = Number(this.heirs_count);
       changeHeirs();
     },

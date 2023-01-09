@@ -6,6 +6,7 @@ $(document).ready(function () {
     tax_form(e);
     const answerBlock = document.querySelector(".answer_block");
     answerBlock.style.display = "block";
+    document.getElementById("caution").style.display = "block";
 
     document.getElementById("yresult").innerText = y_result_text();
     if (sozokuzei < 0 || isNaN(sozokuzei)) {
@@ -51,9 +52,7 @@ var stock_value;
 var sozokuzei = 10;
 
 //相続税額概算シミュレーション
-function tax_form(e) {
-  e.preventDefault();
-
+function tax_form() {
   var zei_taisho = isan_sogaku - (30000000 + 6000000 * sozokunin);
   var hai_keigen = 0;
   var hai_tori = 0;

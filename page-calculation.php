@@ -63,318 +63,324 @@ get_header('2'); ?>
 				<div class="block_one" id="one">
 					<div class="form_block">
 						<h2>相続税・申告報酬<br class="sp-on" />概算シミュレーション</h2>
-						<form action="">
-							<fieldset x-data="step1">
-								<div class="form_wrapper">
-									<h4 class="form_ttl">
-										<div class="date_block">
-											<div class="date_box">
-												<span class="month">STEP</span>
-												<span class="day">1</span>
-											</div>
-										</div>
-										遺産の額を入力してください
-									</h4>
-									<p class="para_under_step_title">遺産の細かい内訳がご不明な場合は、全ての遺産のだいたいの合計額を「現金・預貯金」のエリアだけにご入力ください。</p>
-									<div class="assets_block">
-										<div class="right">
-											<div class="input_row">
-												<div class="txt"><label for="">①現金・預貯金</label></div>
-												<div class="input_right_row">
-													<div class="input_gp_row">
-														<div class="input_gp w160">
-															<input @keydown.enter.prevent @change="savings.handleChange" x-model="savings.digit" type="number" min="0" placeholder="例）10000" />
-															<label for="">万円</label>
+						<form x-data="step1" action="">
+							<div x-data="step2">
+								<div x-data="step3">
+									<fieldset>
+										<div class="form_wrapper">
+											<h4 class="form_ttl">
+												<div class="date_block">
+													<div class="date_box">
+														<span class="month">STEP</span>
+														<span class="day">1</span>
+													</div>
+												</div>
+												遺産の額を入力してください
+											</h4>
+											<p class="para_under_step_title">遺産の細かい内訳がご不明な場合は、全ての遺産のだいたいの合計額を「現金・預貯金」のエリアだけにご入力ください。</p>
+											<div class="assets_block">
+												<div class="right">
+													<div class="input_row">
+														<div class="txt"><label for="">①現金・預貯金</label></div>
+														<div class="input_right_row">
+															<div class="input_gp_row">
+																<div class="input_gp w160">
+																	<input @keydown.enter.prevent @change="savings.handleChange" x-model="savings.digit" type="number" min="0" placeholder="例）10000" />
+																	<label for="">万円</label>
+																</div>
+															</div>
+															<div class="btn_gp">
+																<div class="minus radius" @click="savings.decrease"></div>
+																<div class="plus radius" @click="savings.increase"></div>
+															</div>
 														</div>
 													</div>
-													<div class="btn_gp">
-														<div class="minus radius" @click="savings.decrease"></div>
-														<div class="plus radius" @click="savings.increase"></div>
-													</div>
-												</div>
-											</div>
-											<div class="input_row">
-												<div class="txt"><label for="">②不動産（土地・建物）</label></div>
-												<div class="input_right_row">
-													<div class="input_gp_row">
-														<div class="input_gp w160">
-															<input @keydown.enter.prevent @change="realEstate.handleChange" x-model="realEstate.digit" type="number" min="0" placeholder="例）10000" />
-															<label for="">万円</label>
+													<div class="input_row">
+														<div class="txt"><label for="">②不動産（土地・建物）</label></div>
+														<div class="input_right_row">
+															<div class="input_gp_row">
+																<div class="input_gp w160">
+																	<input @keydown.enter.prevent @change="realEstate.handleChange" x-model="realEstate.digit" type="number" min="0" placeholder="例）10000" />
+																	<label for="">万円</label>
+																</div>
+															</div>
+															<div class="btn_gp">
+																<div class="minus radius" @click="realEstate.decrease"></div>
+																<div class="plus radius" @click="realEstate.increase"></div>
+															</div>
 														</div>
 													</div>
-													<div class="btn_gp">
-														<div class="minus radius" @click="realEstate.decrease"></div>
-														<div class="plus radius" @click="realEstate.increase"></div>
-													</div>
-												</div>
-											</div>
-											<div class="input_row">
-												<div class="txt"><label for="">③有価証券（株式など）​</label></div>
-												<div class="input_right_row">
-													<div class="input_gp_row">
-														<div class="input_gp w160">
-															<input @keydown.enter.prevent @change="securities.handleChange" x-model="securities.digit" type="number" min="0" placeholder="例）10000" />
-															<label for="">万円</label>
+													<div class="input_row">
+														<div class="txt"><label for="">③有価証券（株式など）​</label></div>
+														<div class="input_right_row">
+															<div class="input_gp_row">
+																<div class="input_gp w160">
+																	<input @keydown.enter.prevent @change="securities.handleChange" x-model="securities.digit" type="number" min="0" placeholder="例）10000" />
+																	<label for="">万円</label>
+																</div>
+															</div>
+															<div class="btn_gp">
+																<div class="minus radius" @click="securities.decrease"></div>
+																<div class="plus radius" @click="securities.increase"></div>
+															</div>
 														</div>
 													</div>
-													<div class="btn_gp">
-														<div class="minus radius" @click="securities.decrease"></div>
-														<div class="plus radius" @click="securities.increase"></div>
-													</div>
-												</div>
-											</div>
-											<div class="input_row">
-												<div class="txt">
-													<label for="">④その他財産<br class="pc-on" />
-														（金、車、時計など）</label>
-												</div>
-												<div class="input_right_row">
-													<div class="input_gp_row">
-														<div class="input_gp w160">
-															<input @keydown.enter.prevent @change="others.handleChange" x-model="others.digit" type="number" min="0" placeholder="例）10000" />
-															<label for="">万円</label>
+													<div class="input_row">
+														<div class="txt">
+															<label for="">④その他財産<br class="pc-on" />
+																（金、車、時計など）</label>
+														</div>
+														<div class="input_right_row">
+															<div class="input_gp_row">
+																<div class="input_gp w160">
+																	<input @keydown.enter.prevent @change="others.handleChange" x-model="others.digit" type="number" min="0" placeholder="例）10000" />
+																	<label for="">万円</label>
+																</div>
+															</div>
+															<div class="btn_gp">
+																<div class="minus radius" @click="others.decrease"></div>
+																<div class="plus radius" @click="others.increase"></div>
+															</div>
 														</div>
 													</div>
-													<div class="btn_gp">
-														<div class="minus radius" @click="others.decrease"></div>
-														<div class="plus radius" @click="others.increase"></div>
-													</div>
 												</div>
 											</div>
-										</div>
-									</div>
-									<div class="assets_block debt_block">
+											<div class="assets_block debt_block">
 
-										<div class="right">
-											<div class="input_row">
-												<div class="txt" style="display: flex; align-items: center;"><label for="">⑤債務・葬式費用</label>
-													<div class="tooltip">
-														<span class="tooltiptext">
-															●債務・葬式費用とは <br />
-															亡くなった方の負債や葬式費用は、相続税の対象から引くことができます。
-														</span>
-														<img style="margin-left: 5px;" src="<?php bloginfo('template_url'); ?>/img/service/calculation/q.png" class="q_img" alt="合計">
-													</div>
-												</div>
-												<div class="input_right_row">
-													<div class="input_gp_row">
-														<div class="input_gp w160">
-															<input @keydown.enter.prevent @change="debts.handleChange" x-model="debts.digit" type="number" min="0" placeholder="例）10000" />
-															<label for="">万円</label>
+												<div class="right">
+													<div class="input_row">
+														<div class="txt" style="display: flex; align-items: center;"><label for="">⑤債務・葬式費用</label>
+															<div class="tooltip">
+																<span class="tooltiptext">
+																	●債務・葬式費用とは <br />
+																	亡くなった方の負債や葬式費用は、相続税の対象から引くことができます。
+																</span>
+																<img style="margin-left: 5px;" src="<?php bloginfo('template_url'); ?>/img/service/calculation/q.png" class="q_img" alt="合計">
+															</div>
+														</div>
+														<div class="input_right_row">
+															<div class="input_gp_row">
+																<div class="input_gp w160">
+																	<input @keydown.enter.prevent @change="debts.handleChange" x-model="debts.digit" type="number" min="0" placeholder="例）10000" />
+																	<label for="">万円</label>
+																</div>
+															</div>
+															<div class="btn_gp">
+																<div class="minus radius" @click="debts.decrease"></div>
+																<div class="plus radius" @click="debts.increase"></div>
+															</div>
 														</div>
 													</div>
-													<div class="btn_gp">
-														<div class="minus radius" @click="debts.decrease"></div>
-														<div class="plus radius" @click="debts.increase"></div>
-													</div>
 												</div>
 											</div>
-										</div>
-									</div>
-									<div class="arrow_img">
-										<img src="<?php bloginfo('template_url'); ?>/img/service/calculation/arrow.png" alt="合計" />
-									</div>
-									<div class="input_row style2">
-										<div class="txt"><label class="lb_md  total_label" for="">合計（① + ② + ③ + ④ - ⑤）</label></div>
-										<div class="input_gp_row">
-											<div class="input_gp w160" style="width: 100%; text-align: center;">
-												<label style="width: 100%;" for="" class="lb_md"><span class="total_value" x-text="total"></span> 万円</label>
+											<div class="arrow_img">
+												<img src="<?php bloginfo('template_url'); ?>/img/service/calculation/arrow.png" alt="合計" />
+											</div>
+											<div class="x_result">
+												<p>合計　<span class="total_value" x-text="total"></span> 万円</p>
+												<p>（① ＋ ② ＋ ③ ＋ ④ ー ⑤）</p>
 											</div>
 										</div>
-									</div>
-								</div>
-							</fieldset>
-							<fieldset x-data="step2">
-								<div class="form_wrapper">
-									<h4 class="form_ttl">
-										<div class="date_block">
-											<div class="date_box">
-												<span class="month">STEP</span>
-												<span class="day">2</span>
-											</div>
-										</div>
-										法定相続人について<br class="sp-on" />入力してください
-									</h4>
+									</fieldset>
+									<fieldset>
+										<div class="form_wrapper">
+											<h4 class="form_ttl">
+												<div class="date_block">
+													<div class="date_box">
+														<span class="month">STEP</span>
+														<span class="day">2</span>
+													</div>
+												</div>
+												法定相続人について<br class="sp-on" />入力してください
+											</h4>
 
-									<div class="input_block">
-										<div class="input_row style3">
-											<div class="txt"><label for="">配偶者</label></div>
-											<div class="input_right_row">
-												<div class="input_gp_row">
-													<div class="input_gp">
-														<div class="rdo_item ">
-															<input id="have_spouse" name="spouse" type="radio" @click="have_spouse_handler();" />
-															<label for="have_spouse">いる</label>
+											<div class="input_block">
+												<div class="input_row style3">
+													<div class="txt"><label for="">配偶者</label></div>
+													<div class="input_right_row">
+														<div class="input_gp_row">
+															<div class="input_gp">
+																<div class="rdo_item ">
+																	<input id="have_spouse" name="spouse" type="radio" @click="have_spouse_handler();" />
+																	<label for="have_spouse">いる</label>
+																</div>
+															</div>
+															<div class="input_gp">
+																<div class="rdo_item max rdo_item_02">
+																	<input id="not_have_spouse" name="spouse" type="radio" @click="not_have_spouse_handler();" />
+																	<label for="not_have_spouse">いない</label>
+																</div>
+															</div>
 														</div>
 													</div>
-													<div class="input_gp">
-														<div class="rdo_item max rdo_item_02">
-															<input id="not_have_spouse" name="spouse" type="radio" @click="spouse = false; inherit_rate = 0; relative === 'no_relative' && (heirs_count = 0); haigusya = 1; sozokunin = Number(heirs_count); changeHeirs(); " />
-															<label for="not_have_spouse">いない</label>
+												</div>
+												<div class="input_row style3">
+													<div class="txt"><label for="inherit_rate">配偶者の遺産取得割合</label>
+													</div>
+													<div class="input_right_row">
+														<div class="input_gp_row">
+															<div class="input_gp">
+																<select name="inherit_rate" id="inherit_rate" :disabled="!spouse || relative === 'no_relative'" x-model="inherit_rate" @change="haiwari=Number(inherit_rate)">
+																	<option value="0">0</option>
+																	<option value="10">10</option>
+																	<option value="20">20</option>
+																	<option value="30">30</option>
+																	<option value="40">40</option>
+																	<option value="50">50</option>
+																	<option value="60">60</option>
+																	<option value="70">70</option>
+																	<option value="80">80</option>
+																	<option value="90">90</option>
+																	<option value="100">100</option>
+																</select>
+																<label for="">%</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="input_row style3">
+													<div class="txt"><label for="">配偶者以外の法定相続人の続柄</label>
+														<div class="tooltip">
+															<span class="tooltiptext">
+																●法定相続人とは<br>
+																民法で定められている相続権がある人のこと。<br>
+																配偶者は必ず相続人になります。<br>
+																配偶者以外の法定相続人では、<br>
+																第一順位：子<br>
+																第二順位：親、祖父母<br>
+																第三順位：兄弟姉妹<br>
+																の順に優先されます。
+															</span>
+															<img src="<?php bloginfo('template_url'); ?>/img/service/calculation/q.png" class="q_img" alt="の数" />
+														</div>
+													</div>
+													<div class="input_right_row rdo">
+														<div class="input_gp_row">
+															<div class="input_gp">
+																<div class="rdo_item">
+																	<input id="child" name="relative" type="radio" @click="child_handler();" />
+																	<label for="child">子</label>
+																</div>
+															</div>
+															<div class="input_gp">
+																<div class="rdo_item max">
+																	<input id="siblings" name="relative" type="radio" @click="siblings_handler();" />
+																	<label for="siblings">兄弟姉妹</label>
+																</div>
+															</div>
+														</div>
+														<div class="input_gp_row">
+															<div class="input_gp">
+																<div class="rdo_item">
+																	<input id="parents" name="relative" type="radio" @click="parents_handler();" />
+																	<label for="parents">父母</label>
+																</div>
+															</div>
+															<div class="input_gp">
+																<div class="rdo_item max">
+																	<input id="no_relative" name="relative" type="radio" @click="no_relative_handler();" />
+																	<label for=" no_relative">いない</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="input_row style3">
+													<div class="txt"><label for="">法定相続人の人数</label>
+														<div class="tooltip">
+															<span class="tooltiptext">
+																●法定相続人とは<br>
+																民法で定められている相続権がある人のこと。<br>
+																配偶者は必ず相続人になります。<br>
+																配偶者以外の法定相続人では、<br>
+																第一順位：子<br>
+																第二順位：親、祖父母<br>
+																第三順位：兄弟姉妹<br>
+																の順に優先されます。
+															</span>
+															<img src="<?php bloginfo('template_url'); ?>/img/service/calculation/q.png" class="q_img" alt="合計" />
+														</div>
+													</div>
+													<div class="input_right_row">
+														<div class="input_gp_row">
+															<div class="input_gp">
+																<select name="legal_heirs" id="heirs" :disabled="relative === 'no_relative'" x-model="heirs_count" @change="sozokunin = Number(heirs_count); changeHeirs();">
+																	<option :disabled="spouse" selected="!spouse && relative === 'no_relative'" value></option>
+																	<option :selected="spouse && relative === 'no_relative'" value="1" x-show="!spouse && relative !== 'no_relative'">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																</select>
+																<label for="">人</label>
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="input_row style3">
-											<div class="txt"><label for="inherit_rate">配偶者の遺産取得割合</label>
-											</div>
-											<div class="input_right_row">
-												<div class="input_gp_row">
-													<div class="input_gp">
-														<select name="inherit_rate" id="inherit_rate" :disabled="!spouse" x-model="inherit_rate" @change="haiwari=Number(inherit_rate)">
-															<option value="0">0</option>
-															<option value="10">10</option>
-															<option value="20">20</option>
-															<option value="30">30</option>
-															<option value="40">40</option>
-															<option value="50">50</option>
-															<option value="60">60</option>
-															<option value="70">70</option>
-															<option value="80">80</option>
-															<option value="90">90</option>
-															<option value="100">100</option>
-														</select>
-														<label for="">%</label>
+									</fieldset>
+									<fieldset style="page-break-before: always;">
+										<div class="form_wrapper">
+											<h4 class="form_ttl">
+												<div class="date_block">
+													<div class="date_box">
+														<span class="month">STEP</span>
+														<span class="day">3</span>
 													</div>
 												</div>
-											</div>
-										</div>
-										<div class="input_row style3">
-											<div class="txt"><label for="">配偶者以外の法定相続人の続柄</label>
-												<div class="tooltip">
-													<span class="tooltiptext">
-														●法定相続人とは<br>
-														民法で定められている相続権がある人のこと。<br>
-														配偶者は必ず相続人になります。<br>
-														配偶者以外の法定相続人では、<br>
-														第一順位：子<br>
-														第二順位：親、祖父母<br>
-														第三順位：兄弟姉妹<br>
-														の順に優先されます。
-													</span>
-													<img src="<?php bloginfo('template_url'); ?>/img/service/calculation/q.png" class="q_img" alt="の数" />
-												</div>
-											</div>
-											<div class="input_right_row rdo">
-												<div class="input_gp_row">
-													<div class="input_gp">
-														<div class="rdo_item">
-															<input id="child" name="relative" type="radio" @click="relative = 'child'; zokugara = 1;" />
-															<label for="child">子</label>
+												土地・株式について<br class="sp-on" />入力してください
+											</h4>
+											<p class="para_under_step_title">STEP3は任意入力です。未入力でも相続税計算ができます。レガシィに依頼した場合の概算の申告報酬も計算したい方はご入力ください。</p>
+											<div class="input_block">
+												<div class="input_row style3">
+													<div class="txt"><label for="">所有されている土地の数</label></div>
+													<div class="input_right_row">
+														<div class="input_gp_row">
+															<div class="input_gp">
+																<input @keydown.enter.prevent @change="lands_value = land_factor(Number(lands.digit))" x-model="lands.digit" type="number" min="0" />
+																<label for="">ヶ所</label>
+															</div>
 														</div>
-													</div>
-													<div class="input_gp">
-														<div class="rdo_item max">
-															<input id="siblings" name="relative" type="radio" @click="relative = 'siblings'; zokugara = 3;" />
-															<label for="siblings">兄弟姉妹</label>
+														<div class="btn_gp">
+															<div class="minus radius" @click="lands.decrease"></div>
+															<div class="plus radius" @click="lands.increase"></div>
 														</div>
 													</div>
 												</div>
-												<div class="input_gp_row">
-													<div class="input_gp">
-														<div class="rdo_item">
-															<input id="parents" name="relative" type="radio" @click="relative = 'parents'; zokugara = 2;" />
-															<label for="parents">父母</label>
+												<div class="input_row style3">
+													<div class="txt"><label for="">非上場株式の数</label></div>
+													<div class="input_right_row">
+														<div class="input_gp_row">
+															<div class="input_gp">
+																<input @keydown.enter.prevent @change="stock_value = Number(unlistedshares.digit) * 15" x-model="unlistedshares.digit" type="number" min="0" />
+																<label for="">社</label>
+															</div>
 														</div>
-													</div>
-													<div class="input_gp">
-														<div class="rdo_item max">
-															<input id="no_relative" name="relative" type="radio" @click="no_relative_handler();" />
-															<label for=" no_relative">いない</label>
+														<div class="btn_gp">
+															<div class="minus radius" @click="unlistedshares.decrease"></div>
+															<div class="plus radius" @click="unlistedshares.increase"></div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="input_row style3">
-											<div class="txt"><label for="">法定相続人の人数</label>
-												<div class="tooltip">
-													<span class="tooltiptext">
-														●法定相続人とは<br>
-														民法で定められている相続権がある人のこと。<br>
-														配偶者は必ず相続人になります。<br>
-														配偶者以外の法定相続人では、<br>
-														第一順位：子<br>
-														第二順位：親、祖父母<br>
-														第三順位：兄弟姉妹<br>
-														の順に優先されます。
-													</span>
-													<img src="<?php bloginfo('template_url'); ?>/img/service/calculation/q.png" class="q_img" alt="合計" />
-												</div>
-											</div>
-											<div class="input_right_row">
-												<div class="input_gp_row">
-													<div class="input_gp">
-														<select name="legal_heirs" id="heirs" :disabled="relative === 'no_relative'" x-model="heirs_count" @change="sozokunin = Number(heirs_count); changeHeirs();">
-															<option :disabled="spouse" selected="!spouse && relative === 'no_relative'" value></option>
-															<option :selected="spouse && relative === 'no_relative'" value="1" x-show="!spouse && relative !== 'no_relative'">1</option>
-															<option value="2">2</option>
-															<option value="3">3</option>
-															<option value="4">4</option>
-															<option value="5">5</option>
-															<option value="6">6</option>
-															<option value="7">7</option>
-															<option value="8">8</option>
-															<option value="9">9</option>
-															<option value="10">10</option>
-														</select>
-														<label for="">人</label>
-													</div>
-												</div>
-											</div>
-										</div>
+									</fieldset>
+									<div class="submit_btn">
+										<input type="button" value="計算する" id="show_result" />
+									</div>
+									<div class="caution" id="caution">
+										<p x-show="savings.digit === '' && realEstate.digit === '' && securities.digit === '' && others.digit === '' && debts.digit === ''">
+											STEP1　遺産額は1つ以上の入力欄にご入力ください。</p>
+										<p x-show="spouse === null;">STEP2　配偶者を選択してください。</p>
+										<p x-show="relative === ''">STEP2　配偶者以外の法定相続人の続柄を選択してください。</p>
 									</div>
 								</div>
-							</fieldset>
-							<fieldset x-data="step3">
-								<div class="form_wrapper">
-									<h4 class="form_ttl">
-										<div class="date_block">
-											<div class="date_box">
-												<span class="month">STEP</span>
-												<span class="day">3</span>
-											</div>
-										</div>
-										土地・株式について<br class="sp-on" />入力してください
-									</h4>
-									<p class="para_under_step_title">STEP3は任意入力です。未入力でも相続税計算ができます。レガシィに依頼した場合の概算の申告報酬も計算したい方はご入力ください。</p>
-									<div class="input_block">
-										<div class="input_row style3">
-											<div class="txt"><label for="">所有されている土地の数</label></div>
-											<div class="input_right_row">
-												<div class="input_gp_row">
-													<div class="input_gp">
-														<input @keydown.enter.prevent @change="lands_value = land_factor(Number(lands.digit))" x-model="lands.digit" type="number" min="0" />
-														<label for="">ヶ所</label>
-													</div>
-												</div>
-												<div class="btn_gp">
-													<div class="minus radius" @click="lands.decrease"></div>
-													<div class="plus radius" @click="lands.increase"></div>
-												</div>
-											</div>
-										</div>
-										<div class="input_row style3">
-											<div class="txt"><label for="">非上場株式の数</label></div>
-											<div class="input_right_row">
-												<div class="input_gp_row">
-													<div class="input_gp">
-														<input @keydown.enter.prevent @change="stock_value = Number(unlistedshares.digit) * 15" x-model="unlistedshares.digit" type="number" min="0" />
-														<label for="">社</label>
-													</div>
-												</div>
-												<div class="btn_gp">
-													<div class="minus radius" @click="unlistedshares.decrease"></div>
-													<div class="plus radius" @click="unlistedshares.increase"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</fieldset>
-							<div class="submit_btn">
-								<input type="button" value="計算する" id="show_result" />
 							</div>
 						</form>
 					</div>
