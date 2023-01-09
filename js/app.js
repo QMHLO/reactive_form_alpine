@@ -92,6 +92,32 @@ function app() {
     logger() {
       console.log(this.spouse, this.inherit_rate, this.heirs_count, this.relative);
     },
+
+    have_spouse_handler() {
+      this.spouse = true;
+      if (this.relative === "no_relative") {
+        this.heirs_count = 1;
+        this.inherit_rate = 100;
+        haiwari = 100;
+      }
+      haigusya = 2;
+      sozokunin = Number(this.heirs_count);
+      changeHeirs();
+    },
+
+    no_relative_handler() {
+      this.relative = "no_relative";
+      if (!this.spouse) {
+        this.heirs_count = 0;
+      } else {
+        this.heirs_count = 1;
+        this.inherit_rate = 100;
+        haiwari = 100;
+      }
+      zokugara = 0;
+      sozokunin = Number(this.heirs_count);
+      changeHeirs();
+    },
   }));
   Alpine.data("step3", () => ({
     lands: {

@@ -203,7 +203,7 @@ get_header('2'); ?>
 												<div class="input_gp_row">
 													<div class="input_gp">
 														<div class="rdo_item ">
-															<input id="have_spouse" name="spouse" type="radio" @click="spouse = true; relative === 'no_relative' && (heirs_count = 1); haigusya = 2; sozokunin = Number(heirs_count); changeHeirs(); " />
+															<input id="have_spouse" name="spouse" type="radio" @click="have_spouse_handler();" />
 															<label for="have_spouse">いる</label>
 														</div>
 													</div>
@@ -280,7 +280,7 @@ get_header('2'); ?>
 													</div>
 													<div class="input_gp">
 														<div class="rdo_item max">
-															<input id="no_relative" name="relative" type="radio" @click="relative='no_relative'; !spouse ? (heirs_count = 0) : (heirs_count = 1); zokugara = 0; sozokunin = Number(heirs_count); changeHeirs();  "" />
+															<input id="no_relative" name="relative" type="radio" @click="no_relative_handler();" />
 															<label for=" no_relative">いない</label>
 														</div>
 													</div>
