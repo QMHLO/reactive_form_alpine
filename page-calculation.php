@@ -75,15 +75,11 @@ get_header('2'); ?>
 										</div>
 										遺産の額を入力してください
 									</h4>
-									<p class="para_under_step_title">遺産の細かい内訳がご不明な場合は、全ての遺産のだいたいの合計額を「現金・預貯金」のエリアにご入力ください。</p>
+									<p class="para_under_step_title">遺産の細かい内訳がご不明な場合は、全ての遺産のだいたいの合計額を「現金・預貯金」のエリアだけにご入力ください。</p>
 									<div class="assets_block">
-										<div class="left">
-											<p>資産</p>
-											<div class="plus plus-02 radius"></div>
-										</div>
 										<div class="right">
 											<div class="input_row">
-												<div class="txt"><label for="">① 現金・預貯金</label></div>
+												<div class="txt"><label for="">①現金・預貯金</label></div>
 												<div class="input_right_row">
 													<div class="input_gp_row">
 														<div class="input_gp w160">
@@ -98,7 +94,7 @@ get_header('2'); ?>
 												</div>
 											</div>
 											<div class="input_row">
-												<div class="txt"><label for="">② 不動産（土地・建物）</label></div>
+												<div class="txt"><label for="">②不動産（土地・建物）</label></div>
 												<div class="input_right_row">
 													<div class="input_gp_row">
 														<div class="input_gp w160">
@@ -113,7 +109,7 @@ get_header('2'); ?>
 												</div>
 											</div>
 											<div class="input_row">
-												<div class="txt"><label for="">③ 有価証券（株式など）​</label></div>
+												<div class="txt"><label for="">③有価証券（株式など）​</label></div>
 												<div class="input_right_row">
 													<div class="input_gp_row">
 														<div class="input_gp w160">
@@ -129,7 +125,7 @@ get_header('2'); ?>
 											</div>
 											<div class="input_row">
 												<div class="txt">
-													<label for="">④ その他財産<br class="pc-on" />
+													<label for="">④その他財産<br class="pc-on" />
 														（金、車、時計など）</label>
 												</div>
 												<div class="input_right_row">
@@ -148,13 +144,18 @@ get_header('2'); ?>
 										</div>
 									</div>
 									<div class="assets_block debt_block">
-										<div class="left">
-											<p>負債</p>
-											<div class="minus minus-02 radius"></div>
-										</div>
+
 										<div class="right">
 											<div class="input_row">
-												<div class="txt"><label for="">⑤ 債務・葬式費用</label></div>
+												<div class="txt" style="display: flex; align-items: center;"><label for="">⑤債務・葬式費用</label>
+													<div class="tooltip">
+														<span class="tooltiptext">
+															●債務・葬式費用とは <br />
+															亡くなった方の負債や葬式費用は、相続税の対象から引くことができます。
+														</span>
+														<img style="margin-left: 5px;" src="<?php bloginfo('template_url'); ?>/img/service/calculation/q.png" class="q_img" alt="合計">
+													</div>
+												</div>
 												<div class="input_right_row">
 													<div class="input_gp_row">
 														<div class="input_gp w160">
@@ -174,10 +175,10 @@ get_header('2'); ?>
 										<img src="<?php bloginfo('template_url'); ?>/img/service/calculation/arrow.png" alt="合計" />
 									</div>
 									<div class="input_row style2">
-										<div class="txt"><label class="lb_md" for="">合計（①+②+③+④-⑤）</label></div>
+										<div class="txt"><label class="lb_md  total_label" for="">合計（① + ② + ③ + ④ - ⑤）</label></div>
 										<div class="input_gp_row">
-											<div class="input_gp w160">
-												<label for="" class="lb_md"> <span x-text="total"></span> 万円</label>
+											<div class="input_gp w160" style="width: 100%; text-align: center;">
+												<label style="width: 100%;" for="" class="lb_md"><span class="total_value" x-text="total"></span> 万円</label>
 											</div>
 										</div>
 									</div>

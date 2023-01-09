@@ -233,7 +233,7 @@ html {
   letter-spacing: 0.5px;
 }
 .calculate_inner_block .form_wrapper .assets_block .right {
-  width: calc(100% - 100px);
+  width: 100%;
   padding: 40px 35px;
 }
 .calculate_inner_block .form_wrapper .input_row {
