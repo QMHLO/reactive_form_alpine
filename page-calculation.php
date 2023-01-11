@@ -325,7 +325,7 @@ get_header('2'); ?>
 											</div>
 										</div>
 									</fieldset>
-									<fieldset style="page-break-before: always;">
+									<fieldset>
 										<div class="form_wrapper">
 											<h4 class="form_ttl">
 												<div class="date_block">
@@ -372,10 +372,10 @@ get_header('2'); ?>
 										</div>
 									</fieldset>
 									<div class="submit_btn">
-										<input type="button" value="計算する" id="show_result" />
+										<input type="button" value="計算する" id="show_result" @click="show_result(!savings.digit && !realEstate.digit && !securities.digit && !others.digit && !debts.digit, spouse === null, relative === '');" />
 									</div>
 									<div class="caution" id="caution">
-										<p x-show="savings.digit === '' && realEstate.digit === '' && securities.digit === '' && others.digit === '' && debts.digit === ''">
+										<p x-show="!savings.digit && !realEstate.digit && !securities.digit && !others.digit && !debts.digit">
 											STEP1　遺産額は1つ以上の入力欄にご入力ください。</p>
 										<p x-show="spouse === null;">STEP2　配偶者を選択してください。</p>
 										<p x-show="relative === ''">STEP2　配偶者以外の法定相続人の続柄を選択してください。</p>
@@ -420,7 +420,7 @@ get_header('2'); ?>
 							<img class="sp-on" src="<?php bloginfo('template_url'); ?>/img/service/calculation/bg_img_sp.jpg" alt="問い合わせする" />
 							<a href="#" class="link_btn red"> 問い合わせする </a>
 						</div>
-						<a href="#" class="simulation_btn">シミュレーション結果を印刷する</a>
+						<a href="#" class="simulation_btn" id="print_btn">シミュレーション結果を印刷する</a>
 						<p class="situation_txt">レガシィはあなたの状況に合わせた様々なサービスをご提供しております。</p>
 						<a href="/service/" class="simulation_btn service_btn">サービス案内はこちら</a>
 					</div>

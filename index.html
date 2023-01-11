@@ -47,7 +47,7 @@
                 <input type="" name="source" value="calculation" id="source" style="display: none;">
                 <fieldset>
                   <div class="form_wrapper">
-                    <h4 class="form_ttl" @click="logger();">
+                    <h4 class="form_ttl" @click="step1_logger();">
                       <div class="date_block">
                         <div class="date_box">
                           <span class="month">STEP</span>
@@ -374,7 +374,8 @@
                   </div>
                 </fieldset>
                 <div class="submit_btn">
-                  <input type="button" value="計算する" id="show_result" />
+                  <input type="button" value="計算する" id="show_result"
+                    @click="show_result(!savings.digit && !realEstate.digit && !securities.digit && !others.digit && !debts.digit, spouse === null, relative === '');" />
                 </div>
                 <div class="caution" id="caution">
                   <p x-show="!savings.digit && !realEstate.digit && !securities.digit && !others.digit && !debts.digit">
@@ -422,7 +423,7 @@
             <img class="hidden sp:block" src="./bg_img_sp.jpg" alt="background image for small devices" />
             <a href="#" class="link_btn red"> 問い合わせする </a>
           </div>
-          <a href="#" class="simulation_btn">シュミレーション結果を印刷する</a>
+          <a href="#" class="simulation_btn" id="print_btn">シュミレーション結果を印刷する</a>
           <p class="situation_txt">レガシィはあなたの状況に合わせた様々なサービスをご提供しております。</p>
           <a href="#" class="simulation_btn service_btn">サービス案内はこちら</a>
         </div>

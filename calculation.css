@@ -2114,6 +2114,7 @@ option:empty {
 }
 
 @media only print {
+  .calculate_inner_block h2,
   .calculate_inner_block .submit_btn,
   .precaution,
   .block_two,
@@ -2121,10 +2122,6 @@ option:empty {
   .block_four,
   .block_five {
     display: none;
-  }
-
-  .calculate_inner_block .form_wrapper .arrow_img {
-    page-break-before: always;
   }
 
   .poster,
@@ -2175,8 +2172,12 @@ option:empty {
   #floating_part,
   footer#footer,
   #footer_contact,
+  #header_info .legacy-cloud-BTn,
+  #header_info .legacy-cloud-BTn p,
   .scrolltop .pagetop.fixed,
-  .scrolltop {
+  .scrolltop,
+  #header_info .header_contact a span,
+  #header_info .header_contact.bluebtn a {
     display: none;
   }
 }

@@ -83,7 +83,7 @@ function app() {
       return total;
     },
 
-    logger() {
+    step1_logger() {
       console.log(this.savings.digit, this.realEstate.digit, this.securities.digit, this.others.digit, this.debts.digit);
     },
   }));
@@ -202,6 +202,28 @@ function app() {
         this.unlistedshares.digit = Number(this.unlistedshares.digit) + 1;
         stock_value = Number(this.unlistedshares.digit) * 15;
       },
+    },
+
+    show_result(step1_check, spouse_check, relative_check) {
+      document.querySelector(".answer_block").style.display = "block";
+      document.getElementById("caution").style.display = "block";
+
+      if (step1_check || spouse_check || relative_check) {
+        document.getElementById("xresult1").remove();
+        document.getElementById("xresult").innerText = "入力・選択項目に不足があります。";
+        document.getElementById("yresult").innerText = "入力・選択項目に不足があります。";
+        document.getElementById("zresult1").remove();
+        document.getElementById("zresult").innerText = "入力・選択項目に不足があります。";
+      } else {
+        tax_form();
+        document.getElementById("yresult").innerText = y_result_text();
+        if (sozokuzei < 0 || isNaN(sozokuzei)) {
+          document.getElementById("zresult").innerText = y_result_text();
+        } else {
+          document.getElementById("zresult").innerText = z_result_text();
+        }
+        document.getElementById("zresult1")?.remove();
+      }
     },
   }));
 }

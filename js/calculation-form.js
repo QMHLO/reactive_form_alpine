@@ -2,20 +2,25 @@ $(document).ready(function () {
   // $("#tax_submit").on("click", function (e) {
   //   tax_form(e);
   // });
-  $("#show_result").on("click", function (e) {
-    tax_form(e);
-    const answerBlock = document.querySelector(".answer_block");
-    answerBlock.style.display = "block";
-    document.getElementById("caution").style.display = "block";
-
-    document.getElementById("yresult").innerText = y_result_text();
-    if (sozokuzei < 0 || isNaN(sozokuzei)) {
-      document.getElementById("zresult").innerText = y_result_text();
-    } else {
-      document.getElementById("zresult").innerText = z_result_text();
-    }
-    document.getElementById("zresult1")?.remove();
+  document.getElementById("print_btn").addEventListener("click", (e) => {
+    e.preventDefault();
+    print();
   });
+
+  // $("#show_result").on("click", function (e) {
+  //   tax_form(e);
+  //   const answerBlock = document.querySelector(".answer_block");
+  //   answerBlock.style.display = "block";
+  //   document.getElementById("caution").style.display = "block";
+
+  //   document.getElementById("yresult").innerText = y_result_text();
+  //   if (sozokuzei < 0 || isNaN(sozokuzei)) {
+  //     document.getElementById("zresult").innerText = y_result_text();
+  //   } else {
+  //     document.getElementById("zresult").innerText = z_result_text();
+  //   }
+  //   document.getElementById("zresult1")?.remove();
+  // });
 
   $(".estimation_selecter").on("change", function (e) {
     estimation_form(e);
