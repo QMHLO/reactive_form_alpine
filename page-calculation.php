@@ -41,7 +41,7 @@ get_header('2'); ?>
 	<section>
 		<div class="section_inner">
 			<div class="calculate_inner_block">
-				<div class="link_block">
+				<!-- <div class="link_block">
 					<div class="link_list_row">
 						<a href="#one" class="link_item_box">
 							<div class="link_item"><span>概算シミュレーション</span></div>
@@ -59,7 +59,7 @@ get_header('2'); ?>
 							<div class="link_item"><span>用語の説明</span></div>
 						</a>
 					</div>
-				</div>
+				</div> -->
 				<div class="block_one" id="one">
 					<div class="form_block">
 						<h2>相続税・申告報酬<br class="sp-on" />概算シミュレーション</h2>
@@ -771,9 +771,8 @@ get_header('2'); ?>
 						</div>
 						<div class="knowledge_item">
 							<h4>債務・葬式費用とは</h4>
-							<div class="tooltip">
-								<span class="tooltiptext tooltip_on_txt">「債務・葬式費用」の横にツールチ</span>
-								<p class="tooltip_item">亡くなった方の負債や葬式費用は、相続税の対象から引くことができます。</p>
+							<div>
+								<p>亡くなった方の負債や葬式費用は、相続税の対象から引くことができます。</p>
 							</div>
 						</div>
 
