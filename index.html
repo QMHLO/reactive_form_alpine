@@ -65,7 +65,7 @@
                           <div class="input_right_row">
                             <div class="input_gp_row">
                               <div class="input_gp w160">
-                                <input @keydown.enter.prevent @change="savings.handleChange" x-model="savings.digit"
+                                <input @keydown.enter.prevent @input="savings.handleChange" x-model="savings.digit"
                                   name="savings" type="number" min="0" placeholder="例）10000" />
                                 <label for="">万円</label>
                               </div>

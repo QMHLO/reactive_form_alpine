@@ -2,21 +2,19 @@
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
 }
-.calculate_inner_block {
-  /*
+/*
   html5doctor.com Reset Stylesheet
   v1.6.1
   Last Updated: 2010-09-17
   Author: Richard Clark - http://richclarkdesign.com
   Twitter: @rich_clark
   */
-  /* change colours to suit your needs */
-  /* change colours to suit your needs */
-  /* change border colour to suit your needs */
-  /* ===============================
+/* change colours to suit your needs */
+/* change colours to suit your needs */
+/* change border colour to suit your needs */
+/* ===============================
   Add css
   =============================== */
-}
 .calculate_inner_block html,
 .calculate_inner_block body,
 .calculate_inner_block div,
@@ -232,8 +230,6 @@ img {
   display: block;
   height: auto;
   max-width: 100%;
-
-  vertical-align: middle;
 }
 .pc-on {
   display: block;

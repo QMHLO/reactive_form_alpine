@@ -50,15 +50,17 @@ $(document).ready(function () {
 var isan_sogaku;
 var sozokunin;
 var haigusya;
-var zokugara = 0;
+var zokugara;
 var haiwari;
 var lands_value;
 var stock_value;
-var sozokuzei = 10;
+var sozokuzei = 0;
+// var zei_taisho;
 
 //相続税額概算シミュレーション
 function tax_form() {
-  var zei_taisho = isan_sogaku - (30000000 + 6000000 * sozokunin);
+  var zei_taisho = isan_sogaku - (30_000_000 + 6_000_000 * sozokunin);
+
   var hai_keigen = 0;
   var hai_tori = 0;
   var ko_tori = 0;
@@ -105,6 +107,8 @@ function tax_form() {
     }
     if (zokugara) {
       sozokuzei = hai_zei + ko_zei * (sozokunin - 1) + oya_zei * (sozokunin - 1) + kyo_zei * (sozokunin - 1);
+    } else if (!zokugara || isNaN(zokugara)) {
+      // do nothing
     } else {
       sozokuzei = zeikin(zei_taisho / sozokunin) * sozokunin;
     }
@@ -130,6 +134,8 @@ function tax_form() {
     }
     if (zokugara) {
       sozokuzei = hai_zei + ko_zei * sozokunin + oya_zei * sozokunin + kyo_zei * sozokunin;
+    } else if (!zokugara || isNaN(zokugara)) {
+      // do nothing
     } else {
       sozokuzei = zeikin(zei_taisho / sozokunin) * sozokunin;
     }
@@ -159,6 +165,8 @@ function tax_form() {
         } else {
           hai_keigen = (sozokuzei / isan_sogaku) * hai_tori;
         }
+      } else if (!zokugara || isNaN(zokugara)) {
+        // do nothing
       } else {
         if (160000000 > (isan_sogaku / 100) * haiwari) {
           hai_keigen = (sozokuzei * ((isan_sogaku / 100) * haiwari)) / isan_sogaku;
@@ -166,6 +174,8 @@ function tax_form() {
           hai_keigen = (sozokuzei / isan_sogaku) * 160000000;
         }
       }
+    } else if (!zokugara || isNaN(zokugara)) {
+      // do nothing
     } else {
       if (hai_tori > 160000000) {
         if (hai_tori > (isan_sogaku / 100) * haiwari) {
@@ -340,6 +350,7 @@ function get_value_num(target) {
 //税率算出
 function zeikin(toribun) {
   var zeikin = 0;
+  // console.log("toribun", toribun);
   if (toribun <= 10000000) {
     zeikin = toribun * 0.1;
   } else if (toribun <= 30000000) {
@@ -431,7 +442,7 @@ function localize_amount(value) {
 
   if (value > 1_0000) {
     let men_value = value % 1_0000_0000;
-    result += `${Math.floor(men_value / 1_0000)}万円`;
+    result += `${Math.ceil(men_value / 1_0000)}万円`;
   }
 
   if (value < 1_0000) {
@@ -441,10 +452,20 @@ function localize_amount(value) {
   return result;
 }
 
-// for test case please uncomment this
-// console.log(localize_amount(2_2800_0000));
-// console.log(localize_amount(1350_0000));
-// console.log(localize_amount(3000));
+function localize_with_decimal(value) {
+  let result = "";
+  if (value > 1_0000_0000) {
+    result = `${Math.floor(value / 1_0000_0000)}億 `;
+  }
+
+  if (value > 1_0000) {
+    let men_value = value % 1_0000_0000;
+    let calculation_result = (men_value / 1_0000).toFixed(2);
+    result += Number(calculation_result) + "万円";
+  }
+
+  return result;
+}
 
 function y_result_text() {
   if (heritage === undefined) {
@@ -453,7 +474,7 @@ function y_result_text() {
     return "STEP3を入力したら概算を計算できます";
   } else {
     var y = (heritage + heritage * heirs + lands_value + stock_value) * 10000;
-    return localize_amount(y);
+    return localize_with_decimal(y) + `（税込${localize_with_decimal(y * 1.1)}）`;
   }
 }
 
@@ -463,7 +484,9 @@ function z_result_text() {
   } else if (lands_value === undefined || stock_value === undefined) {
     return "STEP3を入力したら概算を計算できます";
   } else {
-    let z = sozokuzei + (heritage + heritage * heirs + lands_value + stock_value) * 10000;
-    return localize_amount(z);
+    let y = (heritage + heritage * heirs + lands_value + stock_value) * 10000;
+    let z = sozokuzei + y;
+    let z_with_tax = sozokuzei + y * 1.1;
+    return localize_with_decimal(z) + `（税込${localize_with_decimal(z_with_tax)}）`;
   }
 }

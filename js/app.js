@@ -94,7 +94,7 @@ function app() {
     heirs_count: null,
 
     logger() {
-      console.log(this.spouse, this.inherit_rate, this.heirs_count, this.relative);
+      console.log("spouse:", this.spouse, "inherit rate:", this.inherit_rate, "heirt count:", this.heirs_count, "relative:", this.relative);
     },
 
     have_spouse_handler() {
@@ -160,14 +160,14 @@ function app() {
 
     no_relative_handler() {
       this.relative = "no_relative";
+      zokugara = NaN;
       if (!this.spouse) {
         this.heirs_count = 0;
       } else {
         this.heirs_count = 1;
         this.inherit_rate = 100;
-        haiwari = 100;
+        haiwari = 0;
       }
-      zokugara = 0;
       sozokunin = Number(this.heirs_count);
       changeHeirs();
     },
