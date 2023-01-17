@@ -2340,7 +2340,7 @@ body {
     font-size: 16px;
   }
   #fudosan-consulting .quiz .answers {
-    margin: 15px auto 20px;
+    margin: 15px auto 12px;
 
     gap: 10px;
     grid-template-columns: repeat(1, 1fr);
@@ -2360,7 +2360,7 @@ body {
   #fudosan-consulting .quiz .answer > label {
     padding: 17px 20px 17px 35px;
 
-    font-size: 16px;
+    font-size: 18px;
   }
   #fudosan-consulting .quiz_ttl h4 {
     font-size: 14px;
