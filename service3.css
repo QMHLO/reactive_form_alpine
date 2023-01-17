@@ -2358,12 +2358,13 @@ body {
     border-radius: inherit;
   }
   #fudosan-consulting .quiz .answer > label {
-    padding: 17px 20px 17px 30px;
+    padding: 17px 20px 17px 35px;
 
     font-size: 16px;
   }
   #fudosan-consulting .quiz_ttl h4 {
     font-size: 14px;
+    margin-right: 0px;
   }
   #fudosan-consulting .quiz_ttl p {
     margin-right: 5px;
@@ -2374,6 +2375,7 @@ body {
   #fudosan-consulting .quiz_ttl .term,
   #fudosan-consulting .quiz_ttl {
     font-size: 16px;
+    text-align: left;
   }
   #fudosan-consulting .quiz_btn {
     margin-bottom: 10px !important;
