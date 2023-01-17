@@ -1577,11 +1577,10 @@ table.tbl_type01 td select:disabled {
 
   color: #543f22;
 }
-.calculate_inner_block .knowledge_block h4 {
+.calculate_inner_block .knowledge_block h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.55;
-
   color: #c10000;
 }
 .calculate_inner_block .knowledge_block p {
@@ -1715,7 +1714,9 @@ table.tbl_type01 td select:disabled {
   .calculate_inner_block .form_wrapper label {
     font-size: 18px;
   }
-
+  .calculate_inner_block .knowledge_block h3 {
+    font-size: 16px;
+  }
   .calculate_inner_block .plus,
   .calculate_inner_block .minus {
     --l: 25px; /* size of the symbol */
