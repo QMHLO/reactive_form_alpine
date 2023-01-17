@@ -1805,9 +1805,9 @@ table.tbl_type01 td select:disabled {
   .calculate_inner_block .submit_btn input {
     position: relative;
 
-    padding: 8px;
+    padding: 12px 0;
 
-    font-size: 16px;
+    font-size: 20px;
 
     -webkit-box-shadow: 0 4px 2px -1px rgba(235, 232, 227, 1);
     -moz-box-shadow: 0 4px 2px -1px rgba(235, 232, 227, 1);
