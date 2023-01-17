@@ -971,7 +971,19 @@ body {
 #fudosan-consulting .graph-contents .ul-03 li {
   background-color: #f3ece5;
 }
+.pc-show {
+  display: block;
+}
+.sp-show {
+  display: none;
+}
 @media screen and (max-width: 640px) {
+  .pc-show {
+    display: none;
+  }
+  .sp-show {
+    display: block;
+  }
   #fudosan-consulting h2 {
     font-size: 18px;
     line-height: 1.3;
@@ -2126,7 +2138,7 @@ body {
   opacity: 0.8;
 }
 #fudosan-consulting .Explanatory {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
 
   font-size: 12px;
@@ -2333,11 +2345,11 @@ body {
   }
   #fudosan-consulting .quiz_btn {
     width: 100%;
-    height: 41px;
+    height: 60px;
     max-width: 305px;
     padding: 0;
 
-    font-size: 16px;
+    font-size: 18px;
   }
   #fudosan-consulting .quiz .answers {
     margin: 15px auto 12px;

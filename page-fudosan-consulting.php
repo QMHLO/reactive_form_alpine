@@ -411,7 +411,7 @@ get_header('1'); ?>
                 <div class="starter">
                   <p class="starter_text">
                     <strong>当てはまる内容にご回答</strong>いただくだけで、<br />
-                    <strong class="red">路線価が否認される危険度を簡易的にチェック</strong>できます。
+                    <strong class="red">路線価が否認される危険度を<br class="sp-show">簡易的にチェック</strong>できます。
                   </p>
                   <button class="quiz_btn red" @click="start = true">スタート</button>
                   <div class="Explanatory">※弊社の経験をもとに作成した資料であり、正確性・完全性・将来の効果等を保証するものではありません。こちらの情報を利用することで生じたいかなる損害についても、当社は責任を負うものではありません。実際のご相談案件では、相続専門20年以上の経験を持つパートナー税理士が判定を行っております。</div>
