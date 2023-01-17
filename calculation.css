@@ -1708,8 +1708,9 @@ table.tbl_type01 td select:disabled {
   }
   .calculate_inner_block .form_wrapper input,
   .calculate_inner_block .form_wrapper select {
-    width: 50px;
+    width: 75px;
     height: 30px;
+    padding: 3px;
   }
   .calculate_inner_block .form_wrapper label {
     font-size: 18px;
@@ -1867,6 +1868,8 @@ table.tbl_type01 td select:disabled {
   }
   .calculate_inner_block .form_wrapper .input_gp.w160 input {
     width: 130px;
+    padding: 10px 5px;
+    line-height: normal;
   }
   .calculate_inner_block h2 {
     margin: 32px 0 20px 0;
@@ -1950,7 +1953,7 @@ table.tbl_type01 td select:disabled {
     width: 75px;
   }
   .calculate_inner_block .input_gp .rdo_item.rdo_item_02 {
-    width: 80px;
+    width: 90px;
   }
   .calculate_inner_block .answer_block .situation_txt {
     font-size: 14px;
