@@ -455,7 +455,7 @@ get_header('1'); ?>
                         <p class="suggest">でも、<strong>〇〇なことに注意が必要です。</strong> <span class="break">万全を期すために</span>一度相続の専門家にご相談下さい。</p>
                       </div>
                       <div class="yellow_border">
-                        <p class="medium_text">レガシィの税理士が担当すると<strong>99％</strong>税務調査に入られません！</p>
+                        <p class="medium_text">レガシィの税理士が<br class="sp-show">担当すると<strong>99％</strong>税務調査に<br class="sp-show">入られません！</p>
                         <p class="small_text">診断結果をもとに</p>
                         <p class="large_text"><span>具体的に税理士に相談してみる</span></p>
                         <a class="quiz_btn red" href="#">税理士に相談する</a>

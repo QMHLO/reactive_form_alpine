@@ -1643,6 +1643,9 @@ table.tbl_type01 td select:disabled {
 .calculate_inner_block .block_five h2 {
   margin-bottom: 20px;
 }
+.calculate_inner_block .block_one h2 {
+  margin-top: 5px;
+}
 @media screen and (max-width: 640px) {
   #calculation_mainv {
     width: 100%;
